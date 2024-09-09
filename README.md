@@ -58,6 +58,10 @@ This is a feature module for the home screen.
 ![mvvm](https://github.com/user-attachments/assets/1f118e0b-8424-48df-8ed3-4c33e21de174)
 
 
+## Dependencies
+![2024-09-09_17h34_52](https://github.com/user-attachments/assets/030a823e-a1af-4848-be72-087b8b08bb8f)
+
+
 ## Deployment
 
 To deploy this application, follow these steps:
