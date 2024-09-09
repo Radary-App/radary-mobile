@@ -30,12 +30,54 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
+# The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-
+  cupertino_icons: ^1.0.2
+  
+  # State management with Bloc pattern.
+  flutter_bloc: ^8.1.3
+  
+  # Code generator for immutable classes and union types.
+  freezed: ^2.4.5
+  # Annotations for freezed package.
+  freezed_annotation: ^2.4.1
+  
+  # Dependency injection package.
+  get_it: ^7.6.4
+  
+  # Code generator for JSON serialization.
+  json_serializable: ^6.7.1
+  # Annotations for JSON serialization.
+  json_annotation: ^4.8.1
+  
+  # Networking library.
+  dio: ^5.3.3
+  # Type conversion for HTTP requests.
+  retrofit: ^4.0.3
+  # Code generator for Retrofit.
+  retrofit_generator: ^8.0.4
+  # Logger for Dio requests.
+  pretty_dio_logger: ^1.3.1
+  
+  # Internationalization and localization.
+  intl: ^0.19.0
+  # Easy localization for Flutter apps.
+  easy_localization: ^3.0.3
+  
+  # Generates native splash screen for your Flutter app.
+  flutter_native_splash: ^2.3.5
+  
+  # Cached network image with caching support.
+  cached_network_image: ^3.3.1
+  
+  # Shimmer effect for loading states.
+  shimmer: ^3.0.0
+  
+  # Utility for adapting UI to different screen sizes.
+  flutter_screenutil: ^5.7.0
+  
+  # Persistent storage for simple data.
+  shared_preferences: ^2.2.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
