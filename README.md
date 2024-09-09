@@ -59,7 +59,7 @@ This is a feature module for the home screen.
 
 
 ## Dependencies
-![2024-09-09_17h34_52](https://github.com/user-attachments/assets/030a823e-a1af-4848-be72-087b8b08bb8f)
+![2024-09-09_17h38_49](https://github.com/user-attachments/assets/784ef738-09ae-47c6-8cee-672fd848c801)
 
 
 ## Deployment
