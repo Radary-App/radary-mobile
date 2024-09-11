@@ -929,16 +929,6 @@ class S {
       args: [],
     );
   }
-
-  /// `Mustafa`
-  String get mustafa {
-    return Intl.message(
-      'Mustafa',
-      name: 'mustafa',
-      desc: '',
-      args: [],
-    );
-  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
