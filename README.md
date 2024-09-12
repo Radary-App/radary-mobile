@@ -5,7 +5,8 @@ report local issues such as potholes, broken streetlights,
 accumulated waste, and other community concerns directly to the relevant authorities.By streamlining
 communication between citizens and municipal services, the app
 enhances community engagement and improves local infrastructure
-maintenance.
+maintenance.It also provides a feature that allows citizens to report accidents(ex. car accidents,fires,...) with a quick and instant response by the relevant authorities with the help of the AI system that works to determine the geographical location through the uploaded image and determine its priority to ensure suitable support.
+
 ## Contributors
 
 - [Mustafa Magdy](https://github.com/mustafa-dev-nasr)
