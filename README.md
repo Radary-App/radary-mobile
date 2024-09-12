@@ -1,6 +1,12 @@
 # Radary 
 
-Radary Mobile is a community-based app that enables citizens to report urgent and local issues, such as potholes, broken lampposts, graffiti, and more, directly to the relevant authorities. The app leverages geolocation for precise location reporting and includes a voting system that prioritizes issues based on urgency and impact. This ensures that the most important issues are addressed first, improves communication between citizens and municipal services, and enhances the maintenance of local infrastructure.
+Radary is a mobile application designed to enable citizens to
+report local issues such as potholes, broken streetlights,
+accumulated waste, and other community concerns directly to the relevant authorities.By streamlining
+communication between citizens and municipal services, the app
+enhances community engagement and improves local infrastructure
+maintenance.It also provides a feature that allows citizens to report accidents(ex. car accidents,fires,...) with a quick and instant response by the relevant authorities with the help of the AI system that works to determine the geographical location through the uploaded image and determine its priority to ensure suitable support.
+
 ## Contributors
 
 - [Mustafa Magdy](https://github.com/mustafa-dev-nasr)

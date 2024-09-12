@@ -138,7 +138,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "descriptionOnboarding_3": MessageLookupByLibrary.simpleMessage(
             "Track your progress and earn certifications."),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
-        "mustafa": MessageLookupByLibrary.simpleMessage("Mustafa"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("PrivacyPolicy"),
