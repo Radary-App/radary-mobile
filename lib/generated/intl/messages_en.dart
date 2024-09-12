@@ -83,7 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
         "Dont_Have":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("Don\'\'t have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),

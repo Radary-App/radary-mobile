@@ -7,16 +7,16 @@ class OnboardingItems {
   List<OnboardingInfo> getItems(BuildContext context) {
     return [
       OnboardingInfo(
-          title: S.of(context).titleOnboarding_1,
-          description: S.of(context).descriptionOnboarding_1,
+          title: S.of(context).Accessibility,
+          description: S.of(context).AccessibilityDescription,
           image: "assets/svgs/Onboarding_1.svg"),
       OnboardingInfo(
-          title: S.of(context).titleOnboarding_2,
-          description: S.of(context).descriptionOnboarding_2,
+          title: S.of(context).Answer1,
+          description: S.of(context).Answer2,
           image: "assets/svgs/Onboarding_2.svg"),
       OnboardingInfo(
-          title: S.of(context).titleOnboarding_3,
-          description: S.of(context).descriptionOnboarding_3,
+          title: S.of(context).Answer3,
+          description: S.of(context).Answer4,
           image: "assets/svgs/Onboarding_3.svg"),
     ];
   }

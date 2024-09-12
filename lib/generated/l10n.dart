@@ -200,10 +200,10 @@ class S {
     );
   }
 
-  /// `Don't have an account?`
+  /// `Don''t have an account?`
   String get Dont_Have {
     return Intl.message(
-      'Don\'t have an account?',
+      'Don\'\'t have an account?',
       name: 'Dont_Have',
       desc: '',
       args: [],
