@@ -80,6 +80,66 @@ class S {
     );
   }
 
+  /// `Contribute to the improvment of your area`
+  String get Message1 {
+    return Intl.message(
+      'Contribute to the improvment of your area',
+      name: 'Message1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Radary to help report street problems easily and quickly`
+  String get Message2 {
+    return Intl.message(
+      'Radary to help report street problems easily and quickly',
+      name: 'Message2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Report any issue in seconds`
+  String get Message3 {
+    return Intl.message(
+      'Report any issue in seconds',
+      name: 'Message3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By one click, you can report incidents and problems you face`
+  String get Message4 {
+    return Intl.message(
+      'By one click, you can report incidents and problems you face',
+      name: 'Message4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Together,to make difference`
+  String get Message5 {
+    return Intl.message(
+      'Together,to make difference',
+      name: 'Message5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We are here to help you report problems and act quickly`
+  String get Message6 {
+    return Intl.message(
+      'We are here to help you report problems and act quickly',
+      name: 'Message6',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Accessibility `
   String get Accessibility {
     return Intl.message(
@@ -125,16 +185,6 @@ class S {
     return Intl.message(
       'Skip',
       name: 'Skip',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// ` You can report accidents and problems you encounter with one click`
-  String get HowItWorks {
-    return Intl.message(
-      ' You can report accidents and problems you encounter with one click',
-      name: 'HowItWorks',
       desc: '',
       args: [],
     );
@@ -190,31 +240,11 @@ class S {
     );
   }
 
-  /// `Log in `
-  String get Log_InBtn {
-    return Intl.message(
-      'Log in ',
-      name: 'Log_InBtn',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Don't have an account?`
   String get Dont_Have {
     return Intl.message(
       'Don\'t have an account?',
       name: 'Dont_Have',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// ` Sign Up  `
-  String get Sign_UpBtn {
-    return Intl.message(
-      ' Sign Up  ',
-      name: 'Sign_UpBtn',
       desc: '',
       args: [],
     );
@@ -255,16 +285,6 @@ class S {
     return Intl.message(
       'Confirm code ',
       name: 'ConfirmCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Confirm code `
-  String get ConfirmCodeBtn {
-    return Intl.message(
-      'Confirm code ',
-      name: 'ConfirmCodeBtn',
       desc: '',
       args: [],
     );
@@ -485,26 +505,6 @@ class S {
     return Intl.message(
       'Home',
       name: 'Home',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `My Reports`
-  String get MyReportsBtn {
-    return Intl.message(
-      'My Reports',
-      name: 'MyReportsBtn',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `My profile`
-  String get MyProfileBtn {
-    return Intl.message(
-      'My profile',
-      name: 'MyProfileBtn',
       desc: '',
       args: [],
     );
@@ -865,36 +865,6 @@ class S {
     return Intl.message(
       'Personal Information ',
       name: 'PersonalInformation',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Settings`
-  String get SettingsBtn {
-    return Intl.message(
-      'Settings',
-      name: 'SettingsBtn',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Help and Support`
-  String get SupportAndHelpBtn {
-    return Intl.message(
-      'Help and Support',
-      name: 'SupportAndHelpBtn',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Sign out `
-  String get SignOutBtn {
-    return Intl.message(
-      'Sign out ',
-      name: 'SignOutBtn',
       desc: '',
       args: [],
     );
@@ -1385,6 +1355,16 @@ class S {
     return Intl.message(
       'Delete Account ',
       name: 'ConfirmDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search here `
+  String get Search {
+    return Intl.message(
+      'Search here ',
+      name: 'Search',
       desc: '',
       args: [],
     );
