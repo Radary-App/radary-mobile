@@ -27,14 +27,14 @@ class OnboardingContent extends StatelessWidget {
         SizedBox(height: 20.h),
         Text(
           item.title,
-          style: AppTextStyles.font32BlackSemiBold,
+          // style: AppTextStyles.font32BlackSemiBold,
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 16.h),
         Text(
           item.description,
           textAlign: TextAlign.center,
-          style: AppTextStyles.font20Gray100Regular,
+          // style: AppTextStyles.font20Gray100Regular,
         ),
         SizedBox(height: 30.h),
         SmoothPageIndicator(
