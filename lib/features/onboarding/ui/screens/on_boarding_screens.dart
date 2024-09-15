@@ -74,7 +74,7 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
             _pageController, totalItems), // استخدام وظيفة المساعد
         child: Text(
           S.of(context).Skip,
-          style: AppTextStyles.font20Gray100Regular,
+          // style: AppTextStyles.font20Gray100Regular,
         ),
       ),
     );
