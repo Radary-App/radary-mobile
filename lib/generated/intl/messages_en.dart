@@ -62,7 +62,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Color Change and Contrast"),
         "ConfirmBtn": MessageLookupByLibrary.simpleMessage("Confirm"),
         "ConfirmCode": MessageLookupByLibrary.simpleMessage("Confirm code "),
-        "ConfirmCodeBtn": MessageLookupByLibrary.simpleMessage("Confirm code "),
         "ConfirmDelete":
             MessageLookupByLibrary.simpleMessage("Delete Account "),
         "ConfirmPassword":
@@ -83,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
         "Dont_Have":
-            MessageLookupByLibrary.simpleMessage("Don\'\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
@@ -97,7 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "EnterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter phone number"),
         "Feedback1": MessageLookupByLibrary.simpleMessage(
-            "هDid you find difficulty to report the problem?"),
+            "Did you find difficulty to report the problem?"),
         "Feedback2": MessageLookupByLibrary.simpleMessage(
             "Is the problem already solved?"),
         "FirstName": MessageLookupByLibrary.simpleMessage("First Name"),
@@ -110,8 +109,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "Governorate": MessageLookupByLibrary.simpleMessage("Governorate"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
-        "HowItWorks": MessageLookupByLibrary.simpleMessage(
-            " You can report accidents and problems you encounter with one click"),
         "Issues": MessageLookupByLibrary.simpleMessage("Issues"),
         "IssuesReport": MessageLookupByLibrary.simpleMessage("Report an issue"),
         "LastName": MessageLookupByLibrary.simpleMessage("Second Name"),
@@ -121,11 +118,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "Allow access to your location"),
         "Log_In": MessageLookupByLibrary.simpleMessage("Log in "),
         "Log_InBtn": MessageLookupByLibrary.simpleMessage("Log in "),
+        "Message1": MessageLookupByLibrary.simpleMessage(
+            "Contribute to the improvment of your area"),
+        "Message2": MessageLookupByLibrary.simpleMessage(
+            "Radary to help report street problems easily and quickly"),
+        "Message3":
+            MessageLookupByLibrary.simpleMessage("Report any issue in seconds"),
+        "Message4": MessageLookupByLibrary.simpleMessage(
+            "By one click, you can report incidents and problems you face"),
+        "Message5":
+            MessageLookupByLibrary.simpleMessage("Together,to make difference"),
+        "Message6": MessageLookupByLibrary.simpleMessage(
+            "We are here to help you report problems and act quickly"),
         "Month": MessageLookupByLibrary.simpleMessage("month"),
         "MyProfile": MessageLookupByLibrary.simpleMessage("My profile"),
-        "MyProfileBtn": MessageLookupByLibrary.simpleMessage("My profile"),
         "MyReports": MessageLookupByLibrary.simpleMessage("My reports"),
-        "MyReportsBtn": MessageLookupByLibrary.simpleMessage("My Reports"),
         "NeverAllow": MessageLookupByLibrary.simpleMessage("Never"),
         "NightMode": MessageLookupByLibrary.simpleMessage("Light Mode"),
         "No": MessageLookupByLibrary.simpleMessage("No"),
@@ -177,12 +184,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "The problem has been resolved successfully!"),
         "ResetPassword":
             MessageLookupByLibrary.simpleMessage("Reset Password "),
+        "Search": MessageLookupByLibrary.simpleMessage("Search here "),
         "SecondReport": MessageLookupByLibrary.simpleMessage("Report number 2"),
         "SendCode": MessageLookupByLibrary.simpleMessage("Send code "),
         "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "SettingsBtn": MessageLookupByLibrary.simpleMessage("Settings"),
         "SignOut": MessageLookupByLibrary.simpleMessage("Sign out "),
-        "SignOutBtn": MessageLookupByLibrary.simpleMessage("Sign out "),
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "You will need to enter your username and password the next time you want to log in"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("Sign up"),
@@ -195,8 +201,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "Suggestions": MessageLookupByLibrary.simpleMessage("Suggestions"),
         "SupportAndHelp":
             MessageLookupByLibrary.simpleMessage("Help and support"),
-        "SupportAndHelpBtn":
-            MessageLookupByLibrary.simpleMessage("Help and Support"),
         "ThankMsg": MessageLookupByLibrary.simpleMessage(
             "Your Suggestions help us to improve our services!"),
         "ThankYou": MessageLookupByLibrary.simpleMessage("Thanks"),
