@@ -32,18 +32,19 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
-flavorDimensions "default"
+    flavorDimensions "default"
     productFlavors {
-      production {
-          dimension "default"
-          resValue "string", "app_name", "Radary Production"
-      }
-      development {
-          dimension "default"
-          applicationIdSuffix ".dev"
-          resValue "string", "app_name", "DocDRadaryoc Development"
-      }
+  production {
+      dimension "default"
+      resValue "string", "app_name", "Radary Production"
   }
+  development {
+      dimension "default"
+      applicationIdSuffix ".dev"
+      resValue "string", "app_name", "Radary Development"
+  }
+}
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
