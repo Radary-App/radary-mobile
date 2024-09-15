@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
         "Dont_Have":
-            MessageLookupByLibrary.simpleMessage("Don\'\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
@@ -96,7 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "EnterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter phone number"),
         "Feedback1": MessageLookupByLibrary.simpleMessage(
-            "هDid you find difficulty to report the problem?"),
+            "Did you find difficulty to report the problem?"),
         "Feedback2": MessageLookupByLibrary.simpleMessage(
             "Is the problem already solved?"),
         "FirstName": MessageLookupByLibrary.simpleMessage("First Name"),
@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "LocationAccess": MessageLookupByLibrary.simpleMessage(
             "Allow access to your location"),
         "Log_In": MessageLookupByLibrary.simpleMessage("Log in "),
+        "Log_InBtn": MessageLookupByLibrary.simpleMessage("Log in "),
         "Message1": MessageLookupByLibrary.simpleMessage(
             "Contribute to the improvment of your area"),
         "Message2": MessageLookupByLibrary.simpleMessage(
@@ -191,6 +192,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "You will need to enter your username and password the next time you want to log in"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" Sign Up  "),
         "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "Sound": MessageLookupByLibrary.simpleMessage("Sound"),
         "SoundBtn": MessageLookupByLibrary.simpleMessage("Turn on sound"),

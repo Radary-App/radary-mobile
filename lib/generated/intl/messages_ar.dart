@@ -184,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "ستحتاج إلى إدخال اسم المستخدم الخاص بك وكلمة المرور في المرة القادمة تريد تسجيل الدخول"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
         "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "Sound": MessageLookupByLibrary.simpleMessage("الصوت"),
         "SoundBtn": MessageLookupByLibrary.simpleMessage("تشغيل الصوت"),
