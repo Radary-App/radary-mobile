@@ -77,7 +77,7 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        hintStyle: hintStyle ?? AppTextStyles.font14gray666Regular,
+        // hintStyle: hintStyle ?? AppTextStyles.font14gray666Regular,
         hintText: hintText,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
@@ -85,7 +85,7 @@ class AppTextFormField extends StatelessWidget {
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: AppTextStyles.font14gray666Medium,
+      // style: AppTextStyles.font14gray666Medium,
       validator: (value) {
         return validator(value);
       },

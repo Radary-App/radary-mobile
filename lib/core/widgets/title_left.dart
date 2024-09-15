@@ -17,7 +17,9 @@ class TitleLeft extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(bottom: 8.h),
-          child: Text(title, style: AppTextStyles.font16Blackbold),
+          child: Text(title, 
+          // style: AppTextStyles.font16Blackbold,
+          ),
         ),
       ],
     );
