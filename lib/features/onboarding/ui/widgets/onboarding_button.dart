@@ -12,7 +12,7 @@ class OnBoardingeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(primaryColor),
+        // backgroundColor: WidgetStateProperty.all(primaryColor),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         minimumSize: WidgetStateProperty.all(Size(double.maxFinite, 50.h)),
         shape: WidgetStateProperty.all(
