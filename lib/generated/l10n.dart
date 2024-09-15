@@ -240,11 +240,31 @@ class S {
     );
   }
 
+  /// `Log in `
+  String get Log_InBtn {
+    return Intl.message(
+      'Log in ',
+      name: 'Log_InBtn',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Don't have an account?`
   String get Dont_Have {
     return Intl.message(
       'Don\'t have an account?',
       name: 'Dont_Have',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Sign Up  `
+  String get Sign_UpBtn {
+    return Intl.message(
+      ' Sign Up  ',
+      name: 'Sign_UpBtn',
       desc: '',
       args: [],
     );
@@ -770,10 +790,10 @@ class S {
     );
   }
 
-  /// `هDid you find difficulty to report the problem?`
+  /// `Did you find difficulty to report the problem?`
   String get Feedback1 {
     return Intl.message(
-      'هDid you find difficulty to report the problem?',
+      'Did you find difficulty to report the problem?',
       name: 'Feedback1',
       desc: '',
       args: [],
