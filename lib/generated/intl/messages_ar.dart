@@ -32,6 +32,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفعيل مميزات الوصول"),
         "AccidentReport":
             MessageLookupByLibrary.simpleMessage("الإبلاغ عن حادثة"),
+        "Accident_1": MessageLookupByLibrary.simpleMessage("حوادث مرور بسيطة"),
+        "Accident_2": MessageLookupByLibrary.simpleMessage("حوادث دهس"),
+        "Accident_3": MessageLookupByLibrary.simpleMessage("حوادث الدراجات"),
+        "Accident_4": MessageLookupByLibrary.simpleMessage("حوادث القطارات"),
+        "Accident_5": MessageLookupByLibrary.simpleMessage("حوادث الحريق"),
+        "Accident_6": MessageLookupByLibrary.simpleMessage("انهيارات المباني"),
         "Accidents": MessageLookupByLibrary.simpleMessage("الحوادث"),
         "Address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "All": MessageLookupByLibrary.simpleMessage("الكل"),
@@ -151,6 +157,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إضافة تفاصيل"),
         "PhotosAccess":
             MessageLookupByLibrary.simpleMessage("إذن الوصول للصور"),
+        "Problem_1": MessageLookupByLibrary.simpleMessage("تصدعات في المباني"),
+        "Problem_2":
+            MessageLookupByLibrary.simpleMessage("شبكات الصرف الصحي المعطلة"),
+        "Problem_3":
+            MessageLookupByLibrary.simpleMessage("إشارات المرور المعطلة"),
+        "Problem_4":
+            MessageLookupByLibrary.simpleMessage("الإزدحام المروري المستمر"),
+        "Problem_5": MessageLookupByLibrary.simpleMessage(
+            "مشكلة في إشارات الإنذار أو صفارات الإنذار"),
+        "Problem_6": MessageLookupByLibrary.simpleMessage("مشاكل بيئية"),
+        "Problem_7": MessageLookupByLibrary.simpleMessage("تسربات المياه"),
         "Question1":
             MessageLookupByLibrary.simpleMessage("كيف يستخدم التطبيق موقعي؟"),
         "Question2": MessageLookupByLibrary.simpleMessage(
@@ -186,6 +203,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sign_UP": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
         "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "Solved_problems":
+            MessageLookupByLibrary.simpleMessage("المشاكل التي تم حلها"),
         "Sound": MessageLookupByLibrary.simpleMessage("الصوت"),
         "SoundBtn": MessageLookupByLibrary.simpleMessage("تشغيل الصوت"),
         "SoundOn": MessageLookupByLibrary.simpleMessage("تعديل الصوت"),

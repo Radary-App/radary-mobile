@@ -31,6 +31,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Turn on Accessibility"),
         "AccidentReport":
             MessageLookupByLibrary.simpleMessage("Report an accident"),
+        "Accident_1":
+            MessageLookupByLibrary.simpleMessage("Minor traffic accidents"),
+        "Accident_2":
+            MessageLookupByLibrary.simpleMessage("Vehicular accidents"),
+        "Accident_3": MessageLookupByLibrary.simpleMessage("Bicycle accidents"),
+        "Accident_4": MessageLookupByLibrary.simpleMessage("Train accidents "),
+        "Accident_5": MessageLookupByLibrary.simpleMessage("Fire accidents"),
+        "Accident_6":
+            MessageLookupByLibrary.simpleMessage("Building collapses"),
         "Accidents": MessageLookupByLibrary.simpleMessage("Accidents"),
         "Address": MessageLookupByLibrary.simpleMessage("Address"),
         "All": MessageLookupByLibrary.simpleMessage("All"),
@@ -157,6 +166,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add description"),
         "PhotosAccess":
             MessageLookupByLibrary.simpleMessage("Allow access to your photos"),
+        "Problem_1":
+            MessageLookupByLibrary.simpleMessage("Cracks in buildings"),
+        "Problem_2":
+            MessageLookupByLibrary.simpleMessage("Broken sewage networks"),
+        "Problem_3":
+            MessageLookupByLibrary.simpleMessage("Broken traffic lights"),
+        "Problem_4": MessageLookupByLibrary.simpleMessage(
+            "Continuous traffic congestion"),
+        "Problem_5": MessageLookupByLibrary.simpleMessage(
+            "Problem with alarm signals or sirens"),
+        "Problem_6":
+            MessageLookupByLibrary.simpleMessage("Environmental problems"),
+        "Problem_7": MessageLookupByLibrary.simpleMessage("Water leaks"),
         "Question1": MessageLookupByLibrary.simpleMessage(
             "How does the app use my location?"),
         "Question2": MessageLookupByLibrary.simpleMessage(
@@ -194,6 +216,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sign_UP": MessageLookupByLibrary.simpleMessage("Sign up"),
         "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" Sign Up  "),
         "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "Solved_problems":
+            MessageLookupByLibrary.simpleMessage("Solved problems"),
         "Sound": MessageLookupByLibrary.simpleMessage("Sound"),
         "SoundBtn": MessageLookupByLibrary.simpleMessage("Turn on sound"),
         "SoundOn": MessageLookupByLibrary.simpleMessage("Turn on Sound "),

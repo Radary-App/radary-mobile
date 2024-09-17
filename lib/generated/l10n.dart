@@ -1389,6 +1389,148 @@ class S {
       args: [],
     );
   }
+
+  /// `Cracks in buildings`
+  String get Problem_1 {
+    return Intl.message(
+      'Cracks in buildings',
+      name: 'Problem_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Broken sewage networks`
+  String get Problem_2 {
+    return Intl.message(
+      'Broken sewage networks',
+      name: 'Problem_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Broken traffic lights`
+  String get Problem_3 {
+    return Intl.message(
+      'Broken traffic lights',
+      name: 'Problem_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continuous traffic congestion`
+  String get Problem_4 {
+    return Intl.message(
+      'Continuous traffic congestion',
+      name: 'Problem_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Problem with alarm signals or sirens`
+  String get Problem_5 {
+    return Intl.message(
+      'Problem with alarm signals or sirens',
+      name: 'Problem_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Environmental problems`
+  String get Problem_6 {
+    return Intl.message(
+      'Environmental problems',
+      name: 'Problem_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Water leaks`
+  String get Problem_7 {
+    return Intl.message(
+      'Water leaks',
+      name: 'Problem_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minor traffic accidents`
+  String get Accident_1 {
+    return Intl.message(
+      'Minor traffic accidents',
+      name: 'Accident_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vehicular accidents`
+  String get Accident_2 {
+    return Intl.message(
+      'Vehicular accidents',
+      name: 'Accident_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bicycle accidents`
+  String get Accident_3 {
+    return Intl.message(
+      'Bicycle accidents',
+      name: 'Accident_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Train accidents `
+  String get Accident_4 {
+    return Intl.message(
+      'Train accidents ',
+      name: 'Accident_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fire accidents`
+  String get Accident_5 {
+    return Intl.message(
+      'Fire accidents',
+      name: 'Accident_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Building collapses`
+  String get Accident_6 {
+    return Intl.message(
+      'Building collapses',
+      name: 'Accident_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Recorded problems' key
+
+  /// `Solved problems`
+  String get Solved_problems {
+    return Intl.message(
+      'Solved problems',
+      name: 'Solved_problems',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
