@@ -133,6 +133,20 @@
 "DeleteAccountMessage":"Deleting your account will remove all your information from our database. And this cannot be undone.",
 "Cancel":"Cancel",
 "ConfirmDelete":"Delete Account ",
-"Search":"Search here "
-
+"Search":"Search here ",
+"Problem_1":"Cracks in buildings",
+"Problem_2":"Broken sewage networks",
+"Problem_3":"Broken traffic lights",
+"Problem_4":"Continuous traffic congestion",
+"Problem_5":"Problem with alarm signals or sirens",
+"Problem_6":"Environmental problems",
+"Problem_7":"Water leaks",
+"Accident_1":"Minor traffic accidents",
+"Accident_2":"Vehicular accidents",
+"Accident_3":"Bicycle accidents",
+"Accident_4":"Train accidents ",
+"Accident_5":"Fire accidents",
+"Accident_6":"Building collapses",
+"Recorded problems":"Recorded problems",
+"Solved_problems":"Solved problems"
 }

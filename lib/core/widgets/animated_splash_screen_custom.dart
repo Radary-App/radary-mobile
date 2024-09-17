@@ -10,7 +10,7 @@ class AnimatedSplashScreenCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: 'assets/images/radaryLogoEn.png',
+      splash: 'assets/images/logo_app.png',
       nextScreen: const OnBoardingScreen(),
       backgroundColor: Colors.white,
       splashTransition: SplashTransition.scaleTransition,
