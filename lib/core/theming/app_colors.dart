@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
 
- class AppColors {
-     static const Color black = Color(0xff000000);
-
- }
-const primaryColor = Color(0xff0F54FF);
-const black = Color(0xff000000);
-const gray100 = Color(0xff8A8A8A);
-const gray = Color(0xff9E9E9E);
-const graycostomDD = Color(0xffDDDDDD);
+const blue = Color(0xff045BA2);
+const babyblue = Color(0xff3266CE);
+const lightblue = Color(0xff3A4CBA);
 const white = Color(0xffFFFFFF);
-const whiteF5F5F5 = Color(0xffF5F5F5);
-const gray200 = Color(0xffF5F5F5);
-const gray300 = Color.fromARGB(255, 252, 233, 233);
-const gray400 = Color(0xffAFAFAF);
-const gray666 = Color(0xff666666);
-const red = Color(0xffEF4444);
-const darkBlue = Color(0xff242424);
-const yellow = Color(0xFFFFE500);
-const gray880 = Color(0xff727880);
-const blue209 = Color(0xff2097EE);
-const green23 = Color(0xff23CF51);
-const Color moreLightGray = Color(0xFFFDFDFF);
-const Color lighterGray = Color(0xFFEDEDED);
-const Color lightBlue = Color(0xffD4E1FF);
-const Color lighterBlue = Color(0xff0039C6);
-const Color blue54 = Color(0xff0F54FF);
+const offwhite = Color(0xffD9D9D9);
+const black = Color(0xff000000);
+const purple = Color(0xffC65BCF);
+const darkgray = Color(0xff909090);
+const lightgray = Color(0xff8F8F8F);
+const gray = Color(0xff818181);
+const green = Color(0xff00C52B);
+const red = Color(0xffFA1100);
+const bluelogo = Color(0xff1230AE);
+

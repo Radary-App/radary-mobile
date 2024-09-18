@@ -32,11 +32,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفعيل مميزات الوصول"),
         "AccidentReport":
             MessageLookupByLibrary.simpleMessage("الإبلاغ عن حادثة"),
+        "Accident_1": MessageLookupByLibrary.simpleMessage("حوادث مرور بسيطة"),
+        "Accident_2": MessageLookupByLibrary.simpleMessage("حوادث دهس"),
+        "Accident_3": MessageLookupByLibrary.simpleMessage("حوادث الدراجات"),
+        "Accident_4": MessageLookupByLibrary.simpleMessage("حوادث القطارات"),
+        "Accident_5": MessageLookupByLibrary.simpleMessage("حوادث الحريق"),
+        "Accident_6": MessageLookupByLibrary.simpleMessage("انهيارات المباني"),
         "Accidents": MessageLookupByLibrary.simpleMessage("الحوادث"),
         "Address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "All": MessageLookupByLibrary.simpleMessage("الكل"),
-        "AllowDuringUsingApp": MessageLookupByLibrary.simpleMessage(
-            "السماح فقط عند استخدام التطبيق"),
+        "AllowDuringUsingApp":
+            MessageLookupByLibrary.simpleMessage("السماح عند استخدام التطبيق"),
         "Answer1": MessageLookupByLibrary.simpleMessage(
             " يستخدم التطبيق خاصية تحديد الموقع الجغرافي لتحديد مكان المشكلة بدقة، مما يساعد الجهات المعنية في العثور على المشكلة ومعالجتها بشكل أسرع. تُستخدم بيانات موقعك فقط لأغراض الإبلاغ ولا يتم مشاركتها مع أطراف ثالثة."),
         "Answer2": MessageLookupByLibrary.simpleMessage(
@@ -55,13 +61,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "Center": MessageLookupByLibrary.simpleMessage("مركز"),
         "ChangePhoneMessage": MessageLookupByLibrary.simpleMessage(
-            " تم إرسال رسالة نصية إلى هذا الرقم تحتوي على رمز مكون من أربعة أرقام,قم بإدخال هذا الرمز هنا"),
+            "تم إرسال شفرة مكونة من اربع ارقام على رقم الهاتف المسجل"),
         "ChooseLanguage": MessageLookupByLibrary.simpleMessage("اختيار اللغة"),
         "ColorChangeAndContrast":
             MessageLookupByLibrary.simpleMessage("تعديل الألوان والتباين"),
         "ConfirmBtn": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "ConfirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
-        "ConfirmCodeBtn": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
         "ConfirmDelete": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "ConfirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة السر"),
@@ -98,15 +103,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "FirstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "FirstReport": MessageLookupByLibrary.simpleMessage("بلاغ رقم 1"),
         "ForAccessibility":
-            MessageLookupByLibrary.simpleMessage("لميزات إمكانية الوصول"),
+            MessageLookupByLibrary.simpleMessage("لمميزات إمكانية الوصول"),
         "ForContinueReporting":
             MessageLookupByLibrary.simpleMessage("لمتابعة البلاغ"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
         "Governorate": MessageLookupByLibrary.simpleMessage("محافظة"),
         "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-        "HowItWorks": MessageLookupByLibrary.simpleMessage(
-            " يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها بضغطة واحدة."),
         "Issues": MessageLookupByLibrary.simpleMessage("المشاكل"),
         "IssuesReport":
             MessageLookupByLibrary.simpleMessage("الإبلاغ عن المشاكل العامة"),
@@ -116,12 +119,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "LocationAccess":
             MessageLookupByLibrary.simpleMessage("إذن الوصول للموقع"),
         "Log_In": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
-        "Log_InBtn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Message1":
+            MessageLookupByLibrary.simpleMessage("ساهم في تحسين منطقتك"),
+        "Message2": MessageLookupByLibrary.simpleMessage(
+            "راداري للمساعدة في الإبلاغ عن مشاكل الشارع بسهولة وسرعة "),
+        "Message3":
+            MessageLookupByLibrary.simpleMessage("أبلغ عن أي مشكلة في ثوان"),
+        "Message4": MessageLookupByLibrary.simpleMessage(
+            "بضغطة واحدة، يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها"),
+        "Message5": MessageLookupByLibrary.simpleMessage("معاً لنحدث فرقاً"),
+        "Message6": MessageLookupByLibrary.simpleMessage(
+            "نحن هنا لنساعدك في الإبلاغ عن المشاكل والتصرف بسرعة"),
         "Month": MessageLookupByLibrary.simpleMessage("شهر"),
         "MyProfile": MessageLookupByLibrary.simpleMessage("ملفي"),
-        "MyProfileBtn": MessageLookupByLibrary.simpleMessage("ملفي"),
         "MyReports": MessageLookupByLibrary.simpleMessage("بلاغاتي"),
-        "MyReportsBtn": MessageLookupByLibrary.simpleMessage("بلاغاتي"),
         "NeverAllow": MessageLookupByLibrary.simpleMessage("عدم السماح"),
         "NightMode": MessageLookupByLibrary.simpleMessage("الوضع النهاري"),
         "No": MessageLookupByLibrary.simpleMessage("لا"),
@@ -133,7 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "PassWord": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "Password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "Permission": MessageLookupByLibrary.simpleMessage(
-            "منح هذا التطبيق الإذن بالوصول إلى الكاميرا"),
+            "منح هذا التطبيق الإذن بالوصول إلى الكاميرا؟"),
         "Permissions": MessageLookupByLibrary.simpleMessage("الأذونات"),
         "PersonalInformation":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
@@ -146,6 +157,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إضافة تفاصيل"),
         "PhotosAccess":
             MessageLookupByLibrary.simpleMessage("إذن الوصول للصور"),
+        "Problem_1": MessageLookupByLibrary.simpleMessage("تصدعات في المباني"),
+        "Problem_2":
+            MessageLookupByLibrary.simpleMessage("شبكات الصرف الصحي المعطلة"),
+        "Problem_3":
+            MessageLookupByLibrary.simpleMessage("إشارات المرور المعطلة"),
+        "Problem_4":
+            MessageLookupByLibrary.simpleMessage("الإزدحام المروري المستمر"),
+        "Problem_5": MessageLookupByLibrary.simpleMessage(
+            "مشكلة في إشارات الإنذار أو صفارات الإنذار"),
+        "Problem_6": MessageLookupByLibrary.simpleMessage("مشاكل بيئية"),
+        "Problem_7": MessageLookupByLibrary.simpleMessage("تسربات المياه"),
         "Question1":
             MessageLookupByLibrary.simpleMessage("كيف يستخدم التطبيق موقعي؟"),
         "Question2": MessageLookupByLibrary.simpleMessage(
@@ -171,25 +193,24 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لقد تم حل المشكلة بنجاح!"),
         "ResetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة السر"),
+        "Search": MessageLookupByLibrary.simpleMessage("ابحث هنا"),
         "SecondReport": MessageLookupByLibrary.simpleMessage("بلاغ رقم 2"),
         "SendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
         "Settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-        "SettingsBtn": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "SignOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
-        "SignOutBtn": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "ستحتاج إلى إدخال اسم المستخدم الخاص بك وكلمة المرور في المرة القادمة تريد تسجيل الدخول"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
         "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "Solved_problems":
+            MessageLookupByLibrary.simpleMessage("المشاكل التي تم حلها"),
         "Sound": MessageLookupByLibrary.simpleMessage("الصوت"),
         "SoundBtn": MessageLookupByLibrary.simpleMessage("تشغيل الصوت"),
-        "SoundOn": MessageLookupByLibrary.simpleMessage("تشغيل الصوت"),
+        "SoundOn": MessageLookupByLibrary.simpleMessage("تعديل الصوت"),
         "Suggestion": MessageLookupByLibrary.simpleMessage("لإعطاء اقتراح"),
         "Suggestions": MessageLookupByLibrary.simpleMessage("للاقتراحات"),
         "SupportAndHelp":
-            MessageLookupByLibrary.simpleMessage("الدعم والمساعدة"),
-        "SupportAndHelpBtn":
             MessageLookupByLibrary.simpleMessage("الدعم والمساعدة"),
         "ThankMsg": MessageLookupByLibrary.simpleMessage(
             "اقتراحاتك تساعدنا على تحسين خدماتنا!"),

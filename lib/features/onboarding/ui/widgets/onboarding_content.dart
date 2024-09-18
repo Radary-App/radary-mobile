@@ -43,8 +43,8 @@ class OnboardingContent extends StatelessWidget {
           effect: ExpandingDotsEffect(
             dotHeight: 10.h,
             dotWidth: 10.w,
-            activeDotColor: primaryColor,
-            dotColor: graycostomDD,
+            // activeDotColor: primaryColor,
+            // dotColor: graycostomDD,
             expansionFactor: 2.5.w,
             spacing: 5.0.w,
           ),
