@@ -10,15 +10,15 @@ class OnboardingItems {
       OnboardingInfo(
           title: S.of(context).Message1,
           description: S.of(context).Message2,
-          image: Assetsdata.welcome_1),
+          image: AssetsData.welcome_1),
       OnboardingInfo(
           title: S.of(context).Message3,
           description: S.of(context).Message4,
-          image: Assetsdata.welcome_3),
+          image: AssetsData.welcome_3),
       OnboardingInfo(
           title: S.of(context).Message5,
           description: S.of(context).Message6,
-          image: Assetsdata.welcome_3),
+          image: AssetsData.welcome_3),
     ];
   }
 }

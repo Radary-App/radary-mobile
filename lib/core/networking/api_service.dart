@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:radary/core/networking/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
+import '../../features/login/data/models/login_request_body.dart';
+import '../../features/login/data/models/login_response.dart';
 
 
 part 'api_service.g.dart';
@@ -9,13 +11,10 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-  // @POST(ApiConstants.login)
-  // Future<LoginResponse> login(
-  //   @Body() LoginRequestBody loginRequestBody,
-  // );
+  @POST(ApiConstants.login)
+  Future<LoginResponse> login(
+    @Body() LoginRequestBody loginRequestBody,
+  );
 
-  // @POST("api/register")
-  // Future<SignupResponse> signup(
-  //   @Body() SignupRequestBody signupRequestBody,
-  // );
+  
 }

@@ -14,7 +14,7 @@ class AppTextFormField extends StatelessWidget {
   final bool? isObscureText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
-  
+
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
@@ -33,7 +33,8 @@ class AppTextFormField extends StatelessWidget {
     this.backgroundColor,
     this.controller,
     required this.validator,
-    this.isNumericKeyboard, this.prefixIcon,
+    this.isNumericKeyboard,
+    this.prefixIcon,
   });
 
   @override
@@ -50,7 +51,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                // color: primaryColor,
+                color: blue,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -58,7 +59,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                // color: lighterGray,
+                color: gray,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -77,11 +78,11 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        // hintStyle: hintStyle ?? AppTextStyles.font14gray666Regular,
+        hintStyle: hintStyle ?? AppTextStyles.font20BlackRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
-        // fillColor: backgroundColor ?? gray200,
+        fillColor: backgroundColor ?? white,
         filled: true,
       ),
       obscureText: isObscureText ?? false,

@@ -1,5 +1,6 @@
-abstract class Assetsdata {
+abstract class AssetsData {
   static const logo = "assets/images/radarylogo.png";
+  static const logoRadaryText="assets/svgs/logo_radary_text.svg";
   static const accesability = "assets/images/accessability.png";
   static const accident = "assets/images/accident.png";
   static const apple = "assets/images/apple.png";
@@ -53,5 +54,4 @@ abstract class Assetsdata {
   static const whitecircle = "assets/svgs/white_circle.svg";
   static const mobileuser = "assets/svgs/mobile_user.svg";
   static const headphones = "assets/svgs/Headphones_fill (1).svg";
-  
 }
