@@ -9,7 +9,7 @@ class AppTextButton extends StatelessWidget {
   final double? horzontalPadding;
   final double? bottonWidth;
   final double? bouttonHeight;
-  final Color? backgrondColor;
+  final Color? backgroundColor;
 
   final void Function()? onPressed;
   final String buttonText;
@@ -25,7 +25,7 @@ class AppTextButton extends StatelessWidget {
     this.horzontalPadding,
     this.bottonWidth,
     this.bouttonHeight,
-    this.backgrondColor,
+    this.backgroundColor,
   });
 
   @override
@@ -38,7 +38,9 @@ class AppTextButton extends StatelessWidget {
             ),
           ),
           // backgroundColor:
-          //     WidgetStatePropertyAll(backgrondColor ?? primaryColor),
+          backgroundColor: WidgetStateProperty.all<Color>(
+            backgroundColor ?? blue,
+          ),
           padding: WidgetStateProperty.all<EdgeInsets>(
             EdgeInsets.symmetric(
                 horizontal: horzontalPadding?.w ?? 12.w,
