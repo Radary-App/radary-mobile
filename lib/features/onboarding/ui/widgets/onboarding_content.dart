@@ -7,7 +7,6 @@ import '../../../../core/theming/app_text_styles.dart';
 import '../../data/models/onboarding_info.dart';
 import '../../data/repo/onboarding_items.dart';
 
-
 class OnboardingContent extends StatelessWidget {
   const OnboardingContent({
     super.key,
@@ -27,27 +26,14 @@ class OnboardingContent extends StatelessWidget {
         SizedBox(height: 20.h),
         Text(
           item.title,
-          // style: AppTextStyles.font32BlackSemiBold,
+          style: AppTextStyles.font20BlueRegular,
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 16.h),
         Text(
           item.description,
           textAlign: TextAlign.center,
-          // style: AppTextStyles.font20Gray100Regular,
-        ),
-        SizedBox(height: 30.h),
-        SmoothPageIndicator(
-          controller: pageController,
-          count: OnboardingItems().getItems(context).length,
-          effect: ExpandingDotsEffect(
-            dotHeight: 10.h,
-            dotWidth: 10.w,
-            // activeDotColor: primaryColor,
-            // dotColor: graycostomDD,
-            expansionFactor: 2.5.w,
-            spacing: 5.0.w,
-          ),
+          style: AppTextStyles.font20BlackRegular,
         ),
       ],
     );

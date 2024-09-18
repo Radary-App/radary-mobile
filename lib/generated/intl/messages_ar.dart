@@ -223,7 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرحباً يا ...."),
         "Year": MessageLookupByLibrary.simpleMessage("سنة"),
         "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
-        "getStarted": MessageLookupByLibrary.simpleMessage("بدء الاستخدام"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال")

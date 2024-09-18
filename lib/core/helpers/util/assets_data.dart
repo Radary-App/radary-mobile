@@ -13,9 +13,9 @@ abstract class Assetsdata {
   static const river = "assets/images/river.png";
   static const traffic = "assets/images/traffic.png";
   static const trash = "assets/images/trash.png";
-  static const welcome_1 = "assets/images/welcome_1.png";
-  static const welcome_2 = "assets/images/welcome_2.png";
-  static const welcome_3 = "assets/images/welcome_3.png";
+  static const welcome_1 = "assets/svgs/welcome_1.svg";
+  static const welcome_2 = "assets/svgs/welcome_2.svg";
+  static const welcome_3 = "assets/svgs/welcome_3.svg";
   static const person = "assets/svgs/person.svg";
   static const bluecircle = "assets/svgs/blue_circle.svg";
   static const camera = "assets/svgs/Camera.svg";

@@ -16,7 +16,7 @@ class RadaryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(430, 932),
+      designSize: const Size(428, 926),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
@@ -34,6 +34,7 @@ class RadaryApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
+          locale: const Locale('ar'),
           title: 'Radary',
           home: const AnimatedSplashScreenCustom(),
         );
