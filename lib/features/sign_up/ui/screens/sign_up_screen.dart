@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:radary/core/helpers/extensions/app_navigotion.dart';
+import 'package:radary/core/routing/route.dart';
+import 'package:radary/features/onboarding/ui/screens/on_boarding_screens.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/helpers/util/assets_data.dart';
@@ -64,8 +67,8 @@ class SignupScreen extends StatelessWidget {
                       buttonText: S.of(context).next,
                       textStyle: AppTextStyles.font16Whiteregular,
                       onPressed: () {
-                      
-                        validateThenDoSignup(context);
+                        context.pushNamed(Routes.homeScreen);
+                        // validateThenDoSignup(context);
                       },
                     ),
                     verticalSpace(30),

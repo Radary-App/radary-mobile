@@ -224,6 +224,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "Year": MessageLookupByLibrary.simpleMessage("سنة"),
         "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
+        "homeBanner1":
+            MessageLookupByLibrary.simpleMessage("ضغطة واحدة، يمكنك الإبلاغ"),
+        "homeBanner2": MessageLookupByLibrary.simpleMessage(
+            "يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها"),
+        "homeBanner3": MessageLookupByLibrary.simpleMessage("تواجهها"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال")
