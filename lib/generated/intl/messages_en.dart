@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
         "Dont_Have":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("Dont Have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
@@ -198,6 +198,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lots of notifications"),
         "Reason5": MessageLookupByLibrary.simpleMessage("Personal reasons"),
         "Reason6": MessageLookupByLibrary.simpleMessage("Other"),
+        "Recorded_problems":
+            MessageLookupByLibrary.simpleMessage("Recorded problems"),
         "ReportDate": MessageLookupByLibrary.simpleMessage("Report Date "),
         "ReportDoneMessage": MessageLookupByLibrary.simpleMessage(
             "Your report has reached the competent authorities, the problem is being resolved"),
@@ -236,6 +238,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "Year": MessageLookupByLibrary.simpleMessage("year"),
         "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "homeBanner1":
+            MessageLookupByLibrary.simpleMessage("One click, you can report"),
+        "homeBanner2": MessageLookupByLibrary.simpleMessage(
+            "You can report incidents and problems you encounter"),
+        "homeBanner3": MessageLookupByLibrary.simpleMessage("You encounter"),
         "name": MessageLookupByLibrary.simpleMessage("name"),
         "next": MessageLookupByLibrary.simpleMessage("next"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend ")
