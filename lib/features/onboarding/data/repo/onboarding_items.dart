@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/helpers/util/assets_data.dart';
 import '../../../../generated/l10n.dart';
 import '../models/onboarding_info.dart';
 
@@ -7,17 +8,17 @@ class OnboardingItems {
   List<OnboardingInfo> getItems(BuildContext context) {
     return [
       OnboardingInfo(
-          title: S.of(context).Accessibility,
-          description: S.of(context).AccessibilityDescription,
-          image: "assets/svgs/Onboarding_1.svg"),
+          title: S.of(context).Message1,
+          description: S.of(context).Message2,
+          image: AssetsData.welcome_1),
       OnboardingInfo(
-          title: S.of(context).Answer1,
-          description: S.of(context).Answer2,
-          image: "assets/svgs/Onboarding_2.svg"),
+          title: S.of(context).Message3,
+          description: S.of(context).Message4,
+          image: AssetsData.welcome_3),
       OnboardingInfo(
-          title: S.of(context).Answer3,
-          description: S.of(context).Answer4,
-          image: "assets/svgs/Onboarding_3.svg"),
+          title: S.of(context).Message5,
+          description: S.of(context).Message6,
+          image: AssetsData.welcome_3),
     ];
   }
 }

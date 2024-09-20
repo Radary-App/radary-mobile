@@ -83,7 +83,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "DemandEveryTime":
             MessageLookupByLibrary.simpleMessage("الطلب في كل مرة"),
         "DeviceSettings": MessageLookupByLibrary.simpleMessage("نظام الهاتف"),
-        "Dont_Have": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
         "Emergency": MessageLookupByLibrary.simpleMessage("الطوارئ"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("إنهاء"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
@@ -223,21 +222,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرحباً يا ...."),
         "Year": MessageLookupByLibrary.simpleMessage("سنة"),
         "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
-        "address": MessageLookupByLibrary.simpleMessage("عنوان"),
-        "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
-        "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
-        "getStarted": MessageLookupByLibrary.simpleMessage("بدء الاستخدام"),
-        "my_address": MessageLookupByLibrary.simpleMessage(
-            "الدقهلية_المنصورة_ شارع جيهان"),
-        "my_date": MessageLookupByLibrary.simpleMessage("2024/8/17"),
-        "my_details1": MessageLookupByLibrary.simpleMessage(
-            "اصطدام بين سيارة نقل ثقيل و سيارة من الامام في منتصف طريق سريع."),
-        "my_details2": MessageLookupByLibrary.simpleMessage(
-            "قمامة و اثاث قديم ملقى في الشارع و يجذب الحشرات و يعطل مرور الناس."),
-        "my_details3": MessageLookupByLibrary.simpleMessage(
-            "قمامة و حشائش غير مفيدة على ضفة النهر"),
-        "my_notes":
-            MessageLookupByLibrary.simpleMessage("في زبالة فالشارع منظرها وحش"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
+        "homeBanner1":
+            MessageLookupByLibrary.simpleMessage("ضغطة واحدة، يمكنك الإبلاغ"),
+        "homeBanner2": MessageLookupByLibrary.simpleMessage(
+            "يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها"),
+        "homeBanner3": MessageLookupByLibrary.simpleMessage("تواجهها"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "recapture": MessageLookupByLibrary.simpleMessage("إعادة التقاط"),

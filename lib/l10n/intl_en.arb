@@ -19,7 +19,6 @@
 "ForgetPassword":"Forget Password?",
 "OR":"Or",
 "Log_InBtn":"Log in ",
-"Dont_Have":"Don't have an account?",
 "Sign_UpBtn":" Sign Up  ",
 "EnterYourPhoneNumber":"Enter phone number",
 "PhoneNumberExample":"+20 1*********",
@@ -118,7 +117,6 @@
 "Reason6":"Other",
 "OtherMsg":"Write message here",
 "Limit":"0/50",
-
 "SupportAndHelp":"Help and support",
 "Question1":"How does the app use my location?",
 "Question2":"What types of problems can I report?",

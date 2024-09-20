@@ -1,11 +1,10 @@
-// lib/features/onboarding/ui/screens/onboarding_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:radary/core/helpers/extensions/app_navigotion.dart';
-
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../core/routing/route.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../generated/l10n.dart';
 import '../../data/models/onboarding_info.dart';
@@ -25,42 +24,41 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _pageController = PageController();
   bool _isLastPage = false;
 
-  void _updateIsLastPage(int currentPage, int totalPages) {
-    setState(() {
-      _isLastPage = currentPage == totalPages - 1;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final onboardingItems = OnboardingItems();
     final List<OnboardingInfo> items = onboardingItems.getItems(context);
+    final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
 
     return Scaffold(
       body: SafeArea(
         child: PageView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          onPageChanged: (value) => _updateIsLastPage(value, items.length),
+          reverse: isArabic,
+          physics: const BouncingScrollPhysics(),
+          onPageChanged: (index) => _updateIsLastPage(index, items.length),
           itemCount: items.length,
           controller: _pageController,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    _buildSkipButton(items.length),
-                    OnboardingContent(
-                      item: items[index],
-                      pageController: _pageController,
-                    ),
-                    SizedBox(height: 30.h),
-                    _buildNextButton(context),
-                  ],
-                ),
-              ),
-            );
+            return _buildPageContent(context, items, index);
           },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPageContent(
+      BuildContext context, List<OnboardingInfo> items, int index) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            _buildSkipButton(items.length),
+            OnboardingContent(
+                item: items[index], pageController: _pageController),
+            SizedBox(height: 177.h),
+            _buildBottomControls(context, items.length),
+          ],
         ),
       ),
     );
@@ -70,13 +68,33 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
     return Align(
       alignment: Alignment.topRight,
       child: TextButton(
-        onPressed: () => skipToLastPage(
-            _pageController, totalItems), // استخدام وظيفة المساعد
-        child: Text(
-          S.of(context).Skip,
-          // style: AppTextStyles.font20Gray100Regular,
-        ),
+        onPressed: () => skipToLastPage(_pageController, totalItems),
+        child: Text(S.of(context).Skip, style: AppTextStyles.font24BlueMedium),
       ),
+    );
+  }
+
+  Widget _buildBottomControls(BuildContext context, int totalItems) {
+    final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        _buildNextButton(context),
+        SmoothPageIndicator(
+          controller: _pageController,
+          count: totalItems,
+          effect: ExpandingDotsEffect(
+            activeDotColor: blue,
+            dotColor: gray,
+            dotHeight: 10.h,
+            dotWidth: 20.w,
+            expansionFactor: 2.5.w,
+            spacing: 5.0.w,
+          ),
+          textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
+        ),
+      ],
     );
   }
 
@@ -84,14 +102,24 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
     return _isLastPage
         ? OnBoardingeButton(
             titl: S.of(context).getStarted,
-            onPressed: () => context.pushNamed(Routes.signUpScreen),
+            onPressed: () => context.pushNamed(Routes.loginScreen),
           )
-        : OnBoardingeButton(
-            titl: S.of(context).next,
+        : OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              backgroundColor: blue,
+              shape: const CircleBorder(),
+            ),
             onPressed: () => _pageController.nextPage(
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeIn,
             ),
+            child: const Icon(Icons.arrow_forward, color: white),
           );
+  }
+
+  void _updateIsLastPage(int currentPage, int totalPages) {
+    setState(() {
+      _isLastPage = currentPage == totalPages - 1;
+    });
   }
 }

@@ -11,20 +11,10 @@ class OnBoardingeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: ButtonStyle(
-        // backgroundColor: WidgetStateProperty.all(primaryColor),
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        minimumSize: WidgetStateProperty.all(Size(double.maxFinite, 50.h)),
-        shape: WidgetStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.w),
-          ),
-        ),
-      ),
       onPressed: onPressed,
       child: Text(
         titl,
-        // style: AppTextStyles.font16BWhiteBold,
+        style: AppTextStyles.font36BlueSemiBold,
       ),
     );
   }

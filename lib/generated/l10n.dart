@@ -250,16 +250,6 @@ class S {
     );
   }
 
-  /// `Don't have an account?`
-  String get Dont_Have {
-    return Intl.message(
-      'Don\'t have an account?',
-      name: 'Dont_Have',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// ` Sign Up  `
   String get Sign_UpBtn {
     return Intl.message(
@@ -1520,7 +1510,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'Recorded problems' key
+  /// `Recorded problems`
+  String get Recorded_problems {
+    return Intl.message(
+      'Recorded problems',
+      name: 'Recorded_problems',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Solved problems`
   String get Solved_problems {
@@ -1637,6 +1635,46 @@ class S {
     return Intl.message(
       'There is trash in the street and it looks bad',
       name: 'my_notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One click, you can report`
+  String get homeBanner1 {
+    return Intl.message(
+      'One click, you can report',
+      name: 'homeBanner1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can report incidents and problems you encounter`
+  String get homeBanner2 {
+    return Intl.message(
+      'You can report incidents and problems you encounter',
+      name: 'homeBanner2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You encounter`
+  String get homeBanner3 {
+    return Intl.message(
+      'You encounter',
+      name: 'homeBanner3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dont Have an account?`
+  String get Dont_Have {
+    return Intl.message(
+      'Dont Have an account?',
+      name: 'Dont_Have',
       desc: '',
       args: [],
     );
