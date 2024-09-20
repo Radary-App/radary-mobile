@@ -148,5 +148,17 @@
 "Accident_5":"Fire accidents",
 "Accident_6":"Building collapses",
 "Recorded problems":"Recorded problems",
-"Solved_problems":"Solved problems"
+"Solved_problems":"Solved problems",
+"recapture":"Recapture",
+"address":"Address",
+"details":"Details",
+"my_address":"Aldakahlia-Mansoura-Gehan street",
+"my_details1":"A collision between a heavy transport vehicle and a car from the front in the middle of a highway",
+"my_details2":"Garbage and old furniture lying in the street and attracting insects and disrupting the passage of people.",
+"my_details3":"Useless garbage and weeds on the bank of the river",
+"date":"Date",
+"my_date":"2024/8/17",
+"user_notes":"User notes",
+"my_notes":"There is trash in the street and it looks bad"
+
 }
