@@ -1510,15 +1510,7 @@ class S {
     );
   }
 
-  /// `Recorded problems`
-  String get Recorded_problems {
-    return Intl.message(
-      'Recorded problems',
-      name: 'Recorded_problems',
-      desc: '',
-      args: [],
-    );
-  }
+  // skipped getter for the 'Recorded problems' key
 
   /// `Solved problems`
   String get Solved_problems {

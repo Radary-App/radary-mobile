@@ -157,6 +157,12 @@
 "date":"Date",
 "my_date":"2024/8/17",
 "user_notes":"User notes",
-"my_notes":"There is trash in the street and it looks bad"
+"my_notes":"There is trash in the street and it looks bad",
+"homeBanner1": "One click, you can report",
+"homeBanner2": "You can report incidents and problems you encounter",
+"homeBanner3": "You encounter",
+"Dont_Have":"Dont Have an account?"
+
+
 
 }

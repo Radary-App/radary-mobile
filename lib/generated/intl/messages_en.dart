@@ -198,8 +198,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lots of notifications"),
         "Reason5": MessageLookupByLibrary.simpleMessage("Personal reasons"),
         "Reason6": MessageLookupByLibrary.simpleMessage("Other"),
-        "Recorded_problems":
-            MessageLookupByLibrary.simpleMessage("Recorded problems"),
         "ReportDate": MessageLookupByLibrary.simpleMessage("Report Date "),
         "ReportDoneMessage": MessageLookupByLibrary.simpleMessage(
             "Your report has reached the competent authorities, the problem is being resolved"),
