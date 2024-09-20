@@ -58,52 +58,31 @@ extension DataSourceExtension on DataSource {
   ApiErrorModel getFailure() {
     switch (this) {
       case DataSource.NO_CONTENT:
-        return ApiErrorModel(
-            code: ResponseCode.NO_CONTENT, message: ResponseMessage.NO_CONTENT);
+        return ApiErrorModel(error: ResponseMessage.NO_CONTENT);
       case DataSource.BAD_REQUEST:
-        return ApiErrorModel(
-            code: ResponseCode.BAD_REQUEST,
-            message: ResponseMessage.BAD_REQUEST);
+        return ApiErrorModel(error: ResponseMessage.BAD_REQUEST);
       case DataSource.FORBIDDEN:
-        return ApiErrorModel(
-            code: ResponseCode.FORBIDDEN, message: ResponseMessage.FORBIDDEN);
+        return ApiErrorModel(error: ResponseMessage.FORBIDDEN);
       case DataSource.UNAUTHORISED:
-        return ApiErrorModel(
-            code: ResponseCode.UNAUTHORISED,
-            message: ResponseMessage.UNAUTHORISED);
+        return ApiErrorModel(error: ResponseMessage.UNAUTHORISED);
       case DataSource.NOT_FOUND:
-        return ApiErrorModel(
-            code: ResponseCode.NOT_FOUND, message: ResponseMessage.NOT_FOUND);
+        return ApiErrorModel(error: ResponseMessage.NOT_FOUND);
       case DataSource.INTERNAL_SERVER_ERROR:
-        return ApiErrorModel(
-            code: ResponseCode.INTERNAL_SERVER_ERROR,
-            message: ResponseMessage.INTERNAL_SERVER_ERROR);
+        return ApiErrorModel(error: ResponseMessage.INTERNAL_SERVER_ERROR);
       case DataSource.CONNECT_TIMEOUT:
-        return ApiErrorModel(
-            code: ResponseCode.CONNECT_TIMEOUT,
-            message: ResponseMessage.CONNECT_TIMEOUT);
+        return ApiErrorModel(error: ResponseMessage.CONNECT_TIMEOUT);
       case DataSource.CANCEL:
-        return ApiErrorModel(
-            code: ResponseCode.CANCEL, message: ResponseMessage.CANCEL);
+        return ApiErrorModel(error: ResponseMessage.CANCEL);
       case DataSource.RECEIVE_TIMEOUT:
-        return ApiErrorModel(
-            code: ResponseCode.RECEIVE_TIMEOUT,
-            message: ResponseMessage.RECEIVE_TIMEOUT);
+        return ApiErrorModel(error: ResponseMessage.RECEIVE_TIMEOUT);
       case DataSource.SEND_TIMEOUT:
-        return ApiErrorModel(
-            code: ResponseCode.SEND_TIMEOUT,
-            message: ResponseMessage.SEND_TIMEOUT);
+        return ApiErrorModel(error: ResponseMessage.SEND_TIMEOUT);
       case DataSource.CACHE_ERROR:
-        return ApiErrorModel(
-            code: ResponseCode.CACHE_ERROR,
-            message: ResponseMessage.CACHE_ERROR);
+        return ApiErrorModel(error: ResponseMessage.CACHE_ERROR);
       case DataSource.NO_INTERNET_CONNECTION:
-        return ApiErrorModel(
-            code: ResponseCode.NO_INTERNET_CONNECTION,
-            message: ResponseMessage.NO_INTERNET_CONNECTION);
+        return ApiErrorModel(error: ResponseMessage.NO_INTERNET_CONNECTION);
       case DataSource.DEFAULT:
-        return ApiErrorModel(
-            code: ResponseCode.DEFAULT, message: ResponseMessage.DEFAULT);
+        return ApiErrorModel(error: ResponseMessage.DEFAULT);
     }
   }
 }
@@ -132,7 +111,13 @@ ApiErrorModel _handleError(DioException error) {
       if (error.response != null &&
           error.response?.statusCode != null &&
           error.response?.statusMessage != null) {
-        return ApiErrorModel.fromJson(error.response!.data);
+        // Check if response data is a Map before parsing
+        if (error.response?.data is Map<String, dynamic>) {
+          return ApiErrorModel.fromJson(error.response!.data);
+        } else {
+          return DataSource.DEFAULT
+              .getFailure(); // Handle non-JSON responses gracefully
+        }
       } else {
         return DataSource.DEFAULT.getFailure();
       }
@@ -140,7 +125,13 @@ ApiErrorModel _handleError(DioException error) {
       if (error.response != null &&
           error.response?.statusCode != null &&
           error.response?.statusMessage != null) {
-        return ApiErrorModel.fromJson(error.response!.data);
+        // Check if response data is a Map before parsing
+        if (error.response?.data is Map<String, dynamic>) {
+          return ApiErrorModel.fromJson(error.response!.data);
+        } else {
+          return DataSource.DEFAULT
+              .getFailure(); // Handle non-JSON responses gracefully
+        }
       } else {
         return DataSource.DEFAULT.getFailure();
       }

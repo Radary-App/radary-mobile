@@ -25,80 +25,86 @@ class _SignupFormState extends State<SignupForm> {
   bool hasNumber = false;
   bool hasMinLength = false;
 
-  late TextEditingController passwordController;
-
   @override
   void initState() {
     super.initState();
-    passwordController = context.read<SignupCubit>().passwordController;
     setupPasswordControllerListener();
   }
 
   void setupPasswordControllerListener() {
-    passwordController.addListener(() {
+    final signupCubit = context.read<SignupCubit>();
+    signupCubit.passwordController.addListener(() {
       setState(() {
-        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
-        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
+        hasLowercase =
+            AppRegex.hasLowerCase(signupCubit.passwordController.text);
+        hasUppercase =
+            AppRegex.hasUpperCase(signupCubit.passwordController.text);
         hasSpecialCharacters =
-            AppRegex.hasSpecialCharacter(passwordController.text);
-        hasNumber = AppRegex.hasNumber(passwordController.text);
-        hasMinLength = AppRegex.hasMinLength(passwordController.text);
+            AppRegex.hasSpecialCharacter(signupCubit.passwordController.text);
+        hasNumber = AppRegex.hasNumber(signupCubit.passwordController.text);
+        hasMinLength =
+            AppRegex.hasMinLength(signupCubit.passwordController.text);
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final signupCubit = context.read<SignupCubit>();
+
     return Form(
-      key: context.read<SignupCubit>().formKey,
+      key: signupCubit.formKey,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Row(
             children: [
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     TitleLeft(
-              //       title: S.of(context).FirstName,
-              //     ),
-              //     SizedBox(
-              //       width: 180.w,
-              //       child: AppTextFormField(
-              //         hintText: S.of(context).FirstName,
-              //         validator: (value) {
-              //           if (value == null || value.isEmpty) {
-              //             return 'Please enter a valid firstName';
-              //           }
-              //         },
-              //         controller: context.read<SignupCubit>().fNameController,
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     TitleLeft(
-              //       title: S.of(context).LastName,
-              //     ),
-              //     SizedBox(
-              //       width: 180.w,
-              //       child: AppTextFormField(
-              //         hintText: S.of(context).LastName,
-              //         validator: (value) {
-              //           if (value == null || value.isEmpty) {
-              //             return 'Please enter a valid lastName';
-              //           }
-              //         },
-              //         controller: context.read<SignupCubit>().lNameController,
-              //       ),
-              //     ),
-              //   ],
-              // ),
+              Column(
+                children: [
+                  TitleLeft(
+                    title: S.of(context).FirstName,
+                  ),
+                  SizedBox(
+                    width: 180.w,
+                    child: AppTextFormField(
+                      hintText: S.of(context).FirstName,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter a valid first name';
+                        }
+                        return null;
+                      },
+                      controller: context.read<SignupCubit>().fNameController,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Add vertical spacing and continue with other input fields
+              horizontalSpace(8),
+              Column(
+                children: [
+                  TitleLeft(
+                    title: S.of(context).LastName,
+                  ),
+                  SizedBox(
+                    width: 180.w,
+                    child: AppTextFormField(
+                      hintText: S.of(context).LastName,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter a valid last name';
+                        }
+                        return null;
+                      },
+                      controller: context.read<SignupCubit>().lNameController,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
-          verticalSpace(18),
+          verticalSpace(20),
           TitleLeft(
             title: S.of(context).Phone_Number,
           ),
@@ -111,25 +117,11 @@ class _SignupFormState extends State<SignupForm> {
                   !AppRegex.isPhoneNumberValid(value)) {
                 return 'Please enter a valid phone number';
               }
+              return null;
             },
             controller: context.read<SignupCubit>().phoneController,
           ),
-          verticalSpace(18),
-          TitleLeft(
-            title: S.of(context).EnterEmail,
-          ),
-          AppTextFormField(
-            hintText: S.of(context).EnterEmail,
-            validator: (value) {
-              if (value == null ||
-                  value.isEmpty ||
-                  !AppRegex.isEmailValid(value)) {
-                return 'Please enter a valid email';
-              }
-            },
-            controller: context.read<SignupCubit>().emailController,
-          ),
-          verticalSpace(18),
+          verticalSpace(20),
           TitleLeft(
             title: S.of(context).Password,
           ),
@@ -165,41 +157,33 @@ class _SignupFormState extends State<SignupForm> {
                 }
                 return null;
               }),
-          verticalSpace(24),
+          verticalSpace(20),
           AppTextFormField(
-              controller: context.read<SignupCubit>().passwordController,
-              hintText: S.of(context).ConfirmPassword,
-              isObscureText: isPasswordObscureText,
-              suffixIcon: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    isPasswordObscureText = !isPasswordObscureText;
-                  });
-                },
-                child: Icon(
-                  isPasswordObscureText
-                      ? Icons.visibility_off
-                      : Icons.visibility,
-                ),
+            controller: context.read<SignupCubit>().confirmPasswordController,
+            hintText: S.of(context).ConfirmPassword,
+            isObscureText: isPasswordConfirmationObscureText,
+            suffixIcon: GestureDetector(
+              onTap: () {
+                setState(() {
+                  isPasswordConfirmationObscureText =
+                      !isPasswordConfirmationObscureText;
+                });
+              },
+              child: Icon(
+                isPasswordConfirmationObscureText
+                    ? Icons.visibility_off
+                    : Icons.visibility,
               ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'يرجى إدخال كلمة مرور';
-                } else if (!AppRegex.hasLowerCase(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل';
-                } else if (!AppRegex.hasUpperCase(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل';
-                } else if (!AppRegex.hasSpecialCharacter(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل';
-                } else if (!AppRegex.hasNumber(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل';
-                } else if (!AppRegex.hasMinLength(value)) {
-                  return 'يجب أن تكون كلمة المرور على الأقل 8 أحرف طويلة';
-                }else if(passwordController.text != context.read<SignupCubit>().passwordController.text){
-                  return 'كلمة المرور غير متطابقة';
-                }
-                return null;
-              }),
+            ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return S.of(context).PleaseEnterPasswordAgain;
+              } else if (value != signupCubit.passwordController.text) {
+                return S.of(context).PasswordsDoNotMatch;
+              }
+              return null;
+            },
+          ),
         ],
       ),
     );
@@ -207,7 +191,7 @@ class _SignupFormState extends State<SignupForm> {
 
   @override
   void dispose() {
-    passwordController.dispose();
+    // Do not dispose controllers here as they are managed by SignupCubit
     super.dispose();
   }
 }

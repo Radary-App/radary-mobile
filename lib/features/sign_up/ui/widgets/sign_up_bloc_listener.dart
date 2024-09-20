@@ -20,6 +20,7 @@ class SignupBlocListener extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           signupLoading: () {
+            FocusScope.of(context).unfocus(); // Dismiss keyboard
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -30,17 +31,25 @@ class SignupBlocListener extends StatelessWidget {
             );
           },
           signupSuccess: (signupResponse) {
-            context.pop();
-            showSuccessDialog(context);
+            if (_isDialogOpen(context)) {
+              context.pop(); // Close the loading dialog
+            }
+            showSuccessDialog(context); // Show success dialog
           },
           signupError: (error) {
-            setupErrorState(context, error);
+            if (_isDialogOpen(context)) {
+              context.pop(); // Close the loading dialog
+            }
+            setupErrorState(context, error); // Show error dialog
           },
         );
       },
       child: const SizedBox.shrink(),
     );
   }
+
+  bool _isDialogOpen(BuildContext context) =>
+      ModalRoute.of(context)?.isCurrent != true;
 
   void showSuccessDialog(BuildContext context) {
     showDialog(
@@ -75,7 +84,6 @@ class SignupBlocListener extends StatelessWidget {
   }
 
   void setupErrorState(BuildContext context, String error) {
-    context.pop();
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -91,7 +99,7 @@ class SignupBlocListener extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () {
-              context.pop();
+              context.pop(); // Close error dialog
             },
             child: Text(
               'Got it',

@@ -143,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "OtherMsg": MessageLookupByLibrary.simpleMessage("اكتب رسالة هنا"),
         "PassWord": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "Password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
+        "PasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("كلمتا المرور غير متطابقتين"),
         "Permission": MessageLookupByLibrary.simpleMessage(
             "منح هذا التطبيق الإذن بالوصول إلى الكاميرا؟"),
         "Permissions": MessageLookupByLibrary.simpleMessage("الأذونات"),
@@ -157,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إضافة تفاصيل"),
         "PhotosAccess":
             MessageLookupByLibrary.simpleMessage("إذن الوصول للصور"),
+        "PleaseEnterPasswordAgain": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال كلمة المرور مرة أخرى"),
         "Problem_1": MessageLookupByLibrary.simpleMessage("تصدعات في المباني"),
         "Problem_2":
             MessageLookupByLibrary.simpleMessage("شبكات الصرف الصحي المعطلة"),

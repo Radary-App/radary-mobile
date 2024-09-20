@@ -1671,6 +1671,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter password again`
+  String get PleaseEnterPasswordAgain {
+    return Intl.message(
+      'Please enter password again',
+      name: 'PleaseEnterPasswordAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get PasswordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'PasswordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
