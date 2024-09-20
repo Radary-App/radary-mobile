@@ -23,6 +23,7 @@ class OnBoardingScreen extends StatefulWidget {
 class OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _pageController = PageController();
   bool _isLastPage = false;
+  bool _isFirstPage = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +49,25 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
 
   Widget _buildPageContent(
       BuildContext context, List<OnboardingInfo> items, int index) {
+    bool isRtl = Localizations.localeOf(context).languageCode == 'ar';
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        reverse: isRtl,
         child: Column(
           children: [
-            _buildSkipButton(items.length),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                _buildSkipButton(items.length),
+              ],
+            ),
             OnboardingContent(
-                item: items[index], pageController: _pageController),
+              item: items[index],
+              pageController: _pageController,
+            ),
             SizedBox(height: 177.h),
             _buildBottomControls(context, items.length),
           ],
@@ -65,13 +77,18 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   Widget _buildSkipButton(int totalItems) {
-    return Align(
-      alignment: Alignment.topRight,
-      child: TextButton(
-        onPressed: () => skipToLastPage(_pageController, totalItems),
-        child: Text(S.of(context).Skip, style: AppTextStyles.font24BlueMedium),
-      ),
-    );
+    return _isFirstPage
+        ? Align(
+            alignment: Alignment.topRight,
+            child: TextButton(
+              onPressed: () => skipToLastPage(_pageController, totalItems),
+              child: Text(
+                S.of(context).Skip,
+                style: AppTextStyles.font24BlueMedium,
+              ),
+            ),
+          )
+        : const Row();
   }
 
   Widget _buildBottomControls(BuildContext context, int totalItems) {
@@ -80,7 +97,6 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        _buildNextButton(context),
         SmoothPageIndicator(
           controller: _pageController,
           count: totalItems,
@@ -94,6 +110,7 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
           ),
           textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
         ),
+        _buildNextButton(context),
       ],
     );
   }
@@ -120,6 +137,7 @@ class OnBoardingScreenState extends State<OnBoardingScreen> {
   void _updateIsLastPage(int currentPage, int totalPages) {
     setState(() {
       _isLastPage = currentPage == totalPages - 1;
+      _isFirstPage = currentPage == 1;
     });
   }
 }

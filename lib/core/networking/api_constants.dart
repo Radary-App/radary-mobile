@@ -1,6 +1,6 @@
 class ApiConstants {
-  static const String apiBaseUrl = "https://indecoding.frevva.com/";
-  static const String login = "api/login";
+  static const String apiBaseUrl = "http://10.0.2.2:8000/"; 
+  static const String login = "login/";
   static const String register = "api/register";
 }
 
