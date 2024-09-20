@@ -69,20 +69,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             },
             controller: context.read<LoginCubit>().phoneController,
           ),
-          // TitleLeft(title: S.of(context).EnterEmail),
-          // AppTextFormField(
-          //   hintText: S.of(context).EnterEmail,
-          //   validator: (value) {
-          //     if (value == null ||
-          //         value.isEmpty ||
-          //         !AppRegex.isEmailValid(value)) {
-          //       return 'الرجاء إدخال بريد إلكتروني صالح';
-          //     }
-          //     return null;
-          //   },
-          //   controller: context.read<LoginCubit>().emailController,
-          // ),
-          // const SizedBox(height: 18), // Adjust spacing as needed
+       
           TitleLeft(title: S.of(context).Password),
           AppTextFormField(
               controller: passwordController,

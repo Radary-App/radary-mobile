@@ -26,8 +26,10 @@ class UserData {
   @JsonKey(name: 'l_name')
   String? lastName;
   String? email;
+  @JsonKey(name: 'phone_number') // Add this line
+  String? phoneNumber; // Add this line
 
-  UserData({this.token, this.userName, this.firstName, this.lastName, this.email});
+  UserData({this.token, this.userName, this.firstName, this.lastName, this.email, this.phoneNumber}); // Update constructor
 
   factory UserData.fromJson(Map<String, dynamic> json) =>
       _$UserDataFromJson(json);

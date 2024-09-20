@@ -150,6 +150,8 @@
 "homeBanner1": "One click, you can report",
 "homeBanner2": "You can report incidents and problems you encounter",
 "homeBanner3": "You encounter",
-"Dont_Have":"Dont Have an account?"
+"Dont_Have":"Dont Have an account?",
+"PleaseEnterPasswordAgain":"Please enter password again",
+"PasswordsDoNotMatch":"Passwords do not match"
 
 }

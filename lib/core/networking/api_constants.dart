@@ -1,7 +1,7 @@
 class ApiConstants {
-  static const String apiBaseUrl = "http://10.0.2.2:8000/"; 
+  static const String apiBaseUrl = "https://bettercallguts.pythonanywhere.com/";
   static const String login = "login/";
-  static const String register = "api/register";
+  static const String signup = "signup/";
 }
 
 class ApiErrors {

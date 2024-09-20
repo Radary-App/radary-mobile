@@ -148,7 +148,9 @@
 "Solved_problems":"المشاكل التي تم حلها",
 "homeBanner1": "ضغطة واحدة، يمكنك الإبلاغ",
 "homeBanner2": "يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها",
-"homeBanner3": "تواجهها"
+"homeBanner3": "تواجهها",
+ "PleaseEnterPasswordAgain": "يرجى إدخال كلمة المرور مرة أخرى",
+  "PasswordsDoNotMatch": "كلمتا المرور غير متطابقتين"
 
 
 

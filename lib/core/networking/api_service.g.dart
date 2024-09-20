@@ -14,7 +14,7 @@ class _ApiService implements ApiService {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'http://10.0.2.2:8000/';
+    baseUrl ??= 'https://bettercallguts.pythonanywhere.com/';
   }
 
   final Dio _dio;
@@ -71,7 +71,7 @@ class _ApiService implements ApiService {
     )
         .compose(
           _dio.options,
-          'api/register',
+          'signup/',
           queryParameters: queryParameters,
           data: _data,
         )

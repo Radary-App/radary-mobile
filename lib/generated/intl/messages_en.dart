@@ -152,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "OtherMsg": MessageLookupByLibrary.simpleMessage("Write message here"),
         "PassWord": MessageLookupByLibrary.simpleMessage("Password"),
         "Password": MessageLookupByLibrary.simpleMessage("Password "),
+        "PasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "Permission":
             MessageLookupByLibrary.simpleMessage("Allow access to camera"),
         "Permissions": MessageLookupByLibrary.simpleMessage("Permissions"),
@@ -166,6 +168,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add description"),
         "PhotosAccess":
             MessageLookupByLibrary.simpleMessage("Allow access to your photos"),
+        "PleaseEnterPasswordAgain":
+            MessageLookupByLibrary.simpleMessage("Please enter password again"),
         "Problem_1":
             MessageLookupByLibrary.simpleMessage("Cracks in buildings"),
         "Problem_2":
