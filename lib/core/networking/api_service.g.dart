@@ -14,7 +14,7 @@ class _ApiService implements ApiService {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://indecoding.frevva.com/';
+    baseUrl ??= 'http://10.0.2.2:8000/';
   }
 
   final Dio _dio;
@@ -37,7 +37,7 @@ class _ApiService implements ApiService {
     )
         .compose(
           _dio.options,
-          'api/login',
+          'login/',
           queryParameters: queryParameters,
           data: _data,
         )

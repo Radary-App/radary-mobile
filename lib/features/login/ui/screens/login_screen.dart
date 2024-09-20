@@ -67,7 +67,7 @@ void validateThenDoLogin(BuildContext context) {
   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
     context.read<LoginCubit>().emitLoginStates(
           LoginRequestBody(
-            email: context.read<LoginCubit>().emailController.text,
+            phone: context.read<LoginCubit>().phoneController.text,
             password: context.read<LoginCubit>().passwordController.text,
           ),
         );

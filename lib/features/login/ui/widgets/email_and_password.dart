@@ -54,20 +54,35 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TitleLeft(title: S.of(context).EnterEmail),
+          TitleLeft(
+            title: S.of(context).Phone_Number,
+          ),
           AppTextFormField(
-            hintText: S.of(context).EnterEmail,
+            hintText: S.of(context).Phone_Number,
+            isNumericKeyboard: true,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
-                  !AppRegex.isEmailValid(value)) {
-                return 'الرجاء إدخال بريد إلكتروني صالح';
+                  !AppRegex.isPhoneNumberValid(value)) {
+                return 'Please enter a valid phone number';
               }
-              return null;
             },
-            controller: context.read<LoginCubit>().emailController,
+            controller: context.read<LoginCubit>().phoneController,
           ),
-          const SizedBox(height: 18), // Adjust spacing as needed
+          // TitleLeft(title: S.of(context).EnterEmail),
+          // AppTextFormField(
+          //   hintText: S.of(context).EnterEmail,
+          //   validator: (value) {
+          //     if (value == null ||
+          //         value.isEmpty ||
+          //         !AppRegex.isEmailValid(value)) {
+          //       return 'الرجاء إدخال بريد إلكتروني صالح';
+          //     }
+          //     return null;
+          //   },
+          //   controller: context.read<LoginCubit>().emailController,
+          // ),
+          // const SizedBox(height: 18), // Adjust spacing as needed
           TitleLeft(title: S.of(context).Password),
           AppTextFormField(
               controller: passwordController,

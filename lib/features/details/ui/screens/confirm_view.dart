@@ -49,7 +49,9 @@ class ConfirmView extends StatelessWidget {
             ),
             verticalSpace(20),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.followReport);
+                },
                 child: Text(
                   S.of(context).ForContinueReporting,
                   style: AppTextStyles.font16BlueMedium,
