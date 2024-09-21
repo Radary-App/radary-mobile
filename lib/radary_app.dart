@@ -2,13 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:radary/core/routing/app_router.dart';
-
+import 'package:radary/core/routing/route.dart';
 import 'core/theming/app_colors.dart';
-import 'core/widgets/animated_splash_screen_custom.dart';
 import 'generated/l10n.dart';
+import 'main_production.dart';
 
 class RadaryApp extends StatelessWidget {
   final AppRouter appRouter;
@@ -37,7 +36,7 @@ class RadaryApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale('ar'),
           title: 'Radary',
-          home: const AnimatedSplashScreenCustom(),
+          initialRoute: isLoggedIn ? Routes.splashScreen : Routes.homeScreen,
         );
       },
     );
