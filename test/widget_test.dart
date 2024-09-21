@@ -8,13 +8,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:radary/core/routing/app_router.dart';
+import 'package:radary/main_production.dart';
 
 import 'package:radary/radary_app.dart';
-
+ 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget( RadaryApp(appRouter: AppRouter(),));
+    bool isLoggedIn = await checkIfUserIsLoggedIn();
+    await tester.pumpWidget( RadaryApp(appRouter: AppRouter(), isLoggedIn:isLoggedIn ,));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
