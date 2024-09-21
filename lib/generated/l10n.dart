@@ -1510,8 +1510,6 @@ class S {
     );
   }
 
-  // skipped getter for the 'Recorded problems' key
-
   /// `Solved problems`
   String get Solved_problems {
     return Intl.message(
