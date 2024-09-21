@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:radary/core/helpers/extensions/app_navigotion.dart';
-import 'package:radary/core/helpers/spacing.dart';
+import 'package:radary/core/helpers/util/spacing.dart';
 import 'package:radary/core/theming/app_text_styles.dart';
 import 'package:radary/core/widgets/app_text_button.dart';
 import 'package:radary/generated/l10n.dart';

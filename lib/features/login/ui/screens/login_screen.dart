@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:radary/core/helpers/util/assets_data.dart';
 import 'package:radary/core/theming/app_colors.dart';
-import '../../../../core/helpers/spacing.dart';
+import '../../../../core/helpers/util/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../generated/l10n.dart';
