@@ -44,8 +44,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   // Save token to shared preferences
   Future<void> saveToken(String token) async {
-    await CacheHelper.sharedPreferences
-        .setString(SherdPreferencesKeys.userToken, token);
+    await CacheHelper.setSecuredString(SherdPreferencesKeys.userToken, token);
   }
 
   // Dispose method to clean up controllers

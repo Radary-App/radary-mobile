@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:injectable/injectable.dart';
 
@@ -46,5 +48,18 @@ class CacheHelper {
   //! Clear all data in the local database
   Future<bool> clearData() async {
     return await sharedPreferences.clear();
+  }
+  //! Secure storage
+  static setSecuredString(String key, String value) async {
+    const flutterSecureStorage = FlutterSecureStorage();
+    debugPrint(
+        "FlutterSecureStorage : setSecuredString with key : $key and value : $value");
+    await flutterSecureStorage.write(key: key, value: value);
+  }
+  //! Secure storage
+  static getSecuredString(String key) async {
+    const flutterSecureStorage = FlutterSecureStorage();
+    debugPrint('FlutterSecureStorage : getSecuredString with key :');
+    return await flutterSecureStorage.read(key: key) ?? '';
   }
 }

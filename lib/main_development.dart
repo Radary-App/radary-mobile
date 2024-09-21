@@ -31,7 +31,7 @@ void main() async {
 
 checkIfUserIsLoggedIn() async {
   String? userToken =
-   await   CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
+   await   CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
   if (userToken.isNullOrEmpty()) {
     isLoggedIn = true;
   } else {
