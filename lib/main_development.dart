@@ -8,7 +8,6 @@ import 'package:radary/radary_app.dart';
 import 'core/di/dependecy_injection.dart';
 import 'core/helpers/cach/constants.dart';
 
-
 void main() async {
   // Ensure Flutter's binding is initialized before platform services are accessed
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,20 +20,18 @@ void main() async {
 
   // Ensure screen size setup for ScreenUtil
   await ScreenUtil.ensureScreenSize();
-  // Check if user is logged in
- checkIfUserIsLoggedIn();
-  // Run the app
+
+  // Check if the user is logged in
+  bool isLoggedIn = await checkIfUserIsLoggedIn();
+
+  // Run the app with the result of isLoggedIn
   runApp(RadaryApp(
     appRouter: AppRouter(),
+    isLoggedIn: isLoggedIn,
   ));
 }
 
-checkIfUserIsLoggedIn() async {
-  String? userToken =
-   await   CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
-  if (userToken.isNullOrEmpty()) {
-    isLoggedIn = true;
-  } else {
-    isLoggedIn = false;
-  }
+Future<bool> checkIfUserIsLoggedIn() async {
+  String? userToken = await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
+  return userToken.isNullOrEmpty(); // Returns true if logged out
 }

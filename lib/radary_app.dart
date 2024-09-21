@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,11 +5,16 @@ import 'package:radary/core/routing/app_router.dart';
 import 'package:radary/core/routing/route.dart';
 import 'core/theming/app_colors.dart';
 import 'generated/l10n.dart';
-import 'main_production.dart';
 
 class RadaryApp extends StatelessWidget {
   final AppRouter appRouter;
-  const RadaryApp({super.key, required this.appRouter});
+  final bool isLoggedIn;
+
+  const RadaryApp({
+    super.key,
+    required this.appRouter,
+    required this.isLoggedIn,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,4 +45,3 @@ class RadaryApp extends StatelessWidget {
     );
   }
 }
-//

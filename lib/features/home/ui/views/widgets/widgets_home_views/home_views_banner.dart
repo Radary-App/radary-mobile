@@ -52,14 +52,13 @@ class HomeViewBanner extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0), // Add padding to the SVG image
-            // child: SvgPicture.asset(
-            //   // AssetsData.homeBanner,
-            //   // height: 150.h, // Adjust the height as needed
-            // ),
+            child: SvgPicture.asset(
+              AssetsData.mobileuser,
+              height: 150.h,
+            ),
           ),
         ],
       ),
     );
   }
 }
-
