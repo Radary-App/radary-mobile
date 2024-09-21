@@ -113,7 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Issues": MessageLookupByLibrary.simpleMessage("المشاكل"),
         "IssuesReport":
             MessageLookupByLibrary.simpleMessage("الإبلاغ عن المشاكل العامة"),
-        "LastName": MessageLookupByLibrary.simpleMessage("الاسم الثاني"),
+        "LastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "LastReports": MessageLookupByLibrary.simpleMessage("آخر البلاغات"),
         "Limit": MessageLookupByLibrary.simpleMessage("0/50"),
         "LocationAccess":
@@ -227,14 +227,30 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرحباً يا ...."),
         "Year": MessageLookupByLibrary.simpleMessage("سنة"),
         "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
+        "address": MessageLookupByLibrary.simpleMessage("عنوان"),
+        "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
+        "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
         "homeBanner1":
             MessageLookupByLibrary.simpleMessage("ضغطة واحدة، يمكنك الإبلاغ"),
         "homeBanner2": MessageLookupByLibrary.simpleMessage(
             "يمكنك الإبلاغ عن الحوادث والمشاكل التي تواجهها"),
         "homeBanner3": MessageLookupByLibrary.simpleMessage("تواجهها"),
+        "my_address": MessageLookupByLibrary.simpleMessage(
+            "الدقهلية_المنصورة_ شارع جيهان"),
+        "my_date": MessageLookupByLibrary.simpleMessage("2024/8/17"),
+        "my_details1": MessageLookupByLibrary.simpleMessage(
+            "اصطدام بين سيارة نقل ثقيل و سيارة من الامام في منتصف طريق سريع."),
+        "my_details2": MessageLookupByLibrary.simpleMessage(
+            "قمامة و اثاث قديم ملقى في الشارع و يجذب الحشرات و يعطل مرور الناس."),
+        "my_details3": MessageLookupByLibrary.simpleMessage(
+            "قمامة و حشائش غير مفيدة على ضفة النهر"),
+        "my_notes":
+            MessageLookupByLibrary.simpleMessage("في زبالة فالشارع منظرها وحش"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
-        "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال")
+        "recapture": MessageLookupByLibrary.simpleMessage("إعادة التقاط"),
+        "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+        "user_notes": MessageLookupByLibrary.simpleMessage("ملاحظات المستخدم")
       };
 }

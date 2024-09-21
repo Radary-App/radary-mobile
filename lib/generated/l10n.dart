@@ -1510,21 +1510,123 @@ class S {
     );
   }
 
-  /// `Recorded problems`
-  String get Recorded_problems {
-    return Intl.message(
-      'Recorded problems',
-      name: 'Recorded_problems',
-      desc: '',
-      args: [],
-    );
-  }
+  // skipped getter for the 'Recorded problems' key
 
   /// `Solved problems`
   String get Solved_problems {
     return Intl.message(
       'Solved problems',
       name: 'Solved_problems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recapture`
+  String get recapture {
+    return Intl.message(
+      'Recapture',
+      name: 'recapture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aldakahlia-Mansoura-Gehan street`
+  String get my_address {
+    return Intl.message(
+      'Aldakahlia-Mansoura-Gehan street',
+      name: 'my_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A collision between a heavy transport vehicle and a car from the front in the middle of a highway`
+  String get my_details1 {
+    return Intl.message(
+      'A collision between a heavy transport vehicle and a car from the front in the middle of a highway',
+      name: 'my_details1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Garbage and old furniture lying in the street and attracting insects and disrupting the passage of people.`
+  String get my_details2 {
+    return Intl.message(
+      'Garbage and old furniture lying in the street and attracting insects and disrupting the passage of people.',
+      name: 'my_details2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Useless garbage and weeds on the bank of the river`
+  String get my_details3 {
+    return Intl.message(
+      'Useless garbage and weeds on the bank of the river',
+      name: 'my_details3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2024/8/17`
+  String get my_date {
+    return Intl.message(
+      '2024/8/17',
+      name: 'my_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User notes`
+  String get user_notes {
+    return Intl.message(
+      'User notes',
+      name: 'user_notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is trash in the street and it looks bad`
+  String get my_notes {
+    return Intl.message(
+      'There is trash in the street and it looks bad',
+      name: 'my_notes',
       desc: '',
       args: [],
     );

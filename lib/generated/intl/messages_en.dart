@@ -202,8 +202,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lots of notifications"),
         "Reason5": MessageLookupByLibrary.simpleMessage("Personal reasons"),
         "Reason6": MessageLookupByLibrary.simpleMessage("Other"),
-        "Recorded_problems":
-            MessageLookupByLibrary.simpleMessage("Recorded problems"),
         "ReportDate": MessageLookupByLibrary.simpleMessage("Report Date "),
         "ReportDoneMessage": MessageLookupByLibrary.simpleMessage(
             "Your report has reached the competent authorities, the problem is being resolved"),
@@ -241,14 +239,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "WelcomeMessage": MessageLookupByLibrary.simpleMessage("Welcome,...."),
         "Year": MessageLookupByLibrary.simpleMessage("year"),
         "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
+        "date": MessageLookupByLibrary.simpleMessage("Date"),
+        "details": MessageLookupByLibrary.simpleMessage("Details"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeBanner1":
             MessageLookupByLibrary.simpleMessage("One click, you can report"),
         "homeBanner2": MessageLookupByLibrary.simpleMessage(
             "You can report incidents and problems you encounter"),
         "homeBanner3": MessageLookupByLibrary.simpleMessage("You encounter"),
+        "my_address": MessageLookupByLibrary.simpleMessage(
+            "Aldakahlia-Mansoura-Gehan street"),
+        "my_date": MessageLookupByLibrary.simpleMessage("2024/8/17"),
+        "my_details1": MessageLookupByLibrary.simpleMessage(
+            "A collision between a heavy transport vehicle and a car from the front in the middle of a highway"),
+        "my_details2": MessageLookupByLibrary.simpleMessage(
+            "Garbage and old furniture lying in the street and attracting insects and disrupting the passage of people."),
+        "my_details3": MessageLookupByLibrary.simpleMessage(
+            "Useless garbage and weeds on the bank of the river"),
+        "my_notes": MessageLookupByLibrary.simpleMessage(
+            "There is trash in the street and it looks bad"),
         "name": MessageLookupByLibrary.simpleMessage("name"),
         "next": MessageLookupByLibrary.simpleMessage("next"),
-        "resend": MessageLookupByLibrary.simpleMessage("Resend ")
+        "recapture": MessageLookupByLibrary.simpleMessage("Recapture"),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend "),
+        "user_notes": MessageLookupByLibrary.simpleMessage("User notes")
       };
 }
