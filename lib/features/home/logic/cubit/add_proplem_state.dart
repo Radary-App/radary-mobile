@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'addemergency_state.freezed.dart';
+part 'add_proplem_state.freezed.dart';
 
 @freezed
 class AddEmergencyState<T> with _$AddEmergencyState<T> {

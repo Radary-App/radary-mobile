@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:radary/core/helpers/extensions/app_navigotion.dart';
-import 'package:radary/features/home/logic/cubit/addemergency_state.dart';
+import 'package:radary/features/home/logic/cubit/add_proplem_state.dart';
 import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
 import '../../../../core/routing/route.dart';
@@ -50,15 +50,12 @@ class AddEmergencyCubit extends Cubit<AddEmergencyState> {
       if (file != null) {
         final File image = File(file!.path);
 
-        // احفظ الصورة في متغير إذا كنت تحتاجه لاحقًا
         imagee = image;
 
-        // احصل على الموقع قبل الانتقال
 
-        // انتقل إلى ImageDetailsView مع الصورة كوسيط
         context.pushNamed(
           Routes.imageDetails,
-          arguments: image, // تمرير الصورة كوسيط
+          arguments: image, 
         );
 // addProblem(context);
         return image;
