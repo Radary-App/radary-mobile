@@ -32,8 +32,7 @@ class ConfirmView extends StatelessWidget {
               ],
             ),
             verticalSpace(30),
-            // SvgPicture.asset(AssetsData.logoRadary),
-          
+            SvgPicture.asset(AssetsData.confirm),
             verticalSpace(80),
             Text(
               S.of(context).ReportDoneMessage,

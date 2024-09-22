@@ -11,8 +11,7 @@ platform :android do
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
         testers: "mostfammaaggddyy@gmail.com,aymansalleh333@gmail.com,ayahemdan2468@gmail.com,zeyadosama15@gmail.com",
-        release_notes: "Add Problem Feature and Dependency Injection Setup
- "  
+        release_notes: "Added location permissions in `AndroidManifest.xml` for fine and coarse location access."  
   )
   end
 end

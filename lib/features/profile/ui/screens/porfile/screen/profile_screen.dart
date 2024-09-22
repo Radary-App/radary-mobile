@@ -23,32 +23,27 @@ class ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: white,
-        centerTitle: true,
-        title: Text(
-          S.of(context).Settings,
-          style: AppTextStyles.font24BlackSemibold,
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SvgPicture.asset(
-              AssetsData.logoRadaryText,
-            ),
-          ),
-        ],
-      ),
       backgroundColor: white,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
+            padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset(
+                      AssetsData.logoRadaryText,
+                    ),
+                    Text(
+                      S.of(context).MyProfile,
+                      style: AppTextStyles.font24BlackSemibold,
+                    ),
+                  ],
+                ),
+                verticalSpace(30),
                 //cercle avter
                 const Center(
                   child: CircleAvatar(

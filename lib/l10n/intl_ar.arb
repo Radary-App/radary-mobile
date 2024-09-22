@@ -133,5 +133,10 @@
   "DeleteMyAccount":"حذف حسابي",
   "ShippingAddress":"عنوان الشحن",
   "DeleteMessage":"هل أنت متأكد من حذف حسابك؟"  ,
-  "EnterYourShippingAddress":"أدخل عنوان الشحن"
+  "EnterYourShippingAddress":"أدخل عنوان الشحن",
+  "homeBanner1": "بنقرة واحدة، يمكنك الإبلاغ",
+    "homeBanner2": "عن الحوادث والمشاكل التي ",
+    "homeBanner3": "تواجهها"
+
+
 }

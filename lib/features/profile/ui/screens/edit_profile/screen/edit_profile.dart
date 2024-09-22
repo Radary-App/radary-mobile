@@ -30,13 +30,12 @@ class EditProfile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    
+                    SvgPicture.asset(
+                      AssetsData.logoRadaryText,
+                    ),
                     Text(
                       S.of(context).edetProfile,
                       style: AppTextStyles.font24BlackRegular,
-                    ),
-                    SvgPicture.asset(
-                      AssetsData.logoRadaryText,
                     ),
                   ],
                 ),

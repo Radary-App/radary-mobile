@@ -33,7 +33,7 @@ class HomeViewBanner extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).homeBanner1,
-                    style: AppTextStyles.font16WhiteMedium,
+                    style: AppTextStyles.font20WhiteRegular,
                     textAlign: TextAlign.center,
                   ),
                   Text(
