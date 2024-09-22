@@ -136,7 +136,9 @@
   "EnterYourShippingAddress":"أدخل عنوان الشحن",
   "homeBanner1": "بنقرة واحدة، يمكنك الإبلاغ",
     "homeBanner2": "عن الحوادث والمشاكل التي ",
-    "homeBanner3": "تواجهها"
+    "homeBanner3": "تواجهها",
+    "details":"تفاصيل"
+
 
 
 }

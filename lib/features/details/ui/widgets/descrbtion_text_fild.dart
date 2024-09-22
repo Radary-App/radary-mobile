@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/theming/app_colors.dart';
-import '../theming/app_text_styles.dart';
+import '../../../../core/theming/app_text_styles.dart';
 
-class AppTextFormField extends StatelessWidget {
+class DescrbtionTextFild extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
@@ -20,7 +20,7 @@ class AppTextFormField extends StatelessWidget {
   final Function(String?) validator;
   final bool? isNumericKeyboard; // New property
 
-  const AppTextFormField({
+  const DescrbtionTextFild({
     super.key,
     this.contentPadding,
     this.focusedBorder,
@@ -40,7 +40,8 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-    
+      maxLines: 7,
+      minLines: 3,
       controller: controller,
       keyboardType: isNumericKeyboard == true
           ? const TextInputType.numberWithOptions(decimal: false)

@@ -18,4 +18,5 @@ class Routes {
   static const String mentorProfile = "/MentorProfile";
   static const String coursesDetails = "/CoursesDetails";
   static const String profileScreen = "/ProfileScreen";
+  static const String imageDetails = "/ImageDetails";
 }

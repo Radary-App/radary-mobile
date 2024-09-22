@@ -14,6 +14,8 @@ class EmergencyProblemResponseModel {
 
   factory EmergencyProblemResponseModel.fromJson(Map<String, dynamic> json) =>
       _$EmergencyProblemResponseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmergencyProblemResponseModelToJson(this);
 }
 
 @JsonSerializable()
@@ -21,12 +23,21 @@ class Emergency {
   String? coordinates;
   String? photo;
   int? id;
-  String? description; // Added field
+  String? aiDescriptionEnglish; // Assuming this is meant to be the AI description
+  String? aiDescriptionArabic; // Assuming this is meant to be the AI description
 
-  Emergency({this.coordinates, this.photo, this.id, this.description});
+  Emergency({
+    this.coordinates,
+    this.photo,
+    this.id,
+    this.aiDescriptionEnglish,
+    this.aiDescriptionArabic,
+  });
 
   factory Emergency.fromJson(Map<String, dynamic> json) =>
       _$EmergencyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmergencyToJson(this);
 }
 
 @JsonSerializable()
@@ -37,6 +48,8 @@ class Problem {
   String? photo;
   String? createdAt;
   int? id;
+  String? aiDescriptionEnglish; // Optional: You can add this if needed
+  String? aiDescriptionArabic; // Optional: You can add this if needed
 
   Problem({
     this.coordinates,
@@ -45,8 +58,12 @@ class Problem {
     this.photo,
     this.createdAt,
     this.id,
+    this.aiDescriptionEnglish,
+    this.aiDescriptionArabic,
   });
 
   factory Problem.fromJson(Map<String, dynamic> json) =>
       _$ProblemFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProblemToJson(this);
 }

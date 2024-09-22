@@ -1,10 +1,15 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/core/routing/route.dart';
 import 'package:radary/features/home/ui/screens/home_screen.dart';
 import 'package:radary/features/profile/ui/screens/setting/screen/edit_setting.dart';
 import '../../features/details/ui/screens/confirm_view.dart';
+import '../../features/details/ui/screens/image_dettails_view.dart';
 import '../../features/follow_report/ui/screens/follow_report_view.dart';
+import '../../features/home/data/repo/add_proplem_repo.dart';
+import '../../features/home/logic/cubit/addemergency_cubit.dart';
 import '../../features/home/logic/cubit/addproplem_cubit.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
 import '../../features/login/ui/screens/login_screen.dart';
@@ -42,20 +47,33 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-  builder: (_) => MultiBlocProvider(
-    providers: [
-      BlocProvider(
-        create: (context) => getIt<AddProblemCubit>(),
-      ),
-      BlocProvider(
-        create: (context) => EmergencyProblemResponseCubit(
-          getIt<EmergencyProblemResponseRepo>(), 
-        )..getData(),
-      ),
-    ],
-    child: const HomeScreen(),
-  ),
-);
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              // BlocProvider(
+              //   create: (context) => getIt<AddProblemCubit>(),
+              // ),
+              BlocProvider(
+                create: (context) => AddEmergencyCubit(getIt<AddProblemRepo>()),
+              ),
+              BlocProvider(
+                create: (context) => EmergencyProblemResponseCubit(
+                  getIt<EmergencyProblemResponseRepo>(),
+                )..getData(),
+              ),
+            ],
+            child: const HomeScreen(),
+          ),
+        );
+      case Routes.imageDetails:
+        final File? image = settings.arguments as File?;
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => AddEmergencyCubit(getIt<AddProblemRepo>()),
+            child: ImageDetailsView(
+                image: image ??
+                    File('assets/images/accident.png')),
+          ),
+        );
       case Routes.confirmView:
         return MaterialPageRoute(builder: (_) => const ConfirmView());
       case Routes.followReport:

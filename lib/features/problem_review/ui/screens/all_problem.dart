@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:radary/core/helpers/util/spacing.dart';
 import 'package:radary/core/networking/api_constants.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -43,31 +44,29 @@ class EmergencyProblemListView extends StatelessWidget {
                   width: 150.w,
                   height: 160.h,
                   child: CachedNetworkImage(
-                    fit: BoxFit.cover,
-                    imageUrl:
-                        "${ApiConstants.apiBaseUrl}${problem.photo}", // استخدام المسار الكامل
-                    placeholder: (context, url) => Shimmer.fromColors(
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.grey[100]!,
-                      child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        color: Colors.white,
-                      ),
-                    ),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
-                  ),
+                      fit: BoxFit.cover,
+                      imageUrl: "${ApiConstants.apiBaseUrl}${problem.photo}",
+                      placeholder: (context, url) => Shimmer.fromColors(
+                            baseColor: Colors.grey[300]!,
+                            highlightColor: Colors.grey[100]!,
+                            child: Container(
+                              width: double.infinity,
+                              height: double.infinity,
+                              color: Colors.white,
+                            ),
+                          ),
+                      errorWidget: (context, url, error) => Image.network(
+                          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJiDwHr5LknxeAAo6Bfmt2wQEp1my8jrrXeLrt7qoLmZCLWD4RmwlPs4TsberWovNSYeubnTKvv9yOnY2TD2qu6CAtQuvgPXI2CxQEHxJs68uATRUm5egomKowMgPdJKF6hPGH7nPuHo/s1600/kilwa+zoldik.gif")),
                 ),
               ),
-              SizedBox(width: 10.w),
+              verticalSpace(10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      problem.coordinates.toString(),
+                      problem.userDescription ?? "مفيش بدون وصف",
                       style: TextStyle(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

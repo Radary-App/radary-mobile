@@ -6,36 +6,25 @@ import '../../logic/cubit/emergency_problem_response_cubit.dart';
 import '../../logic/cubit/emergency_problem_response_state.dart';
 
 
-
 class EmergencyProblemBlocBuilder extends StatelessWidget {
   const EmergencyProblemBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<EmergencyProblemResponseCubit, EmergencyProblemResponseState>(
-      buildWhen: (previous, current) =>
-          current is Success || current is Error,
       builder: (context, state) {
         return state.maybeWhen(
+          loading: () => const Center(child: CircularProgressIndicator()),
           success: (emergenciesList, problemsList) {
-            return setupSuccess(emergenciesList, problemsList);
+            return EmergencyProblemListView(
+              problems: problemsList ?? [],
+            );
           },
-          error: (errorHandler) => setupError(),
-          orElse: () {
-            return const SizedBox.shrink();
-          },
+          error: (errorHandler) => Center(child: Text('Error: $errorHandler')),
+          orElse: () => const SizedBox.shrink(),
         );
       },
     );
   }
-
-  Widget setupSuccess(List<Emergency>? emergenciesList, List<Problem>? problemsList) {
-    return EmergencyProblemListView(
-      problems: problemsList ?? [], // Provide an empty list if null
-    );
-  }
-
-  Widget setupError() {
-    return const Center(child: Text('Error loading data'));
-  }
 }
+
