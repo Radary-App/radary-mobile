@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/features/problem_review/logic/cubit/emergency_problem_response_cubit.dart';
-import 'package:radary/features/problem_review/ui/screens/all_problem.dart';
 import 'package:radary/features/problem_review/ui/screens/my_emergencys.dart';
 
 import '../../data/models/emergency_problem_response_model.dart';
@@ -12,13 +11,15 @@ class EmergencyListBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<EmergencyProblemResponseCubit,
-        EmergencyProblemResponseState>(
+    return BlocBuilder<EmergencyProblemResponseCubit, EmergencyProblemResponseState>(
       buildWhen: (previous, current) => current is Success || current is Error,
       builder: (context, state) {
         return state.maybeWhen(
           success: (emergenciesList, problemsList) {
-            return MyEmergency(emergenciesList: mapEmergenciesToEmergencies(emergenciesList ?? []));
+            // تأكد من أن كلا القائمتين متاحتين وأنهما غير فارغتين
+            return MyEmergency(
+              emergenciesList: emergenciesList ?? [], // استخدم قائمة الطوارئ من الباك
+            );
           },
           error: (errorHandler) => setupError(context),
           orElse: () {
@@ -27,19 +28,6 @@ class EmergencyListBlocBuilder extends StatelessWidget {
         );
       },
     );
-  }
-
-  // Define the method to convert emergencies to emergencies
-  List<Emergency> mapEmergenciesToEmergencies(List<Emergency> emergencies) {
-    return emergencies.map((emergency) {
-      return Emergency(
-        id: emergency.id,
-        coordinates: emergency.coordinates,
-        photo: emergency.photo,
-        aiDescriptionArabic: emergency.aiDescriptionArabic,
-        aiDescriptionEnglish: emergency.aiDescriptionEnglish,
-      );
-    }).toList();
   }
 
   Widget setupError(BuildContext context) {
