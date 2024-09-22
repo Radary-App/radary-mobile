@@ -17,6 +17,7 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/add_text_form_field.dart';
 import '../../../home/data/repo/add_proplem_repo.dart';
 import '../../../home/logic/cubit/addemergency_cubit.dart';
+import '../widgets/descrbtion_text_fild.dart';
 
 class ImageDetailsView extends StatelessWidget {
   final File image;
@@ -70,7 +71,7 @@ class ImageDetailsView extends StatelessWidget {
                     ],
                   ),
                   verticalSpace(10),
-                  AppTextFormField(
+                  DescrbtionTextFild(
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 20.w, vertical: 100.h),
                     controller:

@@ -43,13 +43,13 @@ class HomeView extends StatelessWidget {
               verticalSpace(40),
               HomeViewRecorded(
                 text: S.of(context).AccidentReport,
-                onTap: () {
-                  context.read<AddEmergencyCubit>().pickImage(context);
-                },
               ),
               verticalSpace(60),
               HomeViewRecorded(
                 text: S.of(context).IssuesReport,
+                onTap: () {
+                  context.read<AddEmergencyCubit>().pickImage(context);
+                },
               ),
             ],
           ),
