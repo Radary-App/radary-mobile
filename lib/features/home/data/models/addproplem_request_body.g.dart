@@ -11,6 +11,7 @@ AddproplemRequestBody _$AddproplemRequestBodyFromJson(
     AddproplemRequestBody(
       photo: AddproplemRequestBody._fileFromJson(json['photo'] as String?),
       coordinates: json['coordinates'] as String,
+      userDescription: json['userDescription'] as String,
     );
 
 Map<String, dynamic> _$AddproplemRequestBodyToJson(
@@ -18,4 +19,5 @@ Map<String, dynamic> _$AddproplemRequestBodyToJson(
     <String, dynamic>{
       'photo': AddproplemRequestBody._fileToJson(instance.photo),
       'coordinates': instance.coordinates,
+      'userDescription': instance.userDescription,
     };

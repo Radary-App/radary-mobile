@@ -9,8 +9,13 @@ class AddproplemRequestBody {
   @JsonKey(toJson: _fileToJson, fromJson: _fileFromJson)
   final XFile? photo;
   final String coordinates;
+  final String userDescription; 
 
-  AddproplemRequestBody({required this.photo, required this.coordinates});
+  AddproplemRequestBody({
+    required this.photo,
+    required this.coordinates,
+    required this.userDescription,  
+  });
 
   // Custom toJson and fromJson for XFile
   static String? _fileToJson(XFile? file) => file?.path;
