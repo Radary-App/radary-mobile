@@ -5,6 +5,7 @@ import 'package:radary/features/home/ui/screens/home_screen.dart';
 import 'package:radary/features/profile/ui/screens/setting/screen/edit_setting.dart';
 import '../../features/details/ui/screens/confirm_view.dart';
 import '../../features/follow_report/ui/screens/follow_report_view.dart';
+import '../../features/home/logic/cubit/addproplem_cubit.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
 import '../../features/login/ui/screens/login_screen.dart';
 import '../../features/onboarding/ui/screens/on_boarding_screens.dart';
@@ -38,7 +39,12 @@ class AppRouter {
           ),
         );
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return  MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AddProblemCubit>(),
+            child: const HomeScreen(),
+          ),
+        );
       case Routes.confirmView:
         return MaterialPageRoute(builder: (_) => const ConfirmView());
       case Routes.followReport:

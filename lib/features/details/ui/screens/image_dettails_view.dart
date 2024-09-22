@@ -46,6 +46,7 @@ class ImageDettailsView extends StatelessWidget {
             ),
             AppTextButton(
                 onPressed: () {
+                  
                   context.pushNamed(Routes.confirmView);
                 },
                 buttonText: S.of(context).ConfirmBtn,

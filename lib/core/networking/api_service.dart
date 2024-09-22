@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:radary/core/networking/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
+import '../../features/home/data/models/add_proplem_response.dart';
+import '../../features/home/data/models/addproplem_request_body.dart';
 import '../../features/login/data/models/login_request_body.dart';
 import '../../features/login/data/models/login_response.dart';
 import '../../features/sign_up/data/models/sign_up_request_body.dart';
@@ -22,4 +24,8 @@ abstract class ApiService {
   Future<SignupResponse> signup(
     @Body() SignupRequestBody signupRequestBody,
   );
+@POST(ApiConstants.addProblem)
+Future<AddProblemResponse> addProblem(
+  @Body() FormData addProblemRequestBody,
+);
 }

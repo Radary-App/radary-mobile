@@ -2,6 +2,7 @@ class ApiConstants {
   static const String apiBaseUrl = "https://bettercallguts.pythonanywhere.com/";
   static const String login = "login/";
   static const String signup = "signup/";
+  static const String addProblem = "problem/create/";
 }
 
 class ApiErrors {

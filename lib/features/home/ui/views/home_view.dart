@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:radary/features/home/logic/logic.dart';
 import 'package:radary/features/home/ui/views/widgets/home_view_recored.dart';
@@ -7,6 +7,7 @@ import 'package:radary/generated/l10n.dart';
 import '../../../../core/helpers/util/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/add_text_form_field.dart';
+import '../../logic/cubit/addproplem_cubit.dart';
 import '../widgets/home_app_bar.dart';
 import 'widgets/widgets_home_views/home_views_banner.dart';
 
@@ -42,7 +43,7 @@ class HomeView extends StatelessWidget {
               HomeViewRecorded(
                 text: S.of(context).AccidentReport,
                 onTap: () {
-                  pickImage(context);
+                  context.read<AddProblemCubit>().pickImage(context);
                 },
               ),
               verticalSpace(60),
