@@ -80,10 +80,10 @@ class S {
     );
   }
 
-  /// `Contribute to the improvment of your area`
+  /// `Contribute to the improvement of your area`
   String get Message1 {
     return Intl.message(
-      'Contribute to the improvment of your area',
+      'Contribute to the improvement of your area',
       name: 'Message1',
       desc: '',
       args: [],
@@ -140,10 +140,10 @@ class S {
     );
   }
 
-  /// `Accessibility `
+  /// `Accessibility`
   String get Accessibility {
     return Intl.message(
-      'Accessibility ',
+      'Accessibility',
       name: 'Accessibility',
       desc: '',
       args: [],
@@ -160,10 +160,10 @@ class S {
     );
   }
 
-  /// `Turn on Sound `
+  /// `Turn on Sound`
   String get SoundOn {
     return Intl.message(
-      'Turn on Sound ',
+      'Turn on Sound',
       name: 'SoundOn',
       desc: '',
       args: [],
@@ -190,30 +190,30 @@ class S {
     );
   }
 
-  /// `Log in `
+  /// `Log in`
   String get Log_In {
     return Intl.message(
-      'Log in ',
+      'Log in',
       name: 'Log_In',
       desc: '',
       args: [],
     );
   }
 
-  /// `Phone Number `
+  /// `Phone Number`
   String get Phone_Number {
     return Intl.message(
-      'Phone Number ',
+      'Phone Number',
       name: 'Phone_Number',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password `
+  /// `Password`
   String get Password {
     return Intl.message(
-      'Password ',
+      'Password',
       name: 'Password',
       desc: '',
       args: [],
@@ -240,20 +240,20 @@ class S {
     );
   }
 
-  /// `Log in `
+  /// `Log in`
   String get Log_InBtn {
     return Intl.message(
-      'Log in ',
+      'Log in',
       name: 'Log_InBtn',
       desc: '',
       args: [],
     );
   }
 
-  /// ` Sign Up  `
+  /// `Sign Up`
   String get Sign_UpBtn {
     return Intl.message(
-      ' Sign Up  ',
+      'Sign Up',
       name: 'Sign_UpBtn',
       desc: '',
       args: [],
@@ -280,50 +280,50 @@ class S {
     );
   }
 
-  /// `Send code `
+  /// `Send code`
   String get SendCode {
     return Intl.message(
-      'Send code ',
+      'Send code',
       name: 'SendCode',
       desc: '',
       args: [],
     );
   }
 
-  /// `Confirm code `
+  /// `Confirm code`
   String get ConfirmCode {
     return Intl.message(
-      'Confirm code ',
+      'Confirm code',
       name: 'ConfirmCode',
       desc: '',
       args: [],
     );
   }
 
-  /// `Resend `
+  /// `Resend`
   String get resend {
     return Intl.message(
-      'Resend ',
+      'Resend',
       name: 'resend',
       desc: '',
       args: [],
     );
   }
 
-  /// `Reset Password `
+  /// `Reset Password`
   String get ResetPassword {
     return Intl.message(
-      'Reset Password ',
+      'Reset Password',
       name: 'ResetPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter new password`
+  /// `Enter Your Password`
   String get EnterYourPassWord {
     return Intl.message(
-      'Enter new password',
+      'Enter Your Password',
       name: 'EnterYourPassWord',
       desc: '',
       args: [],
@@ -340,10 +340,10 @@ class S {
     );
   }
 
-  /// `next`
+  /// `Next`
   String get next {
     return Intl.message(
-      'next',
+      'Next',
       name: 'next',
       desc: '',
       args: [],
@@ -360,31 +360,21 @@ class S {
     );
   }
 
-  /// `phone number `
+  /// `Phone number`
   String get Phone {
     return Intl.message(
-      'phone number ',
+      'Phone number',
       name: 'Phone',
       desc: '',
       args: [],
     );
   }
 
-  /// `Email (optional)`
+  /// `example@example.com`
   String get EnterYourEmail {
     return Intl.message(
-      'Email (optional)',
+      'example@example.com',
       name: 'EnterYourEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Password`
-  String get PassWord {
-    return Intl.message(
-      'Password',
-      name: 'PassWord',
       desc: '',
       args: [],
     );
@@ -430,40 +420,40 @@ class S {
     );
   }
 
-  /// `Date of Birth `
+  /// `Date of Birth`
   String get BirthDate {
     return Intl.message(
-      'Date of Birth ',
+      'Date of Birth',
       name: 'BirthDate',
       desc: '',
       args: [],
     );
   }
 
-  /// `day`
+  /// `Day`
   String get Day {
     return Intl.message(
-      'day',
+      'Day',
       name: 'Day',
       desc: '',
       args: [],
     );
   }
 
-  /// `month`
+  /// `Month`
   String get Month {
     return Intl.message(
-      'month',
+      'Month',
       name: 'Month',
       desc: '',
       args: [],
     );
   }
 
-  /// `year`
+  /// `Year`
   String get Year {
     return Intl.message(
-      'year',
+      'Year',
       name: 'Year',
       desc: '',
       args: [],
@@ -590,10 +580,10 @@ class S {
     );
   }
 
-  /// `Select Time `
+  /// `Select Time`
   String get TimeSelect {
     return Intl.message(
-      'Select Time ',
+      'Select Time',
       name: 'TimeSelect',
       desc: '',
       args: [],
@@ -620,10 +610,10 @@ class S {
     );
   }
 
-  /// `To continue Reporting `
+  /// `To continue Reporting`
   String get ForContinueReporting {
     return Intl.message(
-      'To continue Reporting ',
+      'To continue Reporting',
       name: 'ForContinueReporting',
       desc: '',
       args: [],
@@ -710,20 +700,20 @@ class S {
     );
   }
 
-  /// `Continue Reporting `
+  /// `Continue Reporting`
   String get ContinueReporting {
     return Intl.message(
-      'Continue Reporting ',
+      'Continue Reporting',
       name: 'ContinueReporting',
       desc: '',
       args: [],
     );
   }
 
-  /// `Report Date `
+  /// `Report Date`
   String get ReportDate {
     return Intl.message(
-      'Report Date ',
+      'Report Date',
       name: 'ReportDate',
       desc: '',
       args: [],
@@ -740,10 +730,10 @@ class S {
     );
   }
 
-  /// `Report Status `
+  /// `Report Status`
   String get ReportStatus {
     return Intl.message(
-      'Report Status ',
+      'Report Status',
       name: 'ReportStatus',
       desc: '',
       args: [],
@@ -770,10 +760,10 @@ class S {
     );
   }
 
-  /// `For Suggestions `
+  /// `For Suggestions`
   String get Suggestion {
     return Intl.message(
-      'For Suggestions ',
+      'For Suggestions',
       name: 'Suggestion',
       desc: '',
       args: [],
@@ -860,30 +850,30 @@ class S {
     );
   }
 
-  /// `name`
+  /// `Name`
   String get name {
     return Intl.message(
-      'name',
+      'Name',
       name: 'name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Personal Information `
+  /// `Personal Information`
   String get PersonalInformation {
     return Intl.message(
-      'Personal Information ',
+      'Personal Information',
       name: 'PersonalInformation',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sign out `
+  /// `Sign out`
   String get SignOut {
     return Intl.message(
-      'Sign out ',
+      'Sign out',
       name: 'SignOut',
       desc: '',
       args: [],
@@ -1020,10 +1010,10 @@ class S {
     );
   }
 
-  /// `Application Updates `
+  /// `Application Updates`
   String get AppUpdates {
     return Intl.message(
-      'Application Updates ',
+      'Application Updates',
       name: 'AppUpdates',
       desc: '',
       args: [],
@@ -1105,16 +1095,6 @@ class S {
     return Intl.message(
       'Turn on Accessibility',
       name: 'AccessibilityTurnOn',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Turn on sound`
-  String get SoundBtn {
-    return Intl.message(
-      'Turn on sound',
-      name: 'SoundBtn',
       desc: '',
       args: [],
     );
@@ -1290,10 +1270,10 @@ class S {
     );
   }
 
-  /// `The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties`
+  /// `The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties.`
   String get Answer1 {
     return Intl.message(
-      'The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties',
+      'The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties.',
       name: 'Answer1',
       desc: '',
       args: [],
@@ -1310,20 +1290,20 @@ class S {
     );
   }
 
-  /// `How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities...`
+  /// `How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities.`
   String get Answer3 {
     return Intl.message(
-      'How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities...',
+      'How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities.',
       name: 'Answer3',
       desc: '',
       args: [],
     );
   }
 
-  /// `Yes, Radari Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features.`
+  /// `Yes, Radary Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features.`
   String get Answer4 {
     return Intl.message(
-      'Yes, Radari Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features.',
+      'Yes, Radary Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features.',
       name: 'Answer4',
       desc: '',
       args: [],
@@ -1360,20 +1340,20 @@ class S {
     );
   }
 
-  /// `Delete Account `
+  /// `Delete Account`
   String get ConfirmDelete {
     return Intl.message(
-      'Delete Account ',
+      'Delete Account',
       name: 'ConfirmDelete',
       desc: '',
       args: [],
     );
   }
 
-  /// `Search here `
+  /// `Search here`
   String get Search {
     return Intl.message(
-      'Search here ',
+      'Search here',
       name: 'Search',
       desc: '',
       args: [],
@@ -1480,10 +1460,10 @@ class S {
     );
   }
 
-  /// `Train accidents `
+  /// `Train accidents`
   String get Accident_4 {
     return Intl.message(
-      'Train accidents ',
+      'Train accidents',
       name: 'Accident_4',
       desc: '',
       args: [],
@@ -1660,10 +1640,10 @@ class S {
     );
   }
 
-  /// `Dont Have an account?`
+  /// `Don''t Have an account?`
   String get Dont_Have {
     return Intl.message(
-      'Dont Have an account?',
+      'Don\'\'t Have an account?',
       name: 'Dont_Have',
       desc: '',
       args: [],
@@ -1685,6 +1665,166 @@ class S {
     return Intl.message(
       'Passwords do not match',
       name: 'PasswordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Currency`
+  String get Currency {
+    return Intl.message(
+      'Currency',
+      name: 'Currency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your First Name`
+  String get EnterYourFirstName {
+    return Intl.message(
+      'Enter Your First Name',
+      name: 'EnterYourFirstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Last Name`
+  String get EnterYourLastName {
+    return Intl.message(
+      'Enter Your Last Name',
+      name: 'EnterYourLastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Phone`
+  String get ChangePhone {
+    return Intl.message(
+      'Change Phone',
+      name: 'ChangePhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get edetProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'edetProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A text message has been sent to this number containing a four-digit code, enter this code here`
+  String get ResetPasswordMessage {
+    return Intl.message(
+      'A text message has been sent to this number containing a four-digit code, enter this code here',
+      name: 'ResetPasswordMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Code`
+  String get EnterCode {
+    return Intl.message(
+      'Enter Code',
+      name: 'EnterCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Didn''t receive the code?`
+  String get DontReceived {
+    return Intl.message(
+      'Didn\'\'t receive the code?',
+      name: 'DontReceived',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Currently Points`
+  String get YourCurrentlyPoints {
+    return Intl.message(
+      'Your Currently Points',
+      name: 'YourCurrentlyPoints',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Security`
+  String get Security {
+    return Intl.message(
+      'Security',
+      name: 'Security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Method`
+  String get PaymentMethod {
+    return Intl.message(
+      'Payment Method',
+      name: 'PaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment and Shipping Info`
+  String get PaymentAndShippingInfo {
+    return Intl.message(
+      'Payment and Shipping Info',
+      name: 'PaymentAndShippingInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete My Account`
+  String get DeleteMyAccount {
+    return Intl.message(
+      'Delete My Account',
+      name: 'DeleteMyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping Address`
+  String get ShippingAddress {
+    return Intl.message(
+      'Shipping Address',
+      name: 'ShippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete your account?`
+  String get DeleteMessage {
+    return Intl.message(
+      'Are you sure you want to delete your account?',
+      name: 'DeleteMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Shipping Address`
+  String get EnterYourShippingAddress {
+    return Intl.message(
+      'Enter Your Shipping Address',
+      name: 'EnterYourShippingAddress',
       desc: '',
       args: [],
     );
