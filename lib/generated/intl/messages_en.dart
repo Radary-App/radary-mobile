@@ -22,7 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "Accessibility": MessageLookupByLibrary.simpleMessage("Accessibility "),
+        "Accessibility": MessageLookupByLibrary.simpleMessage("Accessibility"),
         "AccessibilityBtn":
             MessageLookupByLibrary.simpleMessage("Accessibility"),
         "AccessibilityDescription": MessageLookupByLibrary.simpleMessage(
@@ -36,7 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Accident_2":
             MessageLookupByLibrary.simpleMessage("Vehicular accidents"),
         "Accident_3": MessageLookupByLibrary.simpleMessage("Bicycle accidents"),
-        "Accident_4": MessageLookupByLibrary.simpleMessage("Train accidents "),
+        "Accident_4": MessageLookupByLibrary.simpleMessage("Train accidents"),
         "Accident_5": MessageLookupByLibrary.simpleMessage("Fire accidents"),
         "Accident_6":
             MessageLookupByLibrary.simpleMessage("Building collapses"),
@@ -46,23 +46,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "AllowDuringUsingApp":
             MessageLookupByLibrary.simpleMessage("While using the app"),
         "Answer1": MessageLookupByLibrary.simpleMessage(
-            "The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties"),
+            "The app uses geolocation to pinpoint the exact location of the problem, helping stakeholders find and address the problem faster. Your location data is used only for reporting purposes and is not shared with third parties."),
         "Answer2": MessageLookupByLibrary.simpleMessage(
             "You can report a wide range of local problems, including potholes, broken light poles, graffiti, illegal waste disposal, damaged signs, broken traffic signals, and more."),
         "Answer3": MessageLookupByLibrary.simpleMessage(
-            "How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities..."),
+            "How long a problem can be resolved depending on its nature, urgency, and local capacity. The application helps prioritize problems through the voting system, but the final resolution period is determined by the concerned authorities."),
         "Answer4": MessageLookupByLibrary.simpleMessage(
-            "Yes, Radari Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features."),
+            "Yes, Radary Mobile app is completely free to download and use. There are no hidden fees for reporting problems or using any of its features."),
         "Answer5": MessageLookupByLibrary.simpleMessage(
             "You can contact the technical support team by sending an email to the address provided for support. We are here to help you at any time."),
         "AppUpdates":
-            MessageLookupByLibrary.simpleMessage("Application Updates "),
+            MessageLookupByLibrary.simpleMessage("Application Updates"),
         "Arabic": MessageLookupByLibrary.simpleMessage("اللغة العربية"),
-        "BirthDate": MessageLookupByLibrary.simpleMessage("Date of Birth "),
+        "BirthDate": MessageLookupByLibrary.simpleMessage("Date of Birth"),
         "CameraAccess":
             MessageLookupByLibrary.simpleMessage("Allow access to camera"),
         "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "Center": MessageLookupByLibrary.simpleMessage("Center"),
+        "ChangePhone": MessageLookupByLibrary.simpleMessage("Change Phone"),
         "ChangePhoneMessage": MessageLookupByLibrary.simpleMessage(
             "A text message has been sent to this number containing a four-digit code, enter this code here"),
         "ChooseLanguage":
@@ -70,15 +71,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "ColorChangeAndContrast":
             MessageLookupByLibrary.simpleMessage("Color Change and Contrast"),
         "ConfirmBtn": MessageLookupByLibrary.simpleMessage("Confirm"),
-        "ConfirmCode": MessageLookupByLibrary.simpleMessage("Confirm code "),
-        "ConfirmDelete":
-            MessageLookupByLibrary.simpleMessage("Delete Account "),
+        "ConfirmCode": MessageLookupByLibrary.simpleMessage("Confirm code"),
+        "ConfirmDelete": MessageLookupByLibrary.simpleMessage("Delete Account"),
         "ConfirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm new password"),
         "ContinueReporting":
-            MessageLookupByLibrary.simpleMessage("Continue Reporting "),
+            MessageLookupByLibrary.simpleMessage("Continue Reporting"),
+        "Currency": MessageLookupByLibrary.simpleMessage("Currency"),
         "DarkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-        "Day": MessageLookupByLibrary.simpleMessage("day"),
+        "Day": MessageLookupByLibrary.simpleMessage("Day"),
         "DeleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
         "DeleteAccountBtn":
             MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -86,24 +87,37 @@ class MessageLookup extends MessageLookupByLibrary {
             "Deleting your account will remove all your information from our database. And this cannot be undone."),
         "DeleteAccountMsg": MessageLookupByLibrary.simpleMessage(
             "If you need to delete your account, we would like you to provide the reason"),
+        "DeleteMessage": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete your account?"),
+        "DeleteMyAccount":
+            MessageLookupByLibrary.simpleMessage("Delete My Account"),
         "DemandEveryTime": MessageLookupByLibrary.simpleMessage(
             "Ask next time or when I share"),
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
+        "DontReceived":
+            MessageLookupByLibrary.simpleMessage("Didn\'\'t receive the code?"),
         "Dont_Have":
-            MessageLookupByLibrary.simpleMessage("Dont Have an account?"),
+            MessageLookupByLibrary.simpleMessage("Don\'\'t Have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
+        "EnterCode": MessageLookupByLibrary.simpleMessage("Enter Code"),
         "EnterEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "EnterName": MessageLookupByLibrary.simpleMessage("Your name"),
         "EnterPhone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "EnterYourEmail":
-            MessageLookupByLibrary.simpleMessage("Email (optional)"),
+            MessageLookupByLibrary.simpleMessage("example@example.com"),
+        "EnterYourFirstName":
+            MessageLookupByLibrary.simpleMessage("Enter Your First Name"),
+        "EnterYourLastName":
+            MessageLookupByLibrary.simpleMessage("Enter Your Last Name"),
         "EnterYourPassWord":
-            MessageLookupByLibrary.simpleMessage("Enter new password"),
+            MessageLookupByLibrary.simpleMessage("Enter Your Password"),
         "EnterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter phone number"),
+        "EnterYourShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Enter Your Shipping Address"),
         "Feedback1": MessageLookupByLibrary.simpleMessage(
             "Did you find difficulty to report the problem?"),
         "Feedback2": MessageLookupByLibrary.simpleMessage(
@@ -113,7 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ForAccessibility":
             MessageLookupByLibrary.simpleMessage("For Accessibility"),
         "ForContinueReporting":
-            MessageLookupByLibrary.simpleMessage("To continue Reporting "),
+            MessageLookupByLibrary.simpleMessage("To continue Reporting"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "Governorate": MessageLookupByLibrary.simpleMessage("Governorate"),
@@ -125,10 +139,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Limit": MessageLookupByLibrary.simpleMessage("0/50"),
         "LocationAccess": MessageLookupByLibrary.simpleMessage(
             "Allow access to your location"),
-        "Log_In": MessageLookupByLibrary.simpleMessage("Log in "),
-        "Log_InBtn": MessageLookupByLibrary.simpleMessage("Log in "),
+        "Log_In": MessageLookupByLibrary.simpleMessage("Log in"),
+        "Log_InBtn": MessageLookupByLibrary.simpleMessage("Log in"),
         "Message1": MessageLookupByLibrary.simpleMessage(
-            "Contribute to the improvment of your area"),
+            "Contribute to the improvement of your area"),
         "Message2": MessageLookupByLibrary.simpleMessage(
             "Radary to help report street problems easily and quickly"),
         "Message3":
@@ -139,7 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Together,to make difference"),
         "Message6": MessageLookupByLibrary.simpleMessage(
             "We are here to help you report problems and act quickly"),
-        "Month": MessageLookupByLibrary.simpleMessage("month"),
+        "Month": MessageLookupByLibrary.simpleMessage("Month"),
         "MyProfile": MessageLookupByLibrary.simpleMessage("My profile"),
         "MyReports": MessageLookupByLibrary.simpleMessage("My reports"),
         "NeverAllow": MessageLookupByLibrary.simpleMessage("Never"),
@@ -150,19 +164,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Notifications from Radary"),
         "OR": MessageLookupByLibrary.simpleMessage("Or"),
         "OtherMsg": MessageLookupByLibrary.simpleMessage("Write message here"),
-        "PassWord": MessageLookupByLibrary.simpleMessage("Password"),
-        "Password": MessageLookupByLibrary.simpleMessage("Password "),
+        "Password": MessageLookupByLibrary.simpleMessage("Password"),
         "PasswordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "PaymentAndShippingInfo":
+            MessageLookupByLibrary.simpleMessage("Payment and Shipping Info"),
+        "PaymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
         "Permission":
             MessageLookupByLibrary.simpleMessage("Allow access to camera"),
         "Permissions": MessageLookupByLibrary.simpleMessage("Permissions"),
         "PersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information "),
-        "Phone": MessageLookupByLibrary.simpleMessage("phone number "),
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
+        "Phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "PhoneNumberExample":
             MessageLookupByLibrary.simpleMessage("+20 1*********"),
-        "Phone_Number": MessageLookupByLibrary.simpleMessage("Phone Number "),
+        "Phone_Number": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "PhotoAddress": MessageLookupByLibrary.simpleMessage("Add location"),
         "PhotoDescription":
             MessageLookupByLibrary.simpleMessage("Add description"),
@@ -202,30 +218,33 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lots of notifications"),
         "Reason5": MessageLookupByLibrary.simpleMessage("Personal reasons"),
         "Reason6": MessageLookupByLibrary.simpleMessage("Other"),
-        "ReportDate": MessageLookupByLibrary.simpleMessage("Report Date "),
+        "ReportDate": MessageLookupByLibrary.simpleMessage("Report Date"),
         "ReportDoneMessage": MessageLookupByLibrary.simpleMessage(
             "Your report has reached the competent authorities, the problem is being resolved"),
-        "ReportStatus": MessageLookupByLibrary.simpleMessage("Report Status "),
+        "ReportStatus": MessageLookupByLibrary.simpleMessage("Report Status"),
         "ReportSuccess": MessageLookupByLibrary.simpleMessage(
             "The problem has been resolved successfully!"),
-        "ResetPassword":
-            MessageLookupByLibrary.simpleMessage("Reset Password "),
-        "Search": MessageLookupByLibrary.simpleMessage("Search here "),
+        "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "ResetPasswordMessage": MessageLookupByLibrary.simpleMessage(
+            "A text message has been sent to this number containing a four-digit code, enter this code here"),
+        "Search": MessageLookupByLibrary.simpleMessage("Search here"),
         "SecondReport": MessageLookupByLibrary.simpleMessage("Report number 2"),
-        "SendCode": MessageLookupByLibrary.simpleMessage("Send code "),
+        "Security": MessageLookupByLibrary.simpleMessage("Security"),
+        "SendCode": MessageLookupByLibrary.simpleMessage("Send code"),
         "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "SignOut": MessageLookupByLibrary.simpleMessage("Sign out "),
+        "ShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Shipping Address"),
+        "SignOut": MessageLookupByLibrary.simpleMessage("Sign out"),
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "You will need to enter your username and password the next time you want to log in"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("Sign up"),
-        "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" Sign Up  "),
+        "Sign_UpBtn": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "Solved_problems":
             MessageLookupByLibrary.simpleMessage("Solved problems"),
         "Sound": MessageLookupByLibrary.simpleMessage("Sound"),
-        "SoundBtn": MessageLookupByLibrary.simpleMessage("Turn on sound"),
-        "SoundOn": MessageLookupByLibrary.simpleMessage("Turn on Sound "),
-        "Suggestion": MessageLookupByLibrary.simpleMessage("For Suggestions "),
+        "SoundOn": MessageLookupByLibrary.simpleMessage("Turn on Sound"),
+        "Suggestion": MessageLookupByLibrary.simpleMessage("For Suggestions"),
         "Suggestions": MessageLookupByLibrary.simpleMessage("Suggestions"),
         "SupportAndHelp":
             MessageLookupByLibrary.simpleMessage("Help and support"),
@@ -234,14 +253,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "ThankYou": MessageLookupByLibrary.simpleMessage("Thanks"),
         "ThirdReport": MessageLookupByLibrary.simpleMessage("Report number 3"),
         "Time": MessageLookupByLibrary.simpleMessage("Time"),
-        "TimeSelect": MessageLookupByLibrary.simpleMessage("Select Time "),
+        "TimeSelect": MessageLookupByLibrary.simpleMessage("Select Time"),
         "Vibration": MessageLookupByLibrary.simpleMessage("Vibration"),
         "WelcomeMessage": MessageLookupByLibrary.simpleMessage("Welcome,...."),
-        "Year": MessageLookupByLibrary.simpleMessage("year"),
+        "Year": MessageLookupByLibrary.simpleMessage("Year"),
         "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "YourCurrentlyPoints":
+            MessageLookupByLibrary.simpleMessage("Your Currently Points"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
+        "edetProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeBanner1":
             MessageLookupByLibrary.simpleMessage("One click, you can report"),
@@ -259,10 +281,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Useless garbage and weeds on the bank of the river"),
         "my_notes": MessageLookupByLibrary.simpleMessage(
             "There is trash in the street and it looks bad"),
-        "name": MessageLookupByLibrary.simpleMessage("name"),
-        "next": MessageLookupByLibrary.simpleMessage("next"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "recapture": MessageLookupByLibrary.simpleMessage("Recapture"),
-        "resend": MessageLookupByLibrary.simpleMessage("Resend "),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "user_notes": MessageLookupByLibrary.simpleMessage("User notes")
       };
 }

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/core/routing/route.dart';
 import 'package:radary/features/home/ui/screens/home_screen.dart';
+import 'package:radary/features/profile/ui/screens/setting/screen/edit_setting.dart';
 import '../../features/details/ui/screens/confirm_view.dart';
 import '../../features/follow_report/ui/screens/follow_report_view.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
 import '../../features/login/ui/screens/login_screen.dart';
 import '../../features/onboarding/ui/screens/on_boarding_screens.dart';
+import '../../features/profile/ui/screens/edit_profile/screen/edit_profile.dart';
 import '../../features/sign_up/logic/cubit/sigin_up_cubit.dart';
 import '../../features/sign_up/ui/screens/sign_up_screen.dart';
 import '../di/dependecy_injection.dart';
@@ -48,7 +50,20 @@ class AppRouter {
             activeColor: Colors.blue, // Example value
           ),
         );
- 
+
+      case Routes.confirmReport:
+        return MaterialPageRoute(
+          builder: (_) => const ConfirmView(),
+        );
+      case Routes.editProfile:
+        return MaterialPageRoute(
+          builder: (_) => const EditSetting(),
+        );
+      case Routes.editSetting:
+        return MaterialPageRoute(
+          builder: (_) => const EditSetting(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
