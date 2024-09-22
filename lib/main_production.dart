@@ -22,11 +22,9 @@ void main() async {
   DioFactory.getDio();
   // Ensure screen size setup for ScreenUtil
   await ScreenUtil.ensureScreenSize();
-
-  // Check if the user is logged in
+// Run the app with the result of isLoggedIn
   bool isLoggedIn = await checkIfUserIsLoggedIn();
 
-  // Run the app with the result of isLoggedIn
   runApp(RadaryApp(
     appRouter: AppRouter(),
     isLoggedIn: isLoggedIn,
@@ -35,6 +33,6 @@ void main() async {
 
 Future<bool> checkIfUserIsLoggedIn() async {
   String? userToken =
-      await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
-  return userToken.isNullOrEmpty(); // Returns true if logged out
+    await  CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
+  return userToken != null && userToken.isNotEmpty; // Returns true if logged in
 }

@@ -39,7 +39,8 @@ class RadaryApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale('ar'),
           title: 'Radary',
-          initialRoute: isLoggedIn ? Routes.splashScreen : Routes.homeScreen,
+          initialRoute:
+              isLoggedIn ? Routes.homeScreen : Routes.onBoardingScreen,
         );
       },
     );

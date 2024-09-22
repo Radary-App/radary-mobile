@@ -1,14 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:radary/core/networking/api_constants.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../core/theming/app_colors.dart';
-import '../../data/models/Problem_model.dart';
+import '../../data/models/emergency_problem_response_model.dart';
 
-class AllProblem extends StatelessWidget {
-  final List<ProblemModel> problems;
+class EmergencyProblemListView extends StatelessWidget {
+  final List<Problem> problems;
 
-  const AllProblem({super.key, required this.problems});
+  const EmergencyProblemListView({super.key, required this.problems});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,8 @@ class AllProblem extends StatelessWidget {
                   height: 160.h,
                   child: CachedNetworkImage(
                     fit: BoxFit.cover,
-                    imageUrl: problem.imageUrl,
+                    imageUrl:
+                        "${ApiConstants.apiBaseUrl}${problem.photo}", // استخدام المسار الكامل
                     placeholder: (context, url) => Shimmer.fromColors(
                       baseColor: Colors.grey[300]!,
                       highlightColor: Colors.grey[100]!,
@@ -65,7 +67,7 @@ class AllProblem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      problem.title,
+                      problem.coordinates.toString(),
                       style: TextStyle(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

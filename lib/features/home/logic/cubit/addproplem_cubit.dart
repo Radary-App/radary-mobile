@@ -71,7 +71,7 @@ class AddProblemCubit extends Cubit<AddproplemState> {
       return;
     }
 
-    String? token = await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
+    String? token = await CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
     print("Retrieved Token: $token");
 
     // إعداد FormData

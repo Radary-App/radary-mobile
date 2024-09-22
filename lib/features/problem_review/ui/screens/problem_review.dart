@@ -4,12 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:radary/core/theming/app_colors.dart';
 import 'package:radary/features/problem_review/ui/screens/all_problem.dart';
+import 'package:radary/features/problem_review/ui/screens/emergency_bloc_builder.dart';
+import 'package:radary/features/problem_review/ui/screens/emergency_problem_bloc_builder.dart';
 import 'package:radary/features/problem_review/ui/screens/my_emergencys.dart';
 import 'package:radary/generated/l10n.dart';
 
 import '../../../../core/helpers/util/assets_data.dart';
 import '../../../../core/theming/app_text_styles.dart';
-import '../../data/models/Problem_model.dart';
 
 class ProblemReview extends StatelessWidget {
   const ProblemReview({super.key});
@@ -59,60 +60,12 @@ class ProblemReview extends StatelessWidget {
                     ),
                   ],
                 ),
-                Expanded(
+                const Expanded(
                   child: TabBarView(
                     children: <Widget>[
-                      AllProblem(
-                        problems: [
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 1",
-                            description: "Description of problem 1",
-                            date: DateTime.now(),
-                            status: "Open",
-                          ),
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 2",
-                          ),
-                        ],
-                      ),
-                      MyEmergency(
-                        problems: [
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 1",
-                            description: "Description of problem 1",
-                            date: DateTime.now(),
-                            status: "Open",
-                          ),
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 2",
-                          ),
-                        ],
-                      ),
-                      MyEmergency(
-                        problems: [
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 1",
-                            description: "Description of problem 1",
-                            date: DateTime.now(),
-                            status: "Open",
-                          ),
-                          ProblemModel(
-                            imageUrl:
-                                "https://th.bing.com/th/id/OIP.2md6Q-jQXBVcx5sm-PLn0QHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                            title: "Problem 2",
-                          ),
-                        ],
-                      ),
+                      EmergencyProblemBlocBuilder(),
+                      EmergencyListBlocBuilder(),
+                      EmergencyProblemBlocBuilder(),
                     ],
                   ),
                 ),
