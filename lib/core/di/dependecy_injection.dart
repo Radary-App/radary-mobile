@@ -4,6 +4,8 @@ import '../../features/home/data/repo/add_proplem_repo.dart';
 import '../../features/home/logic/cubit/addproplem_cubit.dart';
 import '../../features/login/data/repo/login_repo.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
+import '../../features/problem_review/data/repo/emergency_problem_repo.dart';
+import '../../features/problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import '../../features/sign_up/data/repo/sign_up_repo.dart';
 import '../../features/sign_up/logic/cubit/sigin_up_cubit.dart';
 import '../networking/api_service.dart';
@@ -26,5 +28,10 @@ Future<void> setupGetIt() async {
   // add problem
   getIt.registerLazySingleton<AddProblemRepo>(() => AddProblemRepo(getIt()));
   getIt.registerFactory<AddProblemCubit>(() => AddProblemCubit(getIt()));
-  
+  // emergency problem
+  getIt.registerLazySingleton<EmergencyProblemResponseRepo>(
+      () => EmergencyProblemResponseRepo(getIt()));
+
+  getIt.registerFactory<EmergencyProblemResponseCubit>(
+      () => EmergencyProblemResponseCubit(getIt()));
 }

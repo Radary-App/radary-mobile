@@ -25,11 +25,10 @@ class DioFactory {
     }
   }
 
-  
   static void addDioHeaders() async {
     dio?.options.headers = {
       'Authorization':
-          'Bearer ${await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken)}',
+          'Bearer ${CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken)}',
     };
   }
 

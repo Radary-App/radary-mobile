@@ -9,6 +9,8 @@ import '../../features/home/logic/cubit/addproplem_cubit.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
 import '../../features/login/ui/screens/login_screen.dart';
 import '../../features/onboarding/ui/screens/on_boarding_screens.dart';
+import '../../features/problem_review/data/repo/emergency_problem_repo.dart';
+import '../../features/problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import '../../features/profile/ui/screens/edit_profile/screen/edit_profile.dart';
 import '../../features/sign_up/logic/cubit/sigin_up_cubit.dart';
 import '../../features/sign_up/ui/screens/sign_up_screen.dart';
@@ -40,11 +42,20 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<AddProblemCubit>(),
-            child: const HomeScreen(),
-          ),
-        );
+  builder: (_) => MultiBlocProvider(
+    providers: [
+      BlocProvider(
+        create: (context) => getIt<AddProblemCubit>(),
+      ),
+      BlocProvider(
+        create: (context) => EmergencyProblemResponseCubit(
+          getIt<EmergencyProblemResponseRepo>(), 
+        )..getData(),
+      ),
+    ],
+    child: const HomeScreen(),
+  ),
+);
       case Routes.confirmView:
         return MaterialPageRoute(builder: (_) => const ConfirmView());
       case Routes.followReport:

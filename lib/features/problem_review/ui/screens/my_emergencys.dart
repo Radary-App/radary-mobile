@@ -1,88 +1,100 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:radary/core/helpers/util/spacing.dart';
-import 'package:radary/core/theming/app_colors.dart';
-import 'package:radary/features/problem_review/data/models/Problem_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shimmer/shimmer.dart';
+import '../../../../core/networking/api_constants.dart';
+import '../../logic/cubit/emergency_problem_response_cubit.dart';
+import '../../logic/cubit/emergency_problem_response_state.dart';
+import '../../data/models/emergency_problem_response_model.dart';
+import 'package:radary/core/theming/app_colors.dart';
 
 class MyEmergency extends StatelessWidget {
-  final List<ProblemModel> problems;
-
-  const MyEmergency({
-    super.key,
-    required this.problems,
-  });
+  const MyEmergency({super.key});
 
   @override
   Widget build(BuildContext context) {
-    if (problems.isEmpty) {
-      return Center(
-        child: Text(
-          'No problems available',
-          style: TextStyle(fontSize: 16.sp, color: Colors.black),
-        ),
-      );
-    }
+    return BlocBuilder<EmergencyProblemResponseCubit,
+        EmergencyProblemResponseState>(
+      buildWhen: (previous, current) => current is Success || current is Error,
+      builder: (context, state) {
+        return state.maybeWhen(
+          success: (emergenciesList, _) {
+            if (emergenciesList == null || emergenciesList.isEmpty) {
+              return Center(
+                child: Text(
+                  'No emergencies available',
+                  style: TextStyle(fontSize: 16.sp, color: Colors.black),
+                ),
+              );
+            }
 
-    return ListView.builder(
-      itemCount: problems.length,
-      itemBuilder: (context, index) {
-        final problem = problems[index];
+            return ListView.builder(
+              itemCount: emergenciesList.length,
+              itemBuilder: (context, index) {
+                final emergency = emergenciesList[index];
 
-        return Container(
-          margin: EdgeInsets.symmetric(vertical: 16.h),
-          width: 396.w,
-          height: 160.h,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color:
-                bluetransparent, // Assuming 'bluetransparent' is defined in app_colors
-          ),
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: SizedBox(
-                  width: 150.w,
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 16.h),
+                  width: 396.w,
                   height: 160.h,
-                  child: CachedNetworkImage(
-                    fit: BoxFit.cover,
-                    imageUrl: problem.imageUrl,
-                    placeholder: (context, url) => Shimmer.fromColors(
-                      baseColor: Colors.grey[300]!,
-                      highlightColor: Colors.grey[100]!,
-                      child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        color: Colors.white,
-                      ),
-                    ),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: bluetransparent,
                   ),
-                ),
-              ),
-              SizedBox(width: 10.w),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      problem.title,
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: SizedBox(
+                          width: 150.w,
+                          height: 160.h,
+                          child: CachedNetworkImage(
+                            fit: BoxFit.cover,
+                            imageUrl:
+                                "${ApiConstants.apiBaseUrl}${emergency.photo ?? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJiDwHr5LknxeAAo6Bfmt2wQEp1my8jrrXeLrt7qoLmZCLWD4RmwlPs4TsberWovNSYeubnTKvv9yOnY2TD2qu6CAtQuvgPXI2CxQEHxJs68uATRUm5egomKowMgPdJKF6hPGH7nPuHo/s1600/kilwa+zoldik.gif"}",
+                            placeholder: (context, url) => Shimmer.fromColors(
+                              baseColor: Colors.grey[300]!,
+                              highlightColor: Colors.grey[100]!,
+                              child: Container(
+                                width: double.infinity,
+                                height: double.infinity,
+                                color: Colors.white,
+                              ),
+                            ),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                          ),
+                        ),
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+                      SizedBox(width: 10.w),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              emergency.coordinates?.toString() ??
+                                  'No coordinates', // Handle null
+                              style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+          error: (errorHandler) =>
+              const Center(child: Text('Error loading emergencies')),
+          orElse: () => const SizedBox.shrink(),
         );
       },
     );

@@ -5,6 +5,7 @@ import '../../features/home/data/models/add_proplem_response.dart';
 import '../../features/home/data/models/addproplem_request_body.dart';
 import '../../features/login/data/models/login_request_body.dart';
 import '../../features/login/data/models/login_response.dart';
+import '../../features/problem_review/data/models/emergency_problem_response_model.dart';
 import '../../features/sign_up/data/models/sign_up_request_body.dart';
 import '../../features/sign_up/data/models/sign_up_response.dart';
 
@@ -28,4 +29,6 @@ abstract class ApiService {
 Future<AddProblemResponse> addProblem(
   @Body() FormData addProblemRequestBody,
 );
+@GET(ApiConstants.emergencyProblem)
+Future<EmergencyProblemResponseModel> getEmergencyAndProblems();
 }

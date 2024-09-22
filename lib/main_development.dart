@@ -32,6 +32,6 @@ void main() async {
 }
 
 Future<bool> checkIfUserIsLoggedIn() async {
-  String? userToken = await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
+  String? userToken = await CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
   return userToken.isNullOrEmpty(); // Returns true if logged out
 }

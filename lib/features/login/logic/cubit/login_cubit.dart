@@ -32,6 +32,7 @@ class LoginCubit extends Cubit<LoginState> {
     response.when(success: (loginResponse) async {
       // Save token to shared preferences
       await saveToken(loginResponse.token!);
+      print(loginResponse.token);
       DioFactory.addDioHeaders();
       // Emit success state with the response
       emit(LoginState.success(loginResponse));
@@ -46,8 +47,9 @@ class LoginCubit extends Cubit<LoginState> {
 
   // Save token to shared preferences
   Future<void> saveToken(String token) async {
-    await CacheHelper.setSecuredString(SherdPreferencesKeys.userToken, token);
+    await CacheHelper.sharedPreferences.setString(SherdPreferencesKeys.userToken, token);
     DioFactory.setTokenIntoHeaderAfterLogin(token);
+    DioFactory.addDioHeaders();
   }
 
   // Dispose method to clean up controllers
