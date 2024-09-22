@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/features/problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import 'package:radary/features/problem_review/ui/screens/all_problem.dart';
+import 'package:radary/features/problem_review/ui/screens/my_emergencys.dart';
 
 import '../../data/models/emergency_problem_response_model.dart';
 import '../../logic/cubit/emergency_problem_response_state.dart';
@@ -17,31 +18,39 @@ class EmergencyListBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           success: (emergenciesList, problemsList) {
-            return EmergencyProblemListView(
-              problems: emapEmergenciesToProblems(emergenciesList ?? []),
-            );
+            return MyEmergency(emergenciesList: mapEmergenciesToEmergencies(emergenciesList ?? []));
           },
-          error: (errorHandler) => setupError(),
+          error: (errorHandler) => setupError(context),
           orElse: () {
-            return const SizedBox.shrink();
+            return const Center(child: CircularProgressIndicator());
           },
         );
       },
     );
   }
 
-  // Define the method to convert emergencies to problems
-  List<Problem> emapEmergenciesToProblems(List<Emergency> emergencies) {
+  // Define the method to convert emergencies to emergencies
+  List<Emergency> mapEmergenciesToEmergencies(List<Emergency> emergencies) {
     return emergencies.map((emergency) {
-      return Problem(
+      return Emergency(
         id: emergency.id,
-        userDescription: emergency.description,
         coordinates: emergency.coordinates,
+        photo: emergency.photo,
+        aiDescriptionArabic: emergency.aiDescriptionArabic,
+        aiDescriptionEnglish: emergency.aiDescriptionEnglish,
       );
     }).toList();
   }
 
-  Widget setupError() {
-    return const Center(child: Text('Error loading data'));
+  Widget setupError(BuildContext context) {
+    return const Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Error loading data'),
+          SizedBox(height: 8),
+        ],
+      ),
+    );
   }
 }

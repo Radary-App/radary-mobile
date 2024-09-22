@@ -7,6 +7,7 @@ import 'package:radary/generated/l10n.dart';
 import '../../../../core/helpers/util/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/add_text_form_field.dart';
+import '../../logic/cubit/addemergency_cubit.dart';
 import '../../logic/cubit/addproplem_cubit.dart';
 import '../widgets/home_app_bar.dart';
 import 'widgets/widgets_home_views/home_views_banner.dart';
@@ -43,7 +44,7 @@ class HomeView extends StatelessWidget {
               HomeViewRecorded(
                 text: S.of(context).AccidentReport,
                 onTap: () {
-                  context.read<AddProblemCubit>().pickImage(context);
+                  context.read<AddEmergencyCubit>().pickImage(context);
                 },
               ),
               verticalSpace(60),

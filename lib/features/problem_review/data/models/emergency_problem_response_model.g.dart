@@ -28,14 +28,16 @@ Emergency _$EmergencyFromJson(Map<String, dynamic> json) => Emergency(
       coordinates: json['coordinates'] as String?,
       photo: json['photo'] as String?,
       id: (json['id'] as num?)?.toInt(),
-      description: json['description'] as String?,
+      aiDescriptionEnglish: json['aiDescriptionEnglish'] as String?,
+      aiDescriptionArabic: json['aiDescriptionArabic'] as String?,
     );
 
 Map<String, dynamic> _$EmergencyToJson(Emergency instance) => <String, dynamic>{
       'coordinates': instance.coordinates,
       'photo': instance.photo,
       'id': instance.id,
-      'description': instance.description,
+      'aiDescriptionEnglish': instance.aiDescriptionEnglish,
+      'aiDescriptionArabic': instance.aiDescriptionArabic,
     };
 
 Problem _$ProblemFromJson(Map<String, dynamic> json) => Problem(
@@ -45,6 +47,8 @@ Problem _$ProblemFromJson(Map<String, dynamic> json) => Problem(
       photo: json['photo'] as String?,
       createdAt: json['createdAt'] as String?,
       id: (json['id'] as num?)?.toInt(),
+      aiDescriptionEnglish: json['aiDescriptionEnglish'] as String?,
+      aiDescriptionArabic: json['aiDescriptionArabic'] as String?,
     );
 
 Map<String, dynamic> _$ProblemToJson(Problem instance) => <String, dynamic>{
@@ -54,4 +58,6 @@ Map<String, dynamic> _$ProblemToJson(Problem instance) => <String, dynamic>{
       'photo': instance.photo,
       'createdAt': instance.createdAt,
       'id': instance.id,
+      'aiDescriptionEnglish': instance.aiDescriptionEnglish,
+      'aiDescriptionArabic': instance.aiDescriptionArabic,
     };

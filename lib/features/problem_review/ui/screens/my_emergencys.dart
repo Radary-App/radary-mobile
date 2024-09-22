@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shimmer/shimmer.dart';
+import '../../../../core/helpers/util/spacing.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../logic/cubit/emergency_problem_response_cubit.dart';
 import '../../logic/cubit/emergency_problem_response_state.dart';
@@ -10,8 +11,11 @@ import '../../data/models/emergency_problem_response_model.dart';
 import 'package:radary/core/theming/app_colors.dart';
 
 class MyEmergency extends StatelessWidget {
-  const MyEmergency({super.key});
-
+  const MyEmergency({
+    super.key,
+    required this.emergenciesList,
+  });
+  final List<Emergency> emergenciesList;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<EmergencyProblemResponseCubit,
@@ -50,32 +54,31 @@ class MyEmergency extends StatelessWidget {
                           width: 150.w,
                           height: 160.h,
                           child: CachedNetworkImage(
-                            fit: BoxFit.cover,
-                            imageUrl:
-                                "${ApiConstants.apiBaseUrl}${emergency.photo ?? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJiDwHr5LknxeAAo6Bfmt2wQEp1my8jrrXeLrt7qoLmZCLWD4RmwlPs4TsberWovNSYeubnTKvv9yOnY2TD2qu6CAtQuvgPXI2CxQEHxJs68uATRUm5egomKowMgPdJKF6hPGH7nPuHo/s1600/kilwa+zoldik.gif"}",
-                            placeholder: (context, url) => Shimmer.fromColors(
-                              baseColor: Colors.grey[300]!,
-                              highlightColor: Colors.grey[100]!,
-                              child: Container(
-                                width: double.infinity,
-                                height: double.infinity,
-                                color: Colors.white,
-                              ),
-                            ),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
+                              fit: BoxFit.cover,
+                              imageUrl:
+                                  "${ApiConstants.apiBaseUrl}${emergency.photo ?? "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJiDwHr5LknxeAAo6Bfmt2wQEp1my8jrrXeLrt7qoLmZCLWD4RmwlPs4TsberWovNSYeubnTKvv9yOnY2TD2qu6CAtQuvgPXI2CxQEHxJs68uATRUm5egomKowMgPdJKF6hPGH7nPuHo/s1600/kilwa+zoldik.gif"}",
+                              placeholder: (context, url) => Shimmer.fromColors(
+                                    baseColor: Colors.grey[300]!,
+                                    highlightColor: Colors.grey[100]!,
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                              errorWidget: (context, url, error) => Image.network(
+                                  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJiDwHr5LknxeAAo6Bfmt2wQEp1my8jrrXeLrt7qoLmZCLWD4RmwlPs4TsberWovNSYeubnTKvv9yOnY2TD2qu6CAtQuvgPXI2CxQEHxJs68uATRUm5egomKowMgPdJKF6hPGH7nPuHo/s1600/kilwa+zoldik.gif")),
                         ),
                       ),
-                      SizedBox(width: 10.w),
+                      verticalSpace(10),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              emergency.coordinates?.toString() ??
-                                  'No coordinates', // Handle null
+                              emergency.aiDescriptionArabic?.toString() ??
+                                  'مفيش بدون وصف',
                               style: TextStyle(
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.bold,

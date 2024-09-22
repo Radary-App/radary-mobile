@@ -204,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "YourCurrentlyPoints":
             MessageLookupByLibrary.simpleMessage("تحديث النقاط الحالية"),
+        "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "edetProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
