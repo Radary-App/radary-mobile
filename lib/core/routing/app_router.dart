@@ -39,7 +39,7 @@ class AppRouter {
           ),
         );
       case Routes.homeScreen:
-        return  MaterialPageRoute(
+        return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => getIt<AddProblemCubit>(),
             child: const HomeScreen(),
@@ -56,14 +56,13 @@ class AppRouter {
             activeColor: Colors.blue, // Example value
           ),
         );
-
       case Routes.confirmReport:
         return MaterialPageRoute(
           builder: (_) => const ConfirmView(),
         );
       case Routes.editProfile:
         return MaterialPageRoute(
-          builder: (_) => const EditSetting(),
+          builder: (_) => const EditProfile(),
         );
       case Routes.editSetting:
         return MaterialPageRoute(

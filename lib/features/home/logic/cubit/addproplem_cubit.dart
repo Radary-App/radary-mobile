@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:dio/dio.dart'; // إضافة هذا السطر
+import 'package:geolocator/geolocator.dart'; // إضافة هذه السطر
 import 'package:radary/features/home/logic/cubit/addproplem_state.dart';
 import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
@@ -18,7 +19,30 @@ class AddProblemCubit extends Cubit<AddproplemState> {
   AddProblemCubit(this._repo) : super(const AddproplemState.initial());
 
   XFile? file;
-  String coordinates = '38.909789,35.203289';
+  String coordinates = '';
+
+  Future<void> getUserLocation(context) async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      showErrorSnackBar('Location services are disabled.', context);
+      return;
+    }
+
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        showErrorSnackBar('Location permission denied.', context);
+        return;
+      }
+    }
+
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    coordinates = '${position.latitude},${position.longitude}';
+  }
 
   Future<File?> pickImage(BuildContext context) async {
     try {
@@ -28,14 +52,15 @@ class AddProblemCubit extends Cubit<AddproplemState> {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           return ImageDettailsView(image: image);
         }));
+        await getUserLocation(context); // استدعاء دالة الموقع بعد التقاط الصورة
         await addProblem(context);
         return image;
       } else {
-        showErrorSnackBar('No Image selected', context);
+        showErrorSnackBar('No image selected', context);
         return null;
       }
     } catch (e) {
-      showErrorSnackBar('Error picking Image: $e', context);
+      showErrorSnackBar('Error picking image: $e', context);
       return null;
     }
   }
@@ -46,8 +71,7 @@ class AddProblemCubit extends Cubit<AddproplemState> {
       return;
     }
 
-    String? token =
-        await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
+    String? token = await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
     print("Retrieved Token: $token");
 
     // إعداد FormData
@@ -70,11 +94,12 @@ class AddProblemCubit extends Cubit<AddproplemState> {
     );
   }
 
-  void showErrorSnackBar(String message, BuildContext context) =>
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(message),
-          duration: const Duration(seconds: 1),
-        ),
-      );
+  void showErrorSnackBar(String message, BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        duration: const Duration(seconds: 1),
+      ),
+    );
+  }
 }

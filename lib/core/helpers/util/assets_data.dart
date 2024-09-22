@@ -1,5 +1,6 @@
 abstract class AssetsData {
   static const logo = "assets/images/radarylogo.png";
+  static const confirm = "assets/svgs/comferm.svg";
   static const logoRadaryText = "assets/svgs/logo_radary_text.svg";
   static const accesability = "assets/images/accessability.png";
   static const accident = "assets/images/accident.png";
@@ -54,8 +55,8 @@ abstract class AssetsData {
   static const arrow = "assets/svgs/arrow.svg";
   static const radarywhite = "assets/svgs/radary_white.svg";
   static const homeblue = "assets/svgs/home_blue.svg";
-   static const done = "assets/svgs/done.svg";
-    static const edit = "assets/svgs/edit.svg";
-     static const personicon = "assets/svgs/person_icon.svg";
+  static const done = "assets/svgs/done.svg";
+  static const edit = "assets/svgs/edit.svg";
+  static const personicon = "assets/svgs/person_icon.svg";
   static const frame = "assets/svgs/frame.svg";
 }

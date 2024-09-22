@@ -207,6 +207,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "edetProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء"),
+        "homeBanner1":
+            MessageLookupByLibrary.simpleMessage("بنقرة واحدة، يمكنك الإبلاغ"),
+        "homeBanner2":
+            MessageLookupByLibrary.simpleMessage("عن الحوادث والمشاكل التي "),
+        "homeBanner3": MessageLookupByLibrary.simpleMessage("تواجهها"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال")
