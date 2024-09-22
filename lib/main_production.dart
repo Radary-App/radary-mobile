@@ -7,6 +7,7 @@ import 'package:radary/radary_app.dart';
 
 import 'core/di/dependecy_injection.dart';
 import 'core/helpers/cach/constants.dart';
+import 'core/networking/dio_factory.dart';
 
 void main() async {
   // Ensure Flutter's binding is initialized before platform services are accessed
@@ -17,7 +18,8 @@ void main() async {
 
   // Set up dependency injection
   setupGetIt();
-
+  // Set up Dio
+  DioFactory.getDio();
   // Ensure screen size setup for ScreenUtil
   await ScreenUtil.ensureScreenSize();
 
@@ -32,6 +34,7 @@ void main() async {
 }
 
 Future<bool> checkIfUserIsLoggedIn() async {
-  String? userToken = await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
+  String? userToken =
+      await CacheHelper.getSecuredString(SherdPreferencesKeys.userToken);
   return userToken.isNullOrEmpty(); // Returns true if logged out
 }

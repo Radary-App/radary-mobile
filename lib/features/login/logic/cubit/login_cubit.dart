@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
+import '../../../../core/networking/dio_factory.dart';
 import '../../data/models/login_request_body.dart';
 import '../../data/repo/login_repo.dart';
 import 'login_state.dart';
@@ -31,13 +32,14 @@ class LoginCubit extends Cubit<LoginState> {
     response.when(success: (loginResponse) async {
       // Save token to shared preferences
       await saveToken(loginResponse.token!);
-
+      DioFactory.addDioHeaders();
       // Emit success state with the response
       emit(LoginState.success(loginResponse));
     }, failure: (error) {
       // Emit error state with the error message
       emit(
-        LoginState.error(error: error.apiErrorModel.error ?? 'An unknown error occurred'),
+        LoginState.error(
+            error: error.apiErrorModel.error ?? 'An unknown error occurred'),
       );
     });
   }
@@ -45,6 +47,7 @@ class LoginCubit extends Cubit<LoginState> {
   // Save token to shared preferences
   Future<void> saveToken(String token) async {
     await CacheHelper.setSecuredString(SherdPreferencesKeys.userToken, token);
+    DioFactory.setTokenIntoHeaderAfterLogin(token);
   }
 
   // Dispose method to clean up controllers
