@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import '../../features/home/data/repo/add_energncy_repo.dart';
 import '../../features/home/data/repo/add_proplem_repo.dart';
 import '../../features/home/logic/cubit/add_proplem_cubit.dart';
 import '../../features/home/logic/cubit/add_emergency_cubit.dart';
@@ -26,12 +27,11 @@ Future<void> setupGetIt() async {
   // signup
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
-  // // add problem
-  // getIt.registerLazySingleton<AddProblemRepo>(() => AddProblemRepo(getIt()));
-  // getIt.registerFactory<AddProblemCubit>(() => AddProblemCubit(getIt()));
-  // emergency problem
-  getIt.registerLazySingleton<AddProblemRepo>(() => AddProblemRepo(getIt()));
+  // // add emergency
+  getIt.registerLazySingleton<AddEnergnyRepo>(() => AddEnergnyRepo(getIt()));
   getIt.registerFactory<AddEmergencyCubit>(() => AddEmergencyCubit(getIt()));
+  getIt.registerLazySingleton<AddProblemRepo>(() => AddProblemRepo(getIt()));
+  getIt.registerFactory<AddProplemCubit>(() => AddProplemCubit(getIt()));
 
   getIt.registerLazySingleton<EmergencyProblemResponseRepo>(
       () => EmergencyProblemResponseRepo(getIt()));

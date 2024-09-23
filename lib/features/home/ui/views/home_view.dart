@@ -42,13 +42,16 @@ class HomeView extends StatelessWidget {
               const HomeViewBanner(),
               verticalSpace(40),
               HomeViewRecorded(
+                onTap: () {
+                  context.read<AddEmergencyCubit>().pickImage(context);
+                },
                 text: S.of(context).AccidentReport,
               ),
               verticalSpace(60),
               HomeViewRecorded(
                 text: S.of(context).IssuesReport,
                 onTap: () {
-                  context.read<AddEmergencyCubit>().pickImage(context);
+                  context.read<AddProplemCubit>().pickImage(context);
                 },
               ),
             ],
