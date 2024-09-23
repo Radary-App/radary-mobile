@@ -67,8 +67,15 @@ class AppRouter {
       case Routes.imageDetails:
         final File? image = settings.arguments as File?;
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
+              ),
+              BlocProvider(
+                create: (context) => EmergencyProblemResponseCubit(getIt<EmergencyProblemResponseRepo>()),
+              ),
+            ],
             child: ImageDetailsViewProplem(
                 image: image ?? File('assets/images/accident.png')),
           ),

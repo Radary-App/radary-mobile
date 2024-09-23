@@ -10,6 +10,7 @@ import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
 import '../../../../core/routing/route.dart';
 import '../../../details/ui/screens/image_dettails_view_proplem.dart';
+import '../../../problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import '../../data/repo/add_proplem_repo.dart';
 
 class AddProplemCubit extends Cubit<AddEmergencyState> {
@@ -107,6 +108,7 @@ class AddProplemCubit extends Cubit<AddEmergencyState> {
         success: (response) {
           emit(AddEmergencyState.success(response));
           context.pushNamed(Routes.confirmView);
+          context.read<EmergencyProblemResponseCubit>().getData();
         },
         failure: (error) {
           emit(AddEmergencyState.error(

@@ -15,7 +15,7 @@ import '../../data/repo/add_energncy_repo.dart';
 import '../../data/repo/add_proplem_repo.dart';
 //
 class AddEmergencyCubit extends Cubit<AddEmergencyState> {
-  final AddEnergnyRepo _repo;
+  final AddEmergncyRepo _repo;
   final ImagePicker _picker = ImagePicker();
 
   AddEmergencyCubit(this._repo) : super(const AddEmergencyState.initial());
@@ -84,7 +84,7 @@ class AddEmergencyCubit extends Cubit<AddEmergencyState> {
 
     emit(const AddEmergencyState.loading());
 
-    final result = await _repo.addProblem(formData);
+    final result = await _repo.addEmergancy(formData);
     result.when(
       success: (response) {
         emit(AddEmergencyState.success(response));

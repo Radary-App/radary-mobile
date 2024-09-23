@@ -1,20 +1,24 @@
-import 'package:radary/features/home/data/models/addproplem_request_body.dart';
-import '../../../../core/networking/api_error_handler.dart';
-import '../../../../core/networking/api_result.dart';
-import '../../../../core/networking/api_service.dart';
-import '../models/add_proplem_response.dart';
-import 'package:dio/dio.dart'; 
+import 'package:dio/dio.dart';
+import 'package:radary/core/networking/api_error_handler.dart';
+import 'package:radary/core/networking/api_result.dart';
+import 'package:radary/core/networking/api_service.dart';
 
-class AddEnergnyRepo {
+import '../models/add_emrgncy_response.dart';
+
+class AddEmergncyRepo {
   final ApiService _apiService;
 
-  AddEnergnyRepo(this._apiService);
+  AddEmergncyRepo(this._apiService);
 
-  Future<ApiResult<AddProblemResponse>> addProblem(FormData addProblemRequestBody) async {
+  Future<ApiResult<AddEmergncyResponse>> addEmergancy(FormData addEmergncyRequestBody) async {
     try {
-      final response = await _apiService.addProblem(addProblemRequestBody);
+      // Sending the request with the form data
+      final response = await _apiService.addemergency(addEmergncyRequestBody);
+      
+
       return ApiResult.success(response);
     } catch (error) {
+      // Handling errors using a custom ErrorHandler
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
