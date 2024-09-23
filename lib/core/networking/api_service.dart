@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:radary/core/networking/api_constants.dart';
+import 'package:radary/features/home/data/models/add_emrgncy_response.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../features/home/data/models/add_proplem_response.dart';
 import '../../features/home/data/models/addproplem_request_body.dart';
@@ -31,4 +32,8 @@ Future<AddProblemResponse> addProblem(
 );
 @GET(ApiConstants.emergencyProblem)
 Future<EmergencyProblemResponseModel> getEmergencyAndProblems();
+@POST(ApiConstants.addEmergency)
+Future<AddEmergncyResponse> addemergency(
+  @Body() FormData addProblemRequestBody,
+);
 }

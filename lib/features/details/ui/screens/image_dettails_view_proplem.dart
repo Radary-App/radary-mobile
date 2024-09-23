@@ -19,15 +19,15 @@ import '../../../home/data/repo/add_proplem_repo.dart';
 import '../../../home/logic/cubit/add_proplem_cubit.dart';
 import '../widgets/descrbtion_text_fild.dart';
 
-class ImageDetailsView extends StatelessWidget {
+class ImageDetailsViewProplem extends StatelessWidget {
   final File image;
 
-  const ImageDetailsView({super.key, required this.image});
+  const ImageDetailsViewProplem({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AddEmergencyCubit(getIt<AddProblemRepo>()),
+      create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -75,7 +75,7 @@ class ImageDetailsView extends StatelessWidget {
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 20.w, vertical: 100.h),
                     controller:
-                        context.read<AddEmergencyCubit>().descriptionController,
+                        context.read<AddProplemCubit>().descriptionController,
                     hintText: "",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -86,9 +86,9 @@ class ImageDetailsView extends StatelessWidget {
                   ),
                   verticalSpace(20),
                   AppTextButton(
-                    onPressed: ()  {
-                       context
-                          .read<AddEmergencyCubit>()
+                    onPressed: () {
+                      context
+                          .read<AddProplemCubit>()
                           .addProblem(context, XFile(image.path));
                     },
                     buttonText: S.of(context).ConfirmBtn,

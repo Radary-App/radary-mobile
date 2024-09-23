@@ -6,7 +6,7 @@ import 'package:radary/core/routing/route.dart';
 import 'package:radary/features/home/ui/screens/home_screen.dart';
 import 'package:radary/features/profile/ui/screens/setting/screen/edit_setting.dart';
 import '../../features/details/ui/screens/confirm_view.dart';
-import '../../features/details/ui/screens/image_dettails_view.dart';
+import '../../features/details/ui/screens/image_dettails_view_proplem.dart';
 import '../../features/follow_report/ui/screens/follow_report_view.dart';
 import '../../features/home/data/repo/add_proplem_repo.dart';
 import '../../features/home/logic/cubit/add_proplem_cubit.dart';
@@ -49,11 +49,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => MultiBlocProvider(
             providers: [
-              // BlocProvider(
-              //   create: (context) => getIt<AddProblemCubit>(),
-              // ),
               BlocProvider(
-                create: (context) => AddEmergencyCubit(getIt<AddProblemRepo>()),
+                create: (context) => getIt<AddEmergencyCubit>(),
+              ),
+              BlocProvider(
+                create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
               ),
               BlocProvider(
                 create: (context) => EmergencyProblemResponseCubit(
@@ -68,10 +68,9 @@ class AppRouter {
         final File? image = settings.arguments as File?;
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => AddEmergencyCubit(getIt<AddProblemRepo>()),
-            child: ImageDetailsView(
-                image: image ??
-                    File('assets/images/accident.png')),
+            create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
+            child: ImageDetailsViewProplem(
+                image: image ?? File('assets/images/accident.png')),
           ),
         );
       case Routes.confirmView:

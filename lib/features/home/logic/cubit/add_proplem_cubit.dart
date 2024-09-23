@@ -9,15 +9,15 @@ import 'package:radary/features/home/logic/cubit/add_proplem_state.dart';
 import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
 import '../../../../core/routing/route.dart';
-import '../../../details/ui/screens/image_dettails_view.dart';
+import '../../../details/ui/screens/image_dettails_view_proplem.dart';
 import '../../data/repo/add_proplem_repo.dart';
 
-class AddEmergencyCubit extends Cubit<AddEmergencyState> {
+class AddProplemCubit extends Cubit<AddEmergencyState> {
   final AddProblemRepo _repo;
   final ImagePicker _picker = ImagePicker();
   final TextEditingController descriptionController = TextEditingController();
 
-  AddEmergencyCubit(this._repo) : super(const AddEmergencyState.initial());
+  AddProplemCubit(this._repo) : super(const AddEmergencyState.initial());
 
   XFile? file;
   File? imagee;
@@ -52,10 +52,9 @@ class AddEmergencyCubit extends Cubit<AddEmergencyState> {
 
         imagee = image;
 
-
         context.pushNamed(
           Routes.imageDetails,
-          arguments: image, 
+          arguments: image,
         );
 // addProblem(context);
         return image;
@@ -69,12 +68,15 @@ class AddEmergencyCubit extends Cubit<AddEmergencyState> {
     }
   }
 
-  Future<void> addProblem(BuildContext context, XFile? file,  ) async {
+  Future<void> addProblem(
+    BuildContext context,
+    XFile? file,
+  ) async {
     if (file == null) {
       showErrorSnackBar('Please select an image first', context);
       return;
     }
-        await getUserLocation(context);
+    await getUserLocation(context);
 
     if (coordinates.isEmpty) {
       showErrorSnackBar(

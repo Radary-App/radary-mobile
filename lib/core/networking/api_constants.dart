@@ -3,6 +3,7 @@ class ApiConstants {
   static const String login = "login/";
   static const String signup = "signup/";
   static const String addProblem = "problem/create/";
+  static const String addEmergency = "emergency/create/";
   static const String emergencyProblem = "profile/all/";
 
 }

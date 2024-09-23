@@ -1,13 +1,13 @@
 
-// import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-// part 'addproplem_state.freezed.dart';
+part 'add_emergency_state.freezed.dart';
 
-// @freezed
-// class AddproplemState<T> with _$AddproplemState<T> {
-//   const factory AddproplemState.initial() = _Initial;
+@freezed
+class AddEmergencyState<T> with _$AddEmergencyState<T> {
+  const factory AddEmergencyState.initial() = _Initial;
   
-//   const factory AddproplemState.loading() = Loading;
-//   const factory AddproplemState.success(T data) = Success<T>;
-//   const factory AddproplemState.error({required String error}) = Error;
-// }
+  const factory AddEmergencyState.loading() = Loading;
+  const factory AddEmergencyState.success(T data) = Success<T>;
+  const factory AddEmergencyState.error({required String error}) = Error;
+}
