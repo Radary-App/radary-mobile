@@ -66,13 +66,16 @@ class EmergencyProblemListView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      problem.userDescription ?? "مفيش بدون وصف",
+                      problem.aiDescriptionArabic ?? "مفيش بدون وصف",
                       style: TextStyle(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                       textAlign: TextAlign.center,
+                      maxLines: 4, 
+                      overflow: TextOverflow
+                          .ellipsis,
                     ),
                   ],
                 ),

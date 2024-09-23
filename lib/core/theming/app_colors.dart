@@ -14,6 +14,6 @@ const green = Color(0xff00C52B);
 const red = Color(0xffE00000);
 const bluelogo = Color(0xff1230AE);
 
-const bluetransparent = Color(0xffCDDEEC);
+const bluetransparent = Color(0xffD9E7F3);
 
 //045BA2//CDDEEC

@@ -23,8 +23,8 @@ class Emergency {
   String? coordinates;
   String? photo;
   int? id;
-  String? aiDescriptionEnglish; // Assuming this is meant to be the AI description
-  String? aiDescriptionArabic; // Assuming this is meant to be the AI description
+  String? aiDescriptionEnglish; // AI description in English
+  String? aiDescriptionArabic; // AI description in Arabic
 
   Emergency({
     this.coordinates,
@@ -44,12 +44,17 @@ class Emergency {
 class Problem {
   String? coordinates;
   String? status;
+  @JsonKey(name: 'user_description')
   String? userDescription;
   String? photo;
+  @JsonKey(name: 'created_at')
   String? createdAt;
   int? id;
-  String? aiDescriptionEnglish; // Optional: You can add this if needed
-  String? aiDescriptionArabic; // Optional: You can add this if needed
+  @JsonKey(name: 'ai_description_english')
+  String? aiDescriptionEnglish; 
+  @JsonKey(name: 'ai_description_arabic')
+  String? aiDescriptionArabic; 
+  String? title;
 
   Problem({
     this.coordinates,

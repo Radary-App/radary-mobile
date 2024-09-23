@@ -43,7 +43,7 @@ class ProblemReview extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                   width: 115,
                   unselectedBorderColor: blue,
-                  contentPadding: const EdgeInsets.all(10),
+                  contentPadding: const EdgeInsets.all(1),
                   contentCenter: true,
                   borderWidth: 1,
                   radius: 15,
