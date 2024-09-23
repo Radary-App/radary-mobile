@@ -7,6 +7,7 @@ import '../../features/home/data/models/addproplem_request_body.dart';
 import '../../features/login/data/models/login_request_body.dart';
 import '../../features/login/data/models/login_response.dart';
 import '../../features/problem_review/data/models/emergency_problem_response_model.dart';
+import '../../features/profile/ui/screens/porfile/data/models/user_model.dart';
 import '../../features/sign_up/data/models/sign_up_request_body.dart';
 import '../../features/sign_up/data/models/sign_up_response.dart';
 
@@ -32,8 +33,14 @@ Future<AddProblemResponse> addProblem(
 );
 @GET(ApiConstants.emergencyProblem)
 Future<EmergencyProblemResponseModel> getEmergencyAndProblems();
+
 @POST(ApiConstants.addEmergency)
 Future<AddEmergncyResponse> addemergency(
   @Body() FormData addProblemRequestBody,
 );
+ @GET(ApiConstants.userDetails)
+  Future<User> getUserData();
+
+  @PUT(ApiConstants.updateUser)
+  Future<User> updateUser(@Body() Map<String, dynamic> user);
 }
