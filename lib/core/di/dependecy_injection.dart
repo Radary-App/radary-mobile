@@ -28,7 +28,7 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
   // // add emergency
-  getIt.registerLazySingleton<AddEnergnyRepo>(() => AddEnergnyRepo(getIt()));
+  getIt.registerLazySingleton<AddEmergncyRepo>(() => AddEmergncyRepo(getIt()));
   getIt.registerFactory<AddEmergencyCubit>(() => AddEmergencyCubit(getIt()));
   getIt.registerLazySingleton<AddProblemRepo>(() => AddProblemRepo(getIt()));
   getIt.registerFactory<AddProplemCubit>(() => AddProplemCubit(getIt()));

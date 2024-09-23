@@ -17,6 +17,7 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/add_text_form_field.dart';
 import '../../../home/data/repo/add_proplem_repo.dart';
 import '../../../home/logic/cubit/add_proplem_cubit.dart';
+import '../../../problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import '../widgets/descrbtion_text_fild.dart';
 
 class ImageDetailsViewProplem extends StatelessWidget {

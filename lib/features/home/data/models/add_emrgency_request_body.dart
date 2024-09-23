@@ -1,38 +1,26 @@
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'add_emrgency_request_body.g.dart'; // Ensure the filename matches
+part 'add_emrgency_request_body.g.dart';
 
 @JsonSerializable()
 class AddEmergncyResponse {
-  String? coordinates;
-  String? status;
+  @JsonKey(toJson: _fileToJson, fromJson: _fileFromJson)
+  final XFile? photo;
+  final String coordinates;
 
-  @JsonKey(name: 'user_description')
-  String? userDescription; // Use camelCase for Dart conventions
+  AddEmergncyResponse({required this.photo, required this.coordinates});
 
-  String? photo;
+  // Custom toJson and fromJson for XFile
+  static String? _fileToJson(XFile? file) => file?.path;
 
-  @JsonKey(name: 'created_at')
-  DateTime? createdAt; // Use DateTime for timestamps
-
-  int? id; // Assuming id is an integer
-
-  @JsonKey(name: 'ai_description')
-  String? aiDescription;
-
-  AddEmergncyResponse({
-    this.coordinates,
-    this.status,
-    this.userDescription,
-    this.photo,
-    this.createdAt,
-    this.id,
-    this.aiDescription,
-  });
-
+  static XFile? _fileFromJson(String? path) => path != null ? XFile(path) : null;
+  // Factory method for generating an instance from JSON
   factory AddEmergncyResponse.fromJson(Map<String, dynamic> json) =>
-      _$AddEmergncyResponseFromJson(json); // Correct method name
+      _$AddEmergncyResponseFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$AddEmergncyResponseToJson(this); // Correct method name
+  // Method for converting an instance to JSON
+  Map<String, dynamic> toJson() => _$AddEmergncyResponseToJson(this);
 }
+ 
