@@ -4,6 +4,7 @@ import 'package:radary/core/helpers/extensions/app_navigotion.dart';
 import 'package:radary/core/theming/app_colors.dart';
 import '../../../../core/routing/route.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../../generated/l10n.dart';
 import '../../logic/cubit/sigin_up_cubit.dart';
 import '../../logic/cubit/sigin_up_state.dart';
 
@@ -56,26 +57,26 @@ class SignupBlocListener extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Signup Successful'),
-          content: const SingleChildScrollView(
+          title: Text(S.of(context).Signup_Successful),
+          content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text('Congratulations, you have signed up successfully!'),
+                Text(S.of(context).Congratulations),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white, // This replaces 'primary'
+                foregroundColor: Colors.white, 
                 backgroundColor: Colors.blue,
                 disabledForegroundColor:
-                    Colors.grey.withOpacity(0.38), // This replaces 'onSurface'
+                    Colors.grey.withOpacity(0.38), 
               ),
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);
               },
-              child: const Text('Continue'),
+              child: Text(S.of(context).ConfirmBtn),
             ),
           ],
         );
@@ -102,7 +103,7 @@ class SignupBlocListener extends StatelessWidget {
               context.pop(); // Close error dialog
             },
             child: Text(
-              'Got it',
+              S.of(context).Got_it,
               style: AppTextStyles.font14BlackRegular,
             ),
           ),

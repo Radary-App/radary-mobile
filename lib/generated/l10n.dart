@@ -1589,6 +1589,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Signup Successful`
+  String get Signup_Successful {
+    return Intl.message(
+      'Signup Successful',
+      name: 'Signup_Successful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations, you have signed up successfully!`
+  String get Congratulations {
+    return Intl.message(
+      'Congratulations, you have signed up successfully!',
+      name: 'Congratulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Got it`
+  String get Got_it {
+    return Intl.message(
+      'Got it',
+      name: 'Got_it',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid phone number`
+  String get Please_enter_a_valid_phone_number {
+    return Intl.message(
+      'Please enter a valid phone number',
+      name: 'Please_enter_a_valid_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid password`
+  String get Please_enter_a_valid_password {
+    return Intl.message(
+      'Please enter a valid password',
+      name: 'Please_enter_a_valid_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one lowercase letter.`
+  String get Password_must_contain_at_least_one_lowercase_letter {
+    return Intl.message(
+      'Password must contain at least one lowercase letter.',
+      name: 'Password_must_contain_at_least_one_lowercase_letter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one uppercase letter.`
+  String get Password_must_contain_at_least_one_uppercase_letter {
+    return Intl.message(
+      'Password must contain at least one uppercase letter.',
+      name: 'Password_must_contain_at_least_one_uppercase_letter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one special character.`
+  String get Password_must_contain_at_least_one_special_character {
+    return Intl.message(
+      'Password must contain at least one special character.',
+      name: 'Password_must_contain_at_least_one_special_character',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one number.`
+  String get Password_must_contain_at_least_one_number {
+    return Intl.message(
+      'Password must contain at least one number.',
+      name: 'Password_must_contain_at_least_one_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 8 characters long.`
+  String get Password_must_be_at_least_8_characters_long {
+    return Intl.message(
+      'Password must be at least 8 characters long.',
+      name: 'Password_must_be_at_least_8_characters_long',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid last name`
+  String get Please_enter_a_valid_last_name {
+    return Intl.message(
+      'Please enter a valid last name',
+      name: 'Please_enter_a_valid_last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid first name`
+  String get Please_enter_a_valid_first_name {
+    return Intl.message(
+      'Please enter a valid first name',
+      name: 'Please_enter_a_valid_first_name',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

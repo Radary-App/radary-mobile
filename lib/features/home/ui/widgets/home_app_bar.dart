@@ -14,10 +14,10 @@ class HomeAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SvgPicture.asset(
-          AssetsData.notifications,
+          AssetsData.logoRadaryText,
         ),
         SvgPicture.asset(
-          AssetsData.logoRadaryText,
+          AssetsData.notifications,
         ),
       ],
     );

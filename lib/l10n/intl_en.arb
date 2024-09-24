@@ -152,6 +152,21 @@
 "homeBanner3": "You encounter",
 "Dont_Have":"Dont Have an account?",
 "PleaseEnterPasswordAgain":"Please enter password again",
-"PasswordsDoNotMatch":"Passwords do not match"
+"PasswordsDoNotMatch":"Passwords do not match",
+"Signup_Successful":"Signup Successful",
+"Congratulations":"Congratulations, you have signed up successfully!",
+"Got_it":"Got it",
+"Please_enter_a_valid_phone_number":"Please enter a valid phone number",
+"Please_enter_a_valid_password":"Please enter a valid password",
+"Password_must_contain_at_least_one_lowercase_letter":"Password must contain at least one lowercase letter.",
+"Password_must_contain_at_least_one_uppercase_letter":"Password must contain at least one uppercase letter.",
+"Password_must_contain_at_least_one_special_character":"Password must contain at least one special character.",
+"Password_must_contain_at_least_one_number":"Password must contain at least one number.",
+"Password_must_contain_at_least_one_uppercase_letter":"Password must contain at least one uppercase letter.",
+"Password_must_contain_at_least_one_special_character":"Password must contain at least one special character.",
+"Password_must_contain_at_least_one_number":"Password must contain at least one number.",
+"Password_must_be_at_least_8_characters_long":"Password must be at least 8 characters long.",
+"Please_enter_a_valid_last_name":"Please enter a valid last name",
+"Please_enter_a_valid_first_name":"Please enter a valid first name"
 
 }

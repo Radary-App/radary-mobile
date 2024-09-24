@@ -75,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Delete Account "),
         "ConfirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm new password"),
+        "Congratulations": MessageLookupByLibrary.simpleMessage(
+            "Congratulations, you have signed up successfully!"),
         "ContinueReporting":
             MessageLookupByLibrary.simpleMessage("Continue Reporting "),
         "DarkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("To continue Reporting "),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
+        "Got_it": MessageLookupByLibrary.simpleMessage("Got it"),
         "Governorate": MessageLookupByLibrary.simpleMessage("Governorate"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
         "Issues": MessageLookupByLibrary.simpleMessage("Issues"),
@@ -152,6 +155,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "OtherMsg": MessageLookupByLibrary.simpleMessage("Write message here"),
         "PassWord": MessageLookupByLibrary.simpleMessage("Password"),
         "Password": MessageLookupByLibrary.simpleMessage("Password "),
+        "Password_must_be_at_least_8_characters_long":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must be at least 8 characters long."),
+        "Password_must_contain_at_least_one_lowercase_letter":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one lowercase letter."),
+        "Password_must_contain_at_least_one_number":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one number."),
+        "Password_must_contain_at_least_one_special_character":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one special character."),
+        "Password_must_contain_at_least_one_uppercase_letter":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one uppercase letter."),
         "PasswordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "Permission":
@@ -170,6 +188,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Allow access to your photos"),
         "PleaseEnterPasswordAgain":
             MessageLookupByLibrary.simpleMessage("Please enter password again"),
+        "Please_enter_a_valid_first_name": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid first name"),
+        "Please_enter_a_valid_last_name": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid last name"),
+        "Please_enter_a_valid_password": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid password"),
+        "Please_enter_a_valid_phone_number":
+            MessageLookupByLibrary.simpleMessage(
+                "Please enter a valid phone number"),
         "Problem_1":
             MessageLookupByLibrary.simpleMessage("Cracks in buildings"),
         "Problem_2":
@@ -221,6 +248,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You will need to enter your username and password the next time you want to log in"),
         "Sign_UP": MessageLookupByLibrary.simpleMessage("Sign up"),
         "Sign_UpBtn": MessageLookupByLibrary.simpleMessage(" Sign Up  "),
+        "Signup_Successful":
+            MessageLookupByLibrary.simpleMessage("Signup Successful"),
         "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "Solved_problems":
             MessageLookupByLibrary.simpleMessage("Solved problems"),

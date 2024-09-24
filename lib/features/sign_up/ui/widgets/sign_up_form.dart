@@ -70,7 +70,7 @@ class _SignupFormState extends State<SignupForm> {
                       hintText: S.of(context).FirstName,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter a valid first name';
+                          return S.of(context).Please_enter_a_valid_first_name;
                         }
                         return null;
                       },
@@ -93,7 +93,7 @@ class _SignupFormState extends State<SignupForm> {
                       hintText: S.of(context).LastName,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter a valid last name';
+                          return S.of(context).Please_enter_a_valid_last_name;
                         }
                         return null;
                       },
@@ -115,7 +115,7 @@ class _SignupFormState extends State<SignupForm> {
               if (value == null ||
                   value.isEmpty ||
                   !AppRegex.isPhoneNumberValid(value)) {
-                return 'Please enter a valid phone number';
+                return S.of(context).Please_enter_a_valid_phone_number;
               }
               return null;
             },
@@ -141,19 +141,19 @@ class _SignupFormState extends State<SignupForm> {
                       : Icons.visibility,
                 ),
               ),
-              validator: (value) {
+             validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'يرجى إدخال كلمة مرور';
+                  return S.of(context).Please_enter_a_valid_password;
                 } else if (!AppRegex.hasLowerCase(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل';
+                  return S.of(  context).Password_must_contain_at_least_one_lowercase_letter;
                 } else if (!AppRegex.hasUpperCase(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل';
+                  return S.of(context).Password_must_contain_at_least_one_uppercase_letter;
                 } else if (!AppRegex.hasSpecialCharacter(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل';
+                  return S.of(context).Password_must_contain_at_least_one_special_character;
                 } else if (!AppRegex.hasNumber(value)) {
-                  return 'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل';
+                  return S.of(  context).Password_must_contain_at_least_one_number;
                 } else if (!AppRegex.hasMinLength(value)) {
-                  return 'يجب أن تكون كلمة المرور على الأقل 8 أحرف طويلة';
+                  return S.of(context).Password_must_be_at_least_8_characters_long;
                 }
                 return null;
               }),
@@ -191,7 +191,6 @@ class _SignupFormState extends State<SignupForm> {
 
   @override
   void dispose() {
-    // Do not dispose controllers here as they are managed by SignupCubit
     super.dispose();
   }
 }
