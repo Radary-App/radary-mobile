@@ -33,7 +33,7 @@ class HomeViewBanner extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).homeBanner1,
-                    style: AppTextStyles.font16WhiteMedium,
+                    style: AppTextStyles.font20WhiteRegular,
                     textAlign: TextAlign.center,
                   ),
                   Text(
@@ -52,14 +52,13 @@ class HomeViewBanner extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0), // Add padding to the SVG image
-            // child: SvgPicture.asset(
-            //   // AssetsData.homeBanner,
-            //   // height: 150.h, // Adjust the height as needed
-            // ),
+            child: SvgPicture.asset(
+              AssetsData.mobileuser,
+              height: 150.h,
+            ),
           ),
         ],
       ),
     );
   }
 }
-

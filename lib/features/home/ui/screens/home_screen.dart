@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:radary/core/theming/app_colors.dart';
-import 'package:radary/core/theming/app_text_styles.dart';
-import 'package:radary/core/widgets/add_text_form_field.dart';
 import 'package:radary/features/home/ui/views/home_view.dart';
+import 'package:radary/features/problem_review/ui/screens/problem_review.dart';
 import 'package:radary/generated/l10n.dart';
 import 'package:responsive_navigation_bar/responsive_navigation_bar.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/helpers/util/assets_data.dart';
+import '../../../profile/ui/screens/porfile/screen/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -70,8 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         children: const <Widget>[
           HomeView(),
-          Center(child: Text('Tab 2')),
-          Center(child: Text('Tab 3')),
+          ProblemReview(),
+          ProfileScreen(),
         ],
       ),
     );

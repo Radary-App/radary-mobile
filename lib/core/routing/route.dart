@@ -3,8 +3,10 @@ class Routes {
   static const String loginScreen = "/LoginScreen";
   static const String signUpScreen = "/SignUpScreen";
   static const String homeScreen = "/HomeScreen";
+  static const String splashScreen = "/SplashScreen";
   static const String followReport = "/FollowReport";
-  static const String ConfirmView = "/ConfirmScreen";
+  static const String confirmView = "/ConfirmScreen";
+  static const String confirmReport = "/ConfirmScreen";
   static const String editProfile = "/EditProfile";
   static const String editSetting = "/EditSetting";
   static const String editSecurity = "/EditSecurity";
@@ -15,4 +17,6 @@ class Routes {
   static const String lastcontainer = "/LastContainer";
   static const String mentorProfile = "/MentorProfile";
   static const String coursesDetails = "/CoursesDetails";
+  static const String profileScreen = "/ProfileScreen";
+  static const String imageDetails = "/ImageDetails";
 }

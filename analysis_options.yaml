@@ -7,6 +7,12 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
+analyzer:
+  errors:
+    use_super_parameters: ignore ignore ignore ignore
+    dead_code: ignore
+    no_leading_underscores_for_local_identifiers: ignore
+    unused_element: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
