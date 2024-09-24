@@ -20,12 +20,17 @@ class EmergencyProblemResponseModel {
 
 @JsonSerializable()
 class Emergency {
-  String? coordinates;
+ String? coordinates;
   String? photo;
   int? id;
-  String? aiDescriptionEnglish; // AI description in English
-  String? aiDescriptionArabic; // AI description in Arabic
-
+  @JsonKey(name: 'ai_description_english')
+  String? aiDescriptionEnglish; 
+  @JsonKey(name: 'ai_description_arabic')
+  String? aiDescriptionArabic; 
+  @JsonKey(name: 'title_arabic')
+  String? titleArabic;
+  @JsonKey(name: 'title_english')
+  String? titleEnglish;
   Emergency({
     this.coordinates,
     this.photo,
@@ -54,7 +59,10 @@ class Problem {
   String? aiDescriptionEnglish; 
   @JsonKey(name: 'ai_description_arabic')
   String? aiDescriptionArabic; 
-  String? title;
+  @JsonKey(name: 'title_arabic')
+  String? titleArabic;
+  @JsonKey(name: 'title_english')
+  String? titleEnglish;
 
   Problem({
     this.coordinates,

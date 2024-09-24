@@ -1571,20 +1571,20 @@ class S {
   }
 
   /// `Please enter password again`
-  String get PleaseEnterPasswordAgain {
+  String get pleaseEnterPasswordAgain {
     return Intl.message(
       'Please enter password again',
-      name: 'PleaseEnterPasswordAgain',
+      name: 'pleaseEnterPasswordAgain',
       desc: '',
       args: [],
     );
   }
 
   /// `Passwords do not match`
-  String get PasswordsDoNotMatch {
+  String get passwordsDoNotMatch {
     return Intl.message(
       'Passwords do not match',
-      name: 'PasswordsDoNotMatch',
+      name: 'passwordsDoNotMatch',
       desc: '',
       args: [],
     );
@@ -1651,6 +1651,36 @@ class S {
   }
 
   /// `Password must contain at least one uppercase letter.`
+  String get password_must_contain_at_least_one_uppercase_letter {
+    return Intl.message(
+      'Password must contain at least one uppercase letter.',
+      name: 'password_must_contain_at_least_one_uppercase_letter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one special character.`
+  String get password_must_contain_at_least_one_special_character {
+    return Intl.message(
+      'Password must contain at least one special character.',
+      name: 'password_must_contain_at_least_one_special_character',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one number.`
+  String get password_must_contain_at_least_one_number {
+    return Intl.message(
+      'Password must contain at least one number.',
+      name: 'password_must_contain_at_least_one_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one uppercase letter.`
   String get Password_must_contain_at_least_one_uppercase_letter {
     return Intl.message(
       'Password must contain at least one uppercase letter.',
@@ -1705,6 +1735,216 @@ class S {
     return Intl.message(
       'Please enter a valid first name',
       name: 'Please_enter_a_valid_first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter password again`
+  String get PleaseEnterPasswordAgain {
+    return Intl.message(
+      'Please enter password again',
+      name: 'PleaseEnterPasswordAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get PasswordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'PasswordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Currency`
+  String get Currency {
+    return Intl.message(
+      'Currency',
+      name: 'Currency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your First Name`
+  String get EnterYourFirstName {
+    return Intl.message(
+      'Enter Your First Name',
+      name: 'EnterYourFirstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Last Name`
+  String get EnterYourLastName {
+    return Intl.message(
+      'Enter Your Last Name',
+      name: 'EnterYourLastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Password`
+  String get enterYourPassWord {
+    return Intl.message(
+      'Enter Your Password',
+      name: 'enterYourPassWord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `example@example.com`
+  String get pnterYourEmail {
+    return Intl.message(
+      'example@example.com',
+      name: 'pnterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Phone`
+  String get ChangePhone {
+    return Intl.message(
+      'Change Phone',
+      name: 'ChangePhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get edetProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'edetProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A text message has been sent to this number containing a four-digit code, enter this code here`
+  String get ResetPasswordMessage {
+    return Intl.message(
+      'A text message has been sent to this number containing a four-digit code, enter this code here',
+      name: 'ResetPasswordMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Code`
+  String get EnterCode {
+    return Intl.message(
+      'Enter Code',
+      name: 'EnterCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Didn''t receive the code?`
+  String get DontReceived {
+    return Intl.message(
+      'Didn\'\'t receive the code?',
+      name: 'DontReceived',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Currently Points`
+  String get YourCurrentlyPoints {
+    return Intl.message(
+      'Your Currently Points',
+      name: 'YourCurrentlyPoints',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Security`
+  String get Security {
+    return Intl.message(
+      'Security',
+      name: 'Security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Method`
+  String get PaymentMethod {
+    return Intl.message(
+      'Payment Method',
+      name: 'PaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment and Shipping Info`
+  String get PaymentAndShippingInfo {
+    return Intl.message(
+      'Payment and Shipping Info',
+      name: 'PaymentAndShippingInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete My Account`
+  String get DeleteMyAccount {
+    return Intl.message(
+      'Delete My Account',
+      name: 'DeleteMyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping Address`
+  String get ShippingAddress {
+    return Intl.message(
+      'Shipping Address',
+      name: 'ShippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete your account?`
+  String get DeleteMessage {
+    return Intl.message(
+      'Are you sure you want to delete your account?',
+      name: 'DeleteMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Shipping Address`
+  String get EnterYourShippingAddress {
+    return Intl.message(
+      'Enter Your Shipping Address',
+      name: 'EnterYourShippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
       desc: '',
       args: [],
     );

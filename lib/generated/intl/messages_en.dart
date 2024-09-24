@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Allow access to camera"),
         "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "Center": MessageLookupByLibrary.simpleMessage("Center"),
+        "ChangePhone": MessageLookupByLibrary.simpleMessage("Change Phone"),
         "ChangePhoneMessage": MessageLookupByLibrary.simpleMessage(
             "A text message has been sent to this number containing a four-digit code, enter this code here"),
         "ChooseLanguage":
@@ -79,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Congratulations, you have signed up successfully!"),
         "ContinueReporting":
             MessageLookupByLibrary.simpleMessage("Continue Reporting "),
+        "Currency": MessageLookupByLibrary.simpleMessage("Currency"),
         "DarkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "Day": MessageLookupByLibrary.simpleMessage("day"),
         "DeleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -88,24 +90,37 @@ class MessageLookup extends MessageLookupByLibrary {
             "Deleting your account will remove all your information from our database. And this cannot be undone."),
         "DeleteAccountMsg": MessageLookupByLibrary.simpleMessage(
             "If you need to delete your account, we would like you to provide the reason"),
+        "DeleteMessage": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete your account?"),
+        "DeleteMyAccount":
+            MessageLookupByLibrary.simpleMessage("Delete My Account"),
         "DemandEveryTime": MessageLookupByLibrary.simpleMessage(
             "Ask next time or when I share"),
         "DeviceSettings":
             MessageLookupByLibrary.simpleMessage("Device Setting"),
+        "DontReceived":
+            MessageLookupByLibrary.simpleMessage("Didn\'\'t receive the code?"),
         "Dont_Have":
             MessageLookupByLibrary.simpleMessage("Dont Have an account?"),
         "Emergency": MessageLookupByLibrary.simpleMessage("Emergency"),
         "EndBtn": MessageLookupByLibrary.simpleMessage("End"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
+        "EnterCode": MessageLookupByLibrary.simpleMessage("Enter Code"),
         "EnterEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "EnterName": MessageLookupByLibrary.simpleMessage("Your name"),
         "EnterPhone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "EnterYourEmail":
             MessageLookupByLibrary.simpleMessage("Email (optional)"),
+        "EnterYourFirstName":
+            MessageLookupByLibrary.simpleMessage("Enter Your First Name"),
+        "EnterYourLastName":
+            MessageLookupByLibrary.simpleMessage("Enter Your Last Name"),
         "EnterYourPassWord":
             MessageLookupByLibrary.simpleMessage("Enter new password"),
         "EnterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter phone number"),
+        "EnterYourShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Enter Your Shipping Address"),
         "Feedback1": MessageLookupByLibrary.simpleMessage(
             "Did you find difficulty to report the problem?"),
         "Feedback2": MessageLookupByLibrary.simpleMessage(
@@ -172,6 +187,9 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Password must contain at least one uppercase letter."),
         "PasswordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "PaymentAndShippingInfo":
+            MessageLookupByLibrary.simpleMessage("Payment and Shipping Info"),
+        "PaymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
         "Permission":
             MessageLookupByLibrary.simpleMessage("Allow access to camera"),
         "Permissions": MessageLookupByLibrary.simpleMessage("Permissions"),
@@ -239,10 +257,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "The problem has been resolved successfully!"),
         "ResetPassword":
             MessageLookupByLibrary.simpleMessage("Reset Password "),
+        "ResetPasswordMessage": MessageLookupByLibrary.simpleMessage(
+            "A text message has been sent to this number containing a four-digit code, enter this code here"),
         "Search": MessageLookupByLibrary.simpleMessage("Search here "),
         "SecondReport": MessageLookupByLibrary.simpleMessage("Report number 2"),
+        "Security": MessageLookupByLibrary.simpleMessage("Security"),
         "SendCode": MessageLookupByLibrary.simpleMessage("Send code "),
         "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "ShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Shipping Address"),
         "SignOut": MessageLookupByLibrary.simpleMessage("Sign out "),
         "SignOutMsg": MessageLookupByLibrary.simpleMessage(
             "You will need to enter your username and password the next time you want to log in"),
@@ -270,6 +293,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "WelcomeMessage": MessageLookupByLibrary.simpleMessage("Welcome,...."),
         "Year": MessageLookupByLibrary.simpleMessage("year"),
         "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "YourCurrentlyPoints":
+            MessageLookupByLibrary.simpleMessage("Your Currently Points"),
+        "details": MessageLookupByLibrary.simpleMessage("Details"),
+        "edetProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "enterYourPassWord":
+            MessageLookupByLibrary.simpleMessage("Enter Your Password"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeBanner1":
             MessageLookupByLibrary.simpleMessage("One click, you can report"),
@@ -278,6 +307,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeBanner3": MessageLookupByLibrary.simpleMessage("You encounter"),
         "name": MessageLookupByLibrary.simpleMessage("name"),
         "next": MessageLookupByLibrary.simpleMessage("next"),
+        "password_must_contain_at_least_one_number":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one number."),
+        "password_must_contain_at_least_one_special_character":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one special character."),
+        "password_must_contain_at_least_one_uppercase_letter":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one uppercase letter."),
+        "passwordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "pleaseEnterPasswordAgain":
+            MessageLookupByLibrary.simpleMessage("Please enter password again"),
+        "pnterYourEmail":
+            MessageLookupByLibrary.simpleMessage("example@example.com"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend ")
       };
 }

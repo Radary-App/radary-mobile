@@ -28,16 +28,20 @@ Emergency _$EmergencyFromJson(Map<String, dynamic> json) => Emergency(
       coordinates: json['coordinates'] as String?,
       photo: json['photo'] as String?,
       id: (json['id'] as num?)?.toInt(),
-      aiDescriptionEnglish: json['aiDescriptionEnglish'] as String?,
-      aiDescriptionArabic: json['aiDescriptionArabic'] as String?,
-    );
+      aiDescriptionEnglish: json['ai_description_english'] as String?,
+      aiDescriptionArabic: json['ai_description_arabic'] as String?,
+    )
+      ..titleArabic = json['title_arabic'] as String?
+      ..titleEnglish = json['title_english'] as String?;
 
 Map<String, dynamic> _$EmergencyToJson(Emergency instance) => <String, dynamic>{
       'coordinates': instance.coordinates,
       'photo': instance.photo,
       'id': instance.id,
-      'aiDescriptionEnglish': instance.aiDescriptionEnglish,
-      'aiDescriptionArabic': instance.aiDescriptionArabic,
+      'ai_description_english': instance.aiDescriptionEnglish,
+      'ai_description_arabic': instance.aiDescriptionArabic,
+      'title_arabic': instance.titleArabic,
+      'title_english': instance.titleEnglish,
     };
 
 Problem _$ProblemFromJson(Map<String, dynamic> json) => Problem(
@@ -49,7 +53,9 @@ Problem _$ProblemFromJson(Map<String, dynamic> json) => Problem(
       id: (json['id'] as num?)?.toInt(),
       aiDescriptionEnglish: json['ai_description_english'] as String?,
       aiDescriptionArabic: json['ai_description_arabic'] as String?,
-    )..title = json['title'] as String?;
+    )
+      ..titleArabic = json['title_arabic'] as String?
+      ..titleEnglish = json['title_english'] as String?;
 
 Map<String, dynamic> _$ProblemToJson(Problem instance) => <String, dynamic>{
       'coordinates': instance.coordinates,
@@ -60,5 +66,6 @@ Map<String, dynamic> _$ProblemToJson(Problem instance) => <String, dynamic>{
       'id': instance.id,
       'ai_description_english': instance.aiDescriptionEnglish,
       'ai_description_arabic': instance.aiDescriptionArabic,
-      'title': instance.title,
+      'title_arabic': instance.titleArabic,
+      'title_english': instance.titleEnglish,
     };
