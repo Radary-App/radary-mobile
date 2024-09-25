@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
               HomeViewRecorded(
                 text: S.of(context).IssuesReport,
                 onTap: () {
-                  context.read<AddProplemCubit>().pickImage(context);
+                  context.read<AddProblemCubit>().pickImage(context);
                 },
               ),
             ],

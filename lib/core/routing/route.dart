@@ -19,4 +19,7 @@ class Routes {
   static const String coursesDetails = "/CoursesDetails";
   static const String profileScreen = "/ProfileScreen";
   static const String imageDetails = "/ImageDetails";
+  static const String emergencyReview = "/emergencyReview";
+  static const String proplemReview = "/proplemReview";
+  //
 }

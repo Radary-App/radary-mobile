@@ -5,8 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/core/routing/route.dart';
 import 'package:radary/features/home/ui/screens/home_screen.dart';
 import 'package:radary/features/profile/ui/screens/setting/screen/edit_setting.dart';
-import '../../features/details/ui/screens/confirm_view.dart';
-import '../../features/details/ui/screens/image_dettails_view_proplem.dart';
+import '../../features/ad_details/ui/screens/confirm_view.dart';
+import '../../features/ad_details/ui/screens/image_dettails_view_proplem.dart';
+import '../../features/details/ui/screens/emergency_view.dart';
+import '../../features/details/ui/screens/proplem_details_view.dart';
 import '../../features/follow_report/ui/screens/follow_report_view.dart';
 import '../../features/home/data/repo/add_proplem_repo.dart';
 import '../../features/home/logic/cubit/add_proplem_cubit.dart';
@@ -53,7 +55,7 @@ class AppRouter {
                 create: (context) => getIt<AddEmergencyCubit>(),
               ),
               BlocProvider(
-                create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
+                create: (context) => AddProblemCubit(getIt<AddProblemRepo>()),
               ),
               BlocProvider(
                 create: (context) => EmergencyProblemResponseCubit(
@@ -70,10 +72,11 @@ class AppRouter {
           builder: (_) => MultiBlocProvider(
             providers: [
               BlocProvider(
-                create: (context) => AddProplemCubit(getIt<AddProblemRepo>()),
+                create: (context) => AddProblemCubit(getIt<AddProblemRepo>()),
               ),
               BlocProvider(
-                create: (context) => EmergencyProblemResponseCubit(getIt<EmergencyProblemResponseRepo>()),
+                create: (context) => EmergencyProblemResponseCubit(
+                    getIt<EmergencyProblemResponseRepo>()),
               ),
             ],
             child: ImageDetailsViewProplem(
@@ -103,7 +106,16 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const EditSetting(),
         );
-
+      case Routes.emergencyReview:
+        return MaterialPageRoute(
+          builder: (context) => const EmergencyView(),
+          settings: settings,
+        );
+        case Routes.proplemReview:
+        return MaterialPageRoute(
+          builder: (context) => const ProplemDetailsView(),
+          settings: settings,
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

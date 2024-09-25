@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radary/features/problem_review/logic/cubit/emergency_problem_response_cubit.dart';
-import 'package:radary/features/problem_review/ui/screens/my_emergencys.dart';
+import 'package:radary/features/problem_review/ui/widgets/my_emergencys.dart';
 
 import '../../data/models/emergency_problem_response_model.dart';
 import '../../logic/cubit/emergency_problem_response_state.dart';
@@ -16,9 +16,8 @@ class EmergencyListBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           success: (emergenciesList, problemsList) {
-            // تأكد من أن كلا القائمتين متاحتين وأنهما غير فارغتين
             return MyEmergency(
-              emergenciesList: emergenciesList ?? [], // استخدم قائمة الطوارئ من الباك
+              emergenciesList: emergenciesList ?? [],      
             );
           },
           error: (errorHandler) => setupError(context),

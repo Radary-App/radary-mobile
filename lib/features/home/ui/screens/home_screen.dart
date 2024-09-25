@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:radary/core/theming/app_colors.dart';
 import 'package:radary/features/home/ui/views/home_view.dart';
-import 'package:radary/features/problem_review/ui/screens/problem_review.dart';
+import 'package:radary/features/problem_review/ui/screens/problem_view.dart';
 import 'package:radary/generated/l10n.dart';
 import 'package:responsive_navigation_bar/responsive_navigation_bar.dart';
 

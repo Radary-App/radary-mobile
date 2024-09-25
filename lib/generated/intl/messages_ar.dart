@@ -69,7 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ConfirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
         "ConfirmDelete": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "ConfirmPassword":
-            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور "),
         "Congratulations":
             MessageLookupByLibrary.simpleMessage("تهانينا، لقد سجلت بنجاح!"),
         "ContinueReporting":
@@ -106,7 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "EnterYourLastName":
             MessageLookupByLibrary.simpleMessage("أدخل اسم عائلتك"),
         "EnterYourPassWord":
-            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور الجديدة"),
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور "),
         "EnterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
         "EnterYourShippingAddress":
@@ -149,7 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "نحن هنا لمساعدتك في الإبلاغ عن المشاكل والتصرف بسرعة"),
         "Month": MessageLookupByLibrary.simpleMessage("الشهر"),
         "MyProfile": MessageLookupByLibrary.simpleMessage("ملفي الشخصي"),
-        "MyReports": MessageLookupByLibrary.simpleMessage("تقاريري"),
+        "MyReports": MessageLookupByLibrary.simpleMessage("بلاغاتي"),
         "NeverAllow": MessageLookupByLibrary.simpleMessage("أبدًا"),
         "NightMode": MessageLookupByLibrary.simpleMessage("الوضع الفاتح"),
         "No": MessageLookupByLibrary.simpleMessage("لا"),

@@ -5,43 +5,44 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:radary/core/helpers/extensions/app_navigotion.dart';
+import 'package:radary/features/home/logic/cubit/add_emergency_state.dart';
 import 'package:radary/features/home/logic/cubit/add_proplem_state.dart';
 import '../../../../core/helpers/cach/cach_helper.dart';
 import '../../../../core/helpers/cach/constants.dart';
 import '../../../../core/routing/route.dart';
-import '../../../details/ui/screens/image_dettails_view_proplem.dart';
 import '../../../problem_review/logic/cubit/emergency_problem_response_cubit.dart';
 import '../../data/repo/add_proplem_repo.dart';
 
-class AddProplemCubit extends Cubit<AddEmergencyState> {
+class AddProblemCubit extends Cubit<AddProblemState> { // Corrected name
   final AddProblemRepo _repo;
   final ImagePicker _picker = ImagePicker();
   final TextEditingController descriptionController = TextEditingController();
 
-  AddProplemCubit(this._repo) : super(const AddEmergencyState.initial());
+  AddProblemCubit(this._repo) : super(const AddProblemState.initial());
 
   XFile? file;
-  File? imagee;
+  File? image;
   String coordinates = '';
 
   Future<void> getUserLocation(BuildContext context) async {
-    bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      showErrorSnackBar('Location services are disabled.', context);
+    if (!await Geolocator.isLocationServiceEnabled()) {
+      _showErrorSnackBar('Location services are disabled.', context);
       return;
     }
 
     LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        showErrorSnackBar('Location permission denied.', context);
+      if (![
+        LocationPermission.whileInUse,
+        LocationPermission.always
+      ].contains(permission)) {
+        _showErrorSnackBar('Location permission denied.', context);
         return;
       }
     }
 
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     coordinates = '${position.latitude},${position.longitude}';
   }
 
@@ -49,50 +50,36 @@ class AddProplemCubit extends Cubit<AddEmergencyState> {
     try {
       file = await _picker.pickImage(source: ImageSource.camera);
       if (file != null) {
-        final File image = File(file!.path);
-
-        imagee = image;
-
-        context.pushNamed(
-          Routes.imageDetails,
-          arguments: image,
-        );
-// addProblem(context);
+        image = File(file!.path);
+        context.pushNamed(Routes.imageDetails, arguments: image);
         return image;
       } else {
-        showErrorSnackBar('No image selected', context);
+        _showErrorSnackBar('No image selected', context);
         return null;
       }
     } catch (e) {
-      showErrorSnackBar('Error picking image: $e', context);
+      _showErrorSnackBar('Error picking image: $e', context);
       return null;
     }
   }
 
-  Future<void> addProblem(
-    BuildContext context,
-    XFile? file,
-  ) async {
+  Future<void> addProblem(BuildContext context, XFile? file) async {
     if (file == null) {
-      showErrorSnackBar('Please select an image first', context);
+      _showErrorSnackBar('Please select an image first', context);
       return;
     }
     await getUserLocation(context);
 
     if (coordinates.isEmpty) {
-      showErrorSnackBar(
-          'Location not found. Please check location services.', context);
+      _showErrorSnackBar('Location not found. Please check location services.', context);
       return;
     }
 
-    String? token =
-        CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
+    String? token = CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
     if (token == null) {
-      showErrorSnackBar('User not authenticated', context);
+      _showErrorSnackBar('User not authenticated', context);
       return;
     }
-
-    print("Retrieved Token: $token");
 
     FormData formData = FormData.fromMap({
       'photo': await MultipartFile.fromFile(file.path),
@@ -100,64 +87,30 @@ class AddProplemCubit extends Cubit<AddEmergencyState> {
       'user_description': descriptionController.text,
     });
 
-    emit(const AddEmergencyState.loading());
+    emit(const AddProblemState.loading());
 
     try {
       final result = await _repo.addProblem(formData);
       result.when(
         success: (response) {
-          emit(AddEmergencyState.success(response));
+          emit(AddProblemState.success(response));
           context.pushNamed(Routes.confirmView);
           context.read<EmergencyProblemResponseCubit>().getData();
         },
         failure: (error) {
-          emit(AddEmergencyState.error(
-              error: error.apiErrorModel.error ?? 'An unknown error occurred'));
+          emit(AddProblemState.error(error: error.apiErrorModel.error ?? 'An unknown error occurred'));
         },
       );
     } catch (e) {
-      emit(AddEmergencyState.error(
-          error: 'An error occurred while sending the request: $e'));
+      emit(AddProblemState.error(error: 'An error occurred while sending the request: $e'));
     }
   }
 
-  // Future<void> addProblem(BuildContext context) async {
-  //   if (file == null) {
-  //     showErrorSnackBar('Please select an image first', context);
-  //     return;
-  //   }
-
-  //   String? token =
-  //       CacheHelper.sharedPreferences.getString(SherdPreferencesKeys.userToken);
-  //   print("Retrieved Token: $token");
-
-  //   // إعداد FormData
-  //   FormData formData = FormData.fromMap({
-  //     'photo': await MultipartFile.fromFile(file!.path),
-  //     'coordinates': coordinates,
-  //     'user_description': descriptionController.text,
-  //   });
-
-  //   emit(const AddEmergencyState.loading());
-
-  //   final result = await _repo.addProblem(formData);
-  //   result.when(
-  //     success: (response) {
-  //       emit(AddEmergencyState.success(response));
-  //     },
-  //     failure: (error) {
-  //       emit(AddEmergencyState.error(
-  //         error: error.apiErrorModel.error ?? 'An unknown error occurred',
-  //       ));
-  //     },
-  //   );
-  // }
-
-  void showErrorSnackBar(String message, BuildContext context) {
+  void _showErrorSnackBar(String message, BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        duration: const Duration(seconds: 20),
+        duration: const Duration(seconds: 3), // Shortened duration
       ),
     );
   }
